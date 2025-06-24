@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myuppy - Технические решения</title>
+    <style>
+        @font-face {
+            font-family: 'Eurofurence Bold';
+            src: url('fonts/eurof55.ttf') format('truetype');
+            font-weight: bold;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Eurofurence Bold', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+            line-height: 1.6;
+            padding-top: 80px;
+            padding-bottom: 100px;
+        }
+        .wave {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 1000% 1000% 0 0;
+            position: fixed;
+            width: 200%;
+            height: 12em;
+            animation: wave 10s -3s linear infinite;
+            transform: translate3d(0, 0, 0);
+            opacity: 0.3;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .wave:nth-of-type(2) {
+            bottom: -1.25em;
+            animation: wave 18s linear reverse infinite;
+            opacity: 0.2;
+        }
+        .wave:nth-of-type(3) {
+            bottom: -2.5em;
+            animation: wave 20s -1s reverse infinite;
+            opacity: 0.1;
+        }
+        @keyframes wave {
+            2% { transform: translateX(1); }
+            25% { transform: translateX(-25%); }
+            50% { transform: translateX(-50%); }
+            75% { transform: translateX(-25%); }
+            100% { transform: translateX(1); }
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+        }
+        .nav-logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffffff;
+            letter-spacing: 2px;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+        .nav-menu a::after {
+            content:'';position:absolute;bottom:0;left:0;
+            width:0;height:2px;background:#fff;transition:width .3s;
+        }
+        .nav-menu a:hover::after{width:100%}
+        .nav-menu a {
+            color:#fff;text-decoration:none;font-size:1.1rem;
+            position:relative;padding-bottom:5px;
+        }
+        .tech-solutions-section {
+            padding: 120px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .section-title {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffffff;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .section-description {
+            max-width: 900px; /* Увеличена ширина для текста */
+            margin: 0 auto 80px auto;
+            font-size: 1.5rem; /* Увеличен размер шрифта */
+            line-height: 1.8; /* Увеличен межстрочный интервал */
+            color: rgba(255, 255, 255, 0.9); /* Сделан более ярким */
+            animation: fadeIn 1s ease-out 0.5s forwards;
+            opacity: 0;
+            text-align: center; /* Центрируем текст */
+        }
+        .section-description p {
+            margin-bottom: 20px; /* Отступ между абзацами */
+        }
+        .site-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        .site-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            position: relative;
+            animation: fadeInUp 1s ease-out;
+            display: flex;
+            aspect-ratio: 9 / 16;
+            width: 100%;
+            max-width: 400px;
+        }
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+        }
+        .site-preview-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            pointer-events: auto;
+        }
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        .bottom-nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            padding: 0 40px;
+        }
+        .bottom-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            transition: all 0.3s ease;
+            padding: 10px;
+        }
+        .bottom-nav-item:hover {
+            color: #ffffff;
+            transform: translateY(-3px);
+        }
+        .bottom-nav-item svg {
+            width: 24px;
+            height: 24px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 1.5;
+        }
+        .bottom-nav-item span {
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        footer {
+            text-align: center;
+            padding: 60px 40px;
+            background-color: rgba(255, 255, 255, 0.02);
+            color: rgba(255, 255, 255, 0.6);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 1.1rem;
+        }
+        @media (max-width: 768px) {
+            .nav-container { padding: 0 20px; }
+            .nav-menu { display: none; }
+            .nav-logo { font-size: 1.5rem; }
+            .section-title { font-size: 2.5rem; }
+            .section-description { font-size: 1.2rem; margin-bottom: 40px; }
+            .tech-solutions-section { padding: 80px 20px; }
+            .site-item { max-width: 300px; }
+            .site-grid { gap: 30px; }
+            .bottom-nav-container { gap: 30px; padding: 0 20px; }
+            .bottom-nav-item span { font-size: 0.7rem; }
+        }
+        @media (max-width: 480px) {
+            .section-title { font-size: 2rem; }
+            .section-description { font-size: 1rem; }
+            .site-item { max-width: 250px; }
+            .site-grid { gap: 20px; }
+            .bottom-nav-item span { font-size: 0.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Волны на фоне -->
+<div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+</div>
+
+<!-- Верхняя навигация -->
+<nav class="top-nav">
+    <div class="nav-container">
+        <div class="nav-logo">MYUPPY</div>
+        <ul class="nav-menu">
+            <li><a href="index.html#home">Главная</a></li>
+            <li><a href="index.html#about">О компании</a></li>
+            <li><a href="index.html#services">Услуги</a></li>
+            <li><a href="portfolio.html">Портфолио</a></li>
+            <li><a href="index.html#reviews">Отзывы</a></li>
+            <li><a href="index.html#contacts">Контакты</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Секция Технические решения -->
+<section class="tech-solutions-section">
+    <h2 class="section-title">Технические решения</h2>
+    <div class="section-description">
+        <p>Мы создаем современные цифровые решения, которые упрощают взаимодействие с клиентами, автоматизируют бизнес-процессы и эффективно продвигают ваш бренд. Наши услуги включают:</p>
+        <p><strong>Telegram Mini Apps:</strong> Встроенные веб-приложения, которые позволяют пользователям взаимодействовать с вашим сервисом прямо в мессенджере без установки дополнительных программ. Это могут быть интернет-магазины, системы бронирования, игровые платформы или финансовые сервисы, интегрированные с API Telegram для платежей и уведомлений.</p>
+        <p><strong>Telegram-боты для автоматизации:</strong> Интеллектуальные помощники для вашего бизнеса, способные автоматизировать постинг в социальных сетях, управлять рассылками, обрабатывать заказы и предоставлять клиентскую поддержку. Мы используем как готовые платформы, так и разрабатываем кастомные решения на Python с контролем доступа и функциями ограничения по времени.</p>
+        <p><strong>Сайты на Tilda:</strong> Быстрое создание стильных, адаптивных и SEO-оптимизированных сайтов без необходимости в кодировании. Идеально для лендингов, сайтов-визиток и небольших проектов, требующих современного дизайна и простоты управления.</p>
+        <p><strong>Сайты на HTML:</strong> Разработка уникальных статических сайтов с нуля, обеспечивающих полный контроль над структурой и дизайном. Подходит для проектов, где важна высокая производительность и нестандартные решения.</p>
+        <p><strong>Web-приложения на React:</strong> Создание сложных, интерактивных и высокопроизводительных веб-приложений. React позволяет разрабатывать гибкие и масштабируемые интерфейсы для любых задач, от пользовательских сервисов до внутренних инструментов.</p>
+    </div>
+
+    <div class="site-grid" id="site-grid-container">
+        <!-- Сайты будут добавлены сюда с помощью JavaScript -->
+    </div>
+</section>
+
+<!-- Нижнее закрепленное меню -->
+<nav class="bottom-nav">
+    <div class="bottom-nav-container">
+        <a href="index.html#home" class="bottom-nav-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9,22 9,12 15,12 15,22"/>
+            </svg>
+            <span>Главная</span>
+        </a>
+        <a href="index.html#about" class="bottom-nav-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+            </svg>
+            <span>О нас</span>
+        </a>
+        <a href="index.html#services" class="bottom-nav-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="7" height="9" x="3" y="3" rx="1"/>
+                <rect width="7" height="5" x="14" y="3" rx="1"/>
+                <rect width="7" height="9" x="14" y="12" rx="1"/>
+                <rect width="7" height="5" x="3" y="16" rx="1"/>
+            </svg>
+            <span>Услуги</span>
+        </a>
+        <a href="index.html#contacts" class="bottom-nav-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>Контакты</span>
+        </a>
+    </div>
+</nav>
+
+<!-- Подвал -->
+<footer>
+    © 2025 Myuppy. Все права защищены.
+</footer>
+
+<script>
+    const links = [
+        "https://monteton.github.io/mammy/",
+        "https://monteton.github.io/reels/",
+        "https://monteton.github.io/Nytry/",
+        "https://monteton.github.io/color/",
+        "https://monteton.github.io/Marketting/",
+        "https://monteton.github.io/astrology/"
+    ];
+
+    function addSiteItems(containerId) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+
+        links.forEach(url => {
+            if (!url.includes("t.me")) {
+                const siteItem = document.createElement('div');
+                siteItem.classList.add('site-item');
+
+                const iframeContainer = document.createElement('div');
+                iframeContainer.classList.add('iframe-container');
+
+                const iframe = document.createElement('iframe');
+                iframe.classList.add('site-preview-iframe');
+                iframe.src = url;
+                iframe.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-forms allow-popups allow-pointer-lock');
+                iframe.setAttribute('scrolling', 'auto');
+                
+                iframeContainer.appendChild(iframe);
+                siteItem.appendChild(iframeContainer);
+
+                container.appendChild(siteItem);
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        addSiteItems('site-grid-container');
+    });
+</script>
+
+</body>
+</html>

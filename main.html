@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Myuppy - Digital Marketing & Content Production</title>
+<style>
+@font-face {
+    font-family: 'Eurofurence Bold';
+    src: url('fonts/eurof55.ttf') format('truetype');
+    font-weight: bold;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Eurofurence Bold', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+    line-height: 1.6;
+    padding-bottom: 100px;
+}
+.wave {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.3;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.2;
+}
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.1;
+}
+@keyframes wave {
+    2% { transform: translateX(1); }
+    25% { transform: translateX(-25%); }
+    50% { transform: translateX(-50%); }
+    75% { transform: translateX(-25%); }
+    100% { transform: translateX(1); }
+}
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes neonBorder {
+    0%, 100% { filter: drop-shadow(0 0 10px rgba(0, 150, 255, 0.7)); }
+    50% { filter: drop-shadow(0 0 20px rgba(0, 200, 255, 1)); }
+}
+@keyframes glowText {
+    from { text-shadow: 0 0 10px rgba(0,150,255,0.8); }
+    to { text-shadow: 0 0 30px rgba(0,200,255,1); }
+}
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translateY(1000px);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.05) translateY(-20px);
+    }
+    80% {
+        transform: scale(0.95) translateY(10px);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+.nav-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+.nav-menu {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width .3s;
+}
+.nav-menu a:hover::after {
+    width: 100%;
+}
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+    padding-bottom: 5px;
+}
+.hero {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 60px;
+}
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+.banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+.logo-wrapper {
+    width: 160px;
+    height: 160px;
+    border: 4px solid rgba(0, 150, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    animation: bounceIn 1s ease-out forwards; /* Новая анимация "мячик" */
+}
+.logo-horizontal {
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+    display: block;
+}
+.banner-tagline {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(0, 150, 255, 0.8);
+    animation: glowText 2s infinite alternate;
+    animation-delay: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+section {
+    padding: 120px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.section-title {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+}
+.skewed-frame {
+    height: 300px;
+    overflow: hidden;
+    transform: skewY(-3deg);
+    margin-bottom: 30px;
+}
+.skewed-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: skewY(3deg) scale(1.1);
+    transition: .3s;
+}
+.skewed-frame:hover img {
+    transform: skewY(3deg) scale(1.15)
+}
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+.about-block {
+    background: rgba(255, 255, 255, .03);
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, .1);
+    position: relative;
+    overflow: hidden;
+}
+.about-block h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+.about-block p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, .8);
+}
+.about-cta {
+    text-align: center;
+}
+.section-button {
+    border: 2px solid #fff;
+    border-radius: 8px; /* Скругление кнопок */
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .3s;
+    display: inline-block; /* Для правильного центрирования и отступов */
+    margin-top: 20px;
+}
+.section-button:hover {
+    background: #fff;
+    color: #000
+}
+.services-section {
+    background: rgba(255, 255, 255, .02);
+    border-top: 1px solid rgba(255, 255, 255, .1);
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+.service-card {
+    background: rgba(255, 255, 255, .03);
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, .1);
+    text-align: center;
+    overflow: hidden;
+    display: flex; /* Для выравнивания кнопки */
+    flex-direction: column; /* Для выравнивания кнопки */
+    justify-content: space-between; /* Для выравнивания кнопки */
+}
+.service-icon img {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+}
+.service-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px
+}
+.service-card p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, .8);
+    flex-grow: 1; /* Чтобы текст занимал доступное место, отодвигая кнопку вниз */
+    margin-bottom: 25px; /* Отступ от кнопки */
+}
+.service-button {
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 8px; /* Скругление кнопок */
+    color: #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .3s;
+    align-self: center; /* Центрируем кнопку в карточке */
+}
+.service-button:hover {
+    background: #fff;
+    color: #000
+}
+.contacts-section {
+    text-align: center;
+}
+.contacts-description {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, .8);
+    margin-bottom: 40px;
+}
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+}
+.contact-item img {
+    width: 24px;
+    height: 24px
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.social-icon {
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgba(255, 255, 255, .3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+.social-icon:hover {
+    background: #fff;
+}
+.social-icon img {
+    width: 32px;
+    height: 32px;
+}
+.social-icon:hover img {
+    filter: invert(1); /* Инвертируем цвет иконки при наведении */
+}
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+.bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    color: rgba(255, 255, 255, .7);
+    text-decoration: none;
+    transition: .3s;
+}
+.bottom-nav-item:hover {
+    color: #fff;
+    transform: translateY(-3px)
+}
+.bottom-nav-item img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px
+}
+.bottom-nav-item span {
+    font-size: 0.8rem
+}
+footer {
+    text-align: center;
+    padding: 40px 0;
+    background: rgba(255, 255, 255, .02);
+    color: rgba(255, 255, 255, .6);
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    font-size: 1rem;
+}
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none
+    }
+    .logo-horizontal {
+        width: 140px
+    }
+    .section-title {
+        font-size: 2.5rem
+    }
+    .about-content, .services-grid {
+        grid-template-columns: 1fr
+    }
+    .contact-info {
+        flex-direction: column
+    }
+}
+@media (max-width: 480px) {
+    .logo-horizontal {
+        width: 120px
+    }
+    .banner-tagline {
+        font-size: 1.2rem
+    }
+    .section-title {
+        font-size: 2rem
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Фоновые волны -->
+<div><div class="wave"></div><div class="wave"></div><div class="wave"></div></div>
+
+<!-- Верхняя навигация -->
+<nav class="top-nav">
+    <div class="nav-container">
+        <div class="nav-logo">MYUPPY</div>
+        <ul class="nav-menu">
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#about">О компании</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Баннер -->
+<section class="hero" id="home">
+    <div class="banner-overlay"></div>
+    <div class="banner-content">
+        <div class="logo-wrapper"><img src="images/logo.png" alt="Myuppy Logo" class="logo-horizontal"></div>
+        <div class="banner-tagline">Твоя история — наш контент</div>
+    </div>
+</section>
+
+<!-- О компании -->
+<section class="about-section" id="about">
+    <h2 class="section-title">О компании</h2>
+    <div class="skewed-frame"><img src="images/pic1.png" alt="Команда"></div>
+    <div class="about-content">
+        <div class="about-block"><h3>Стратегический подход</h3><p>Myuppy — стратегический партнёр в цифровом маркетинге, создающий комплексные решения для роста вашего бизнеса.</p></div>
+        <div class="about-block"><h3>Профессиональная команда</h3><p>Маркетолог, сценарист, контент-мейкер и дизайнер с 7-летним опытом, использующие современные инструменты и ИИ.</p></div>
+        <div class="about-block"><h3>Результат с первого месяца</h3><p>Создаем видео и стратегии, которые напрямую влияют на рост продаж и экспертность вашего бренда.</p></div>
+    </div>
+    <div class="about-cta"><a href="#contacts" class="section-button">Оставить заявку</a></div>
+</section>
+
+<!-- Услуги -->
+<section class="services-section" id="services">
+    <h2 class="section-title">Услуги</h2>
+    <div class="skewed-frame"><img src="images/pic2.png" alt="Услуги"></div>
+    <div class="services-grid">
+        <div class="service-card">
+            <div>
+                <div class="service-icon"><img src="images/icon-video.svg" alt="Видео"></div>
+                <h3>Видеопроизводство</h3>
+                <p>Монтаж роликов и написание сценариев, диагностика аккаунта.</p>
+            </div>
+            <a href="portfolio.html" class="service-button">Примеры работ</a>
+        </div>
+        <div class="service-card">
+            <div>
+                <div class="service-icon"><img src="images/icon-strategy.svg" alt="Стратегия"></div>
+                <h3>Стратегия и упаковка</h3>
+                <p>Разработка стратегии, контентных воронок и продающей упаковки блога.</p>
+            </div>
+            <a href="portfolio.html" class="service-button">Примеры работ</a>
+        </div>
+        <div class="service-card">
+            <div>
+                <div class="service-icon"><img src="images/icon-tech.svg" alt="Техрешения"></div>
+                <h3>Технические решения</h3>
+                <p>Боты и мини-приложения для Telegram, настройка сайтов и автоматизация.</p>
+            </div>
+            <a href="tech-solutions.html" class="service-button">Примеры работ</a>
+        </div>
+        <div class="service-card">
+            <div>
+                <div class="service-icon"><img src="images/icon-brand.svg" alt="Бренд"></div>
+                <h3>Продвижение бренда</h3>
+                <p>Распаковка смыслов, создание УТП и продающего визуала.</p>
+            </div>
+            <a href="portfolio.html" class="service-button">Примеры работ</a>
+        </div>
+    </div>
+    <div class="about-cta"><a href="#contacts" class="section-button">Оставить заявку</a></div>
+</section>
+
+<!-- Контакты -->
+<section class="contacts-section" id="contacts">
+    <h2 class="section-title">Контакты</h2>
+    <div class="skewed-frame"><img src="images/pic3.png" alt="Свяжитесь с нами"></div>
+    <div class="contacts-content">
+        <p class="contacts-description">Свяжитесь с нами через удобный канал — мы выведем ваш бренд на новый уровень.</p>
+        <div class="contact-info">
+            <a href="mailto:muuppy.mne@gmail.com" class="contact-item"><img src="images/icon-mail.svg" alt="Почта"><span>muuppy.mne@gmail.com</span></a>
+            <a href="https://wa.me/38268471079" target="_blank" class="contact-item"><img src="images/icon-whatsapp.svg" alt="WhatsApp"><span>WhatsApp</span></a>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/myuppy.mne" target="_blank" class="social-icon"><img src="images/icon-instagram.svg" alt="Instagram"></a>
+            <a href="https://t.me/MyuppyTeam" target="_blank" class="social-icon"><img src="images/icon-telegram.svg" alt="Telegram"></a>
+            <a href="https://www.tiktok.com/@myuppy.mne" target="_blank" class="social-icon"><img src="images/icon-tiktok.svg" alt="TikTok"></a>
+        </div>
+    </div>
+</section>
+
+<!-- Нижнее меню -->
+<nav class="bottom-nav">
+    <a href="#home" class="bottom-nav-item"><img src="images/nav-home.svg" alt="Главная"><span>Главная</span></a>
+    <a href="#about" class="bottom-nav-item"><img src="images/nav-about.svg" alt="О нас"><span>О нас</span></a>
+    <a href="#services" class="bottom-nav-item"><img src="images/nav-services.svg" alt="Услуги"><span>Услуги</span></a>
+    <a href="#contacts" class="bottom-nav-item"><img src="images/nav-contacts.svg" alt="Контакты"><span>Контакты</span></a>
+</nav>
+
+<!-- Подвал -->
+<footer>© 2025 Myuppy. Все права защищены.</footer>
+</body>
+</html>
