@@ -10,24 +10,20 @@
             src: url('fonts/eurof55.ttf') format('truetype');
             font-weight: bold;
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Eurofurence Bold', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: #000000;
             color: #ffffff;
             overflow-x: hidden;
             line-height: 1.6;
-            padding-top: 80px; /* Отступ для фиксированной верхней навигации */
-            padding-bottom: 100px; /* Отступ для фиксированного нижнего меню */
+            padding-top: 80px;
+            padding-bottom: 100px;
         }
-
-        /* Волны на фоне */
         .wave {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 1000% 1000% 0 0;
@@ -41,19 +37,16 @@
             left: 0;
             z-index: -1;
         }
-
         .wave:nth-of-type(2) {
             bottom: -1.25em;
             animation: wave 18s linear reverse infinite;
             opacity: 0.2;
         }
-
         .wave:nth-of-type(3) {
             bottom: -2.5em;
             animation: wave 20s -1s reverse infinite;
             opacity: 0.1;
         }
-
         @keyframes wave {
             2% { transform: translateX(1); }
             25% { transform: translateX(-25%); }
@@ -61,34 +54,27 @@
             75% { transform: translateX(-25%); }
             100% { transform: translateX(1); }
         }
-
-        /* Анимации появления элементов */
         @keyframes fadeInUp {
             0% { opacity: 0; transform: translateY(50px); }
             100% { opacity: 1; transform: translateY(0); }
         }
-
         @keyframes fadeIn {
             0% { opacity: 0; transform: translateY(20px); }
             100% { opacity: 1; transform: translateY(0); }
         }
-
         @keyframes neonBorder {
             0%, 100% { filter: drop-shadow(0 0 10px rgba(0, 150, 255, 0.7)); }
             50% { filter: drop-shadow(0 0 20px rgba(0, 200, 255, 1)); }
         }
-
         @keyframes glowText {
             from { text-shadow: 0 0 10px rgba(0,150,255,0.8); }
             to { text-shadow: 0 0 30px rgba(0,200,255,1); }
         }
-
         @keyframes wiggle {
             0%, 100% { transform: translateY(0) rotate(0deg); }
             25% { transform: translateY(-8px) rotate(2deg); }
             75% { transform: translateY(8px) rotate(-2deg); }
         }
-
         /* Навигация */
         .top-nav {
             position: fixed;
@@ -102,7 +88,6 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             animation: fadeIn 1s ease-out;
         }
-
         .nav-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -111,20 +96,17 @@
             align-items: center;
             padding: 0 40px;
         }
-
         .nav-logo {
             font-size: 2rem;
             font-weight: bold;
             color: #ffffff;
             letter-spacing: 2px;
         }
-
         .nav-menu {
             display: flex;
             gap: 40px;
             list-style: none;
         }
-
         .nav-menu a {
             color: #ffffff;
             text-decoration: none;
@@ -134,7 +116,6 @@
             padding: 10px 0;
             position: relative;
         }
-
         .nav-menu a::after {
             content: '';
             position: absolute;
@@ -145,11 +126,9 @@
             background: #ffffff;
             transition: width 0.3s ease;
         }
-
         .nav-menu a:hover::after {
             width: 100%;
         }
-
         /* Общие стили для кнопок */
         .section-button {
             background: transparent;
@@ -158,7 +137,7 @@
             border: 2px solid #ffffff;
             font-size: 1rem;
             font-weight: bold;
-            cursor: pointer;
+            cursor: button;
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
@@ -166,13 +145,11 @@
             text-transform: uppercase;
             margin-top: 20px;
         }
-
         .section-button:hover {
             background: #ffffff;
             color: #000000;
             transform: translateY(-2px);
         }
-        
         /* Стили для страницы портфолио */
         .portfolio-section {
             padding: 120px 40px;
@@ -180,7 +157,6 @@
             margin: 0 auto;
             text-align: center;
         }
-
         .section-title {
             font-size: 3.5rem;
             text-align: center;
@@ -189,82 +165,29 @@
             font-weight: bold;
             letter-spacing: 2px;
         }
-
         .video-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 280px для 9:16, чтобы уместить 3-4 на широком экране */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 40px;
             margin-bottom: 60px;
         }
-
         .video-item {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.1);
             overflow: hidden;
             position: relative;
             animation: fadeInUp 1s ease-out;
+            border-radius: 8px;
         }
-
-        .video-item::before {
-            content: '';
-            display: block;
-            padding-top: 177.77%; /* Соотношение сторон 9:16 (9/16 * 100%) */
-        }
-
-        .video-item a {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .video-item video {
             width: 100%;
-            height: 100%;
-            display: block;
-            text-decoration: none;
+            height: auto;
+            min-height: 0;
+            border-radius: 8px;
         }
-
-        .video-item img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .video-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .play-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 60px;
-            height: 60px;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
-        }
-
-        .video-item:hover .play-overlay {
-            opacity: 1;
-        }
-
-        .play-overlay svg {
-            width: 30px;
-            height: 30px;
-            fill: #ffffff;
-        }
-        
         .portfolio-cta {
             margin-top: 40px;
         }
-
         /* Нижнее закрепленное меню */
         .bottom-nav {
             position: fixed;
@@ -278,7 +201,6 @@
             padding: 15px 0;
             animation: fadeInUp 1s ease-out 1.5s;
         }
-
         .bottom-nav-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -287,7 +209,6 @@
             gap: 60px;
             padding: 0 40px;
         }
-
         .bottom-nav-item {
             display: flex;
             flex-direction: column;
@@ -298,12 +219,10 @@
             transition: all 0.3s ease;
             padding: 10px;
         }
-
         .bottom-nav-item:hover {
             color: #ffffff;
             transform: translateY(-3px);
         }
-
         .bottom-nav-item svg {
             width: 24px;
             height: 24px;
@@ -311,12 +230,10 @@
             fill: none;
             stroke-width: 1.5;
         }
-
         .bottom-nav-item span {
             font-size: 0.8rem;
             font-weight: 500;
         }
-
         /* Подвал */
         footer {
             text-align: center;
@@ -327,7 +244,6 @@
             font-size: 1.1rem;
             animation: fadeIn 1s ease-out 1s;
         }
-
         /* Мобильная адаптация */
         @media (max-width: 768px) {
             .nav-container {
@@ -346,7 +262,7 @@
                 padding: 80px 20px;
             }
             .video-grid {
-                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* 2 колонки на мобильных */
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
                 gap: 20px;
             }
             .bottom-nav-container {
@@ -357,26 +273,23 @@
                 font-size: 0.7rem;
             }
         }
-
         @media (max-width: 480px) {
             .section-title {
                 font-size: 2rem;
             }
             .video-grid {
-                grid-template-columns: 1fr; /* Одна колонка на очень маленьких экранах */
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-
     <!-- Волны на фоне -->
     <div>
         <div class="wave"></div>
         <div class="wave"></div>
         <div class="wave"></div>
     </div>
-
     <!-- Верхняя навигация -->
     <nav class="top-nav">
         <div class="nav-container">
@@ -391,85 +304,51 @@
             </ul>
         </div>
     </nav>
-
     <!-- Секция Портфолио -->
     <section class="portfolio-section" id="portfolio">
         <h2 class="section-title">Примеры видео</h2>
-
         <div class="video-grid">
-            <!-- Видео 1 -->
             <div class="video-item">
-                <a href="https://www.youtube.com/watch?v=VIDEO_ID_1" target="_blank">
-                    <img src="images/preview_video1.jpg" alt="Превью видео 1">
-                    <div class="play-overlay">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
-                        </svg>
-                    </div>
-                </a>
+                <video controls width="100%" height="auto">
+                    <source src="videos/video1.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
             </div>
-            <!-- Видео 2 -->
             <div class="video-item">
-                <a href="https://www.youtube.com/watch?v=VIDEO_ID_2" target="_blank">
-                    <img src="images/preview_video2.jpg" alt="Превью видео 2">
-                    <div class="play-overlay">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
-                        </svg>
-                    </div>
-                </a>
+                <video controls width="100%" height="auto">
+                    <source src="videos/video2.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
             </div>
-            <!-- Видео 3 -->
             <div class="video-item">
-                <a href="https://www.youtube.com/watch?v=VIDEO_ID_3" target="_blank">
-                    <img src="images/preview_video3.jpg" alt="Превью видео 3">
-                    <div class="play-overlay">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
-                        </svg>
-                    </div>
-                </a>
+                <video controls width="100%" height="auto">
+                    <source src="videos/video3.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
             </div>
-            <!-- Видео 4 -->
             <div class="video-item">
-                <a href="https://www.youtube.com/watch?v=VIDEO_ID_4" target="_blank">
-                    <img src="images/preview_video4.jpg" alt="Превью видео 4">
-                    <div class="play-overlay">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
-                        </svg>
-                    </div>
-                </a>
+                <video controls width="100%" height="auto">
+                    <source src="videos/video4.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
             </div>
-            <!-- Видео 5 -->
             <div class="video-item">
-                <a href="https://www.youtube.com/watch?v=VIDEO_ID_5" target="_blank">
-                    <img src="images/preview_video5.jpg" alt="Превью видео 5">
-                    <div class="play-overlay">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
-                        </svg>
-                    </div>
-                </a>
+                <video controls width="100%" height="auto">
+                    <source src="videos/video5.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
             </div>
-            <!-- Видео 6 -->
             <div class="video-item">
-                <a href="https://www.youtube.com/watch?v=VIDEO_ID_6" target="_blank">
-                    <img src="images/preview_video6.jpg" alt="Превью видео 6">
-                    <div class="play-overlay">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
-                        </svg>
-                    </div>
-                </a>
+                <video controls width="100%" height="auto">
+                    <source src="videos/video6.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
             </div>
         </div>
-
         <div class="portfolio-cta">
-            <a href="https://t.me/your_telegram_channel" target="_blank" class="section-button">Больше примеров в Telegram</a>
+            <a href="https://t.me/your_telegram_channel" class="section-button">Больше примеров в Telegram</a>
         </div>
     </section>
-
     <!-- Нижнее закрепленное меню -->
     <nav class="bottom-nav">
         <div class="bottom-nav-container">
@@ -490,7 +369,7 @@
             <a href="index.html#services" class="bottom-nav-item">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                     <rect width="7" height="9" x="3" y="3" rx="1"/>
-                    <rect width="7" height="5" x="14" y="3" rx="1"/>
+                    <rect width="7" height="5" x="14, y=3" rx="1"/>
                     <rect width="7" height="9" x="14" y="12" rx="1"/>
                     <rect width="7" height="5" x="3" y="16" rx="1"/>
                 </svg>
@@ -504,11 +383,9 @@
             </a>
         </div>
     </nav>
-
     <!-- Подвал -->
     <footer>
         © 2025 Myuppy. Все права защищены.
     </footer>
-
 </body>
 </html>
