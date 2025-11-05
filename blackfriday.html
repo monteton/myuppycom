@@ -10,6 +10,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    html {
+      box-sizing: border-box;
+    }
+    *, *:before, *:after { box-sizing: inherit; }
     .sale-banner-text {
       display: inline-block;
       vertical-align: middle;
@@ -213,7 +217,7 @@
     .review-card {display: flex; align-items: center; gap: 20px; margin-bottom: 20px; background: #161616cc; padding: 20px; border-radius: 12px;}
     .review-img {width: 80px; height: 80px; border-radius: 50%; object-fit: cover;}
     .review-text p {margin: 0;}
-    .prices .card { width: 340px; }
+    .prices .card { max-width: 340px; width: 100%; }
     .packages .card .section-img {
         height: 200px; /* Фиксированная высота */
         object-fit: cover; /* Масштабирование с сохранением пропорций */
@@ -390,8 +394,8 @@
 <body>
   <section class="main-bg">
     <div class="torn-frame animate-on-scroll">
-      <h1>Распродажа</h1>
-      <h1 style="font-size: 3rem; line-height: 1;">Черная Пятница</h1>
+      <h1 style="margin-bottom: 10px;">Распродажа</h1>
+      <h1 style="font-size: clamp(2.5rem, 10vw, 4rem); line-height: 1;">Черная Пятница</h1>
     </div>
     <h2 class="animate-on-scroll" style="transition-delay: 0.1s;"><span class="accent">Тело мечты с мега-скидкой!</span></h2>
     <div class="sale-banner animate-on-scroll" style="transition-delay: 0.3s;"><span class="sale-banner-text">15-30 НОЯБРЯ</span></div>
@@ -512,7 +516,7 @@
   <section class="section">
     <h2>Что внутри каждого блока программ?</h2>
     <div class="packages">
-      <div class="card animate-on-scroll" style="width: 340px; text-align: center;">
+      <div class="card animate-on-scroll" style="max-width: 340px; width: 100%; text-align: center;">
         <div class="image-container">
           <img src="assets/img/team1.jpeg" alt="Упругая попа" class="section-img">
          
@@ -525,7 +529,7 @@
           <p><b>Прощай, целлюлит!</b> Улучшается кровообращение и лимфодренаж в проблемной зоне.</p>
         </div>
       </div>
-      <div class="card animate-on-scroll" style="width: 340px; transition-delay: 0.1s; text-align: center;">
+      <div class="card animate-on-scroll" style="max-width: 340px; width: 100%; transition-delay: 0.1s; text-align: center;">
         <div class="image-container">
           <img src="assets/img/team2.jpeg" alt="Плоский живот" class="section-img">
           
@@ -536,7 +540,7 @@
           <p><b>Улучшение пищеварения.</b> Сильный кор поддерживает внутренние органы, что положительно сказывается на работе кишечника. Уходят вздутие, тяжесть, при регулярных тренировках вы почувствуете невероятную лёгкость в теле.</p>
         </div>
       </div>
-      <div class="card animate-on-scroll" style="width: 340px; transition-delay: 0.2s; text-align: center;">
+      <div class="card animate-on-scroll" style="max-width: 340px; width: 100%; transition-delay: 0.2s; text-align: center;">
         <div class="image-container">
           <img src="assets/img/team3.jpeg" alt="Королевская осанка" class="section-img">
           
@@ -551,7 +555,7 @@
          <p><b>Уверенность и элегантность.</b> Вы будете выглядеть благородно и уверенно, привлекая внимание к своей осанке.</p>
         </div>
       </div>
-      <div class="card animate-on-scroll" style="width: 340px; transition-delay: 0.3s; text-align: center;">
+      <div class="card animate-on-scroll" style="max-width: 340px; width: 100%; transition-delay: 0.3s; text-align: center;">
         <div class="image-container">
           <img src="assets/img/team4.jpeg" alt="Уход за лицом" class="section-img">
           
