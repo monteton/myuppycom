@@ -202,16 +202,10 @@
       line-height: 1.6;
     }
     .section-img {
-      width: 80%;
       aspect-ratio: 4/3;
       object-fit: cover;
-      border-radius: 12px;
       margin-bottom: 15px;
-      max-width: 400px;
       display: block;
-      margin-left: auto;
-      margin-right: auto;
-      border: 2px solid #333;
       background: #181818;
     }
     .review-card {display: flex; align-items: center; gap: 20px; margin-bottom: 20px; background: #161616cc; padding: 20px; border-radius: 12px;}
@@ -395,7 +389,7 @@
   <section class="main-bg">
     <div class="torn-frame animate-on-scroll">
       <h1 style="margin-bottom: 10px;">Распродажа</h1>
-      <h1 style="font-size: clamp(2.5rem, 10vw, 4rem); line-height: 1;">Черная Пятница</h1>
+      <h1 style="font-size: clamp(rem, 10vw, 4rem); line-height: 1;">Черная Пятница</h1>
     </div>
     <h2 class="animate-on-scroll" style="transition-delay: 0.1s;"><span class="accent">Тело мечты с мега-скидкой!</span></h2>
     <div class="sale-banner animate-on-scroll" style="transition-delay: 0.3s;"><span class="sale-banner-text">15-30 НОЯБРЯ</span></div>
@@ -420,15 +414,13 @@
     <p style="text-align:center; max-width: 700px; margin: 0 auto 30px;">Только в эту Чёрную пятницу ты можешь приобрести точечные программы, которые дают видимый результат уже через 10 дней по супер-стоимости!</p>
     <div class="split-blocks">
       <div class="card">
-        <img src="assets/img/gallery1.jpeg" alt="Скульптор: Попа & Пресс" class="section-img">
-        <h3>Программа тренировок СКУЛЬПТОР: ЯГОДИЦЫ & Пресс</h3>
-        <b>Упругая подкачанная попа + плоский живот</b>
-        <p>Экспресс-комплекс для создания идеального силуэта. Эффективно убираем бока и подтягиваем ягодицы. Ты будешь сиять в облегающей одежде!</p>
+        <img src="assets/img/gallery1.jpeg" alt="Скульптор: Попа & Пресс" class="section-img" style="width: calc(100% + 56px); margin-left: -28px; margin-right: -28px; margin-top: -30px; border-radius: 12px 12px 0 0;">
+        <b><h3>УПРУГАЯ И ПОДКАЧАННАЯ ПОПА + ПЛОСКИЙ ЖИВОТ</h3></b>
+        <p>Комплекс для создания идеального силуэта. Эффективно убираем бока и подтягиваем ягодицы. Ты будешь сиять в облегающей одежде!</p>
       </div>
       <div class="card">
-        <img src="assets/img/gallery2.jpeg" alt="Королевский Комплекс: Осанка & Лицо" class="section-img">
-        <h3>Программа тренировок КОРОЛЕВСКИЙ КОМПЛЕКС: Осанка & Лицо</h3>
-        <b>Упражнения на осанку + видео по уходу за лицом</b>
+        <img src="assets/img/gallery2.jpeg" alt="Королевский Комплекс: Осанка & Лицо" class="section-img" style="width: calc(100% + 56px); margin-left: -28px; margin-right: -28px; margin-top: -30px; border-radius: 12px 12px 0 0;">
+        <b><h3>УПРАЖНЕНИЯ НА ОСАНКУ + ВИДЕО ПО УХОДУ ЗА ЛИЦОМ</h3></b>
         <p>Видимый антиэйдж-эффект! Расправляем спину (минус 10 лет визуально!), убираем второй подбородок, холку, возвращаем лицу контур и сияние. Возвращение молодости и красоты!</p>
       </div>
     </div>
@@ -465,8 +457,9 @@
     </div>
     <div class="prices ">
     <div class="card animate-on-scroll" style="text-align: center;">
-    <div class="price-card-title">Программа тренировок СКУЛЬПТОР: Ягодицы & Пресс</div>
-    <p>70 упражнений</p>
+    <div class="price-card-title">Программа тренировок СКУЛЬПТОР: Ягодицы и Пресс</div>
+    <b>33 упражнения на ягодицы</b>
+    <b>36  упражнений на пресс</b>
     <p>Упругая подкачанная попа + плоский живот</p>
     <div class="old-prices">
       <p>Обычная цена по отдельности:</p>
@@ -480,7 +473,7 @@
     <a href="https://..." target="_blank" class="cta-btn" style="background: #222; border: 1px solid #e10613; text-decoration: none;">Купить за 1900 ₽ / £19 (не из РФ)</a>
       </div>
       <div class="card animate-on-scroll" style="border: 2px solid #e10613; text-align: center;">
-        <div class="price-card-title">Программа тренировок КОРОЛЕВСКИЙ КОМПЛЕКС: Осанка & Лицо</div>
+        <div class="price-card-title">Программа тренировок КОРОЛЕВСКИЙ КОМПЛЕКС: Осанка и Лицо</div>
         <p>32 упражнения на осанку, Упражнения для лица, 5 видео по уходу за лицом</p>
         <div class="old-prices">
           <p>Обычная цена по отдельности:</p>
@@ -496,7 +489,7 @@
       <div class="card animate-on-scroll" style="transition-delay: 0.1s; text-align: center;">
     <div class="hit-badge">Хит продаж</div>
     <div class="price-card-title">Полный комплекс</div>
-    <p>Скульптор: Ягодицы & Пресс + Королевский Комплекс: Осанка & Лицо</p>
+    <p>Скульптор: Ягодицы и Пресс + Королевский Комплекс: Осанка и Лицо</p>
     <div class="old-prices">
       <p>Обычная цена:</p>
       <ul class="old-price-list">
@@ -518,7 +511,7 @@
     <div class="packages">
       <div class="card animate-on-scroll" style="max-width: 340px; width: 100%; text-align: center;">
         <div class="image-container">
-          <img src="assets/img/team1.jpeg" alt="Упругая попа" class="section-img">
+          <img src="assets/img/team1.jpeg" alt="Упругая попа" class="section-img" style="width: calc(100% + 56px); margin-left: -28px; margin-right: -28px; margin-top: -30px; border-radius: 12px 12px 0 0;">
          
         </div>
         <p><i>33 упражнения на ягодицы,  собранные в удобные и результативные тренировки.</i></p>
@@ -531,7 +524,7 @@
       </div>
       <div class="card animate-on-scroll" style="max-width: 340px; width: 100%; transition-delay: 0.1s; text-align: center;">
         <div class="image-container">
-          <img src="assets/img/team2.jpeg" alt="Плоский живот" class="section-img">
+          <img src="assets/img/team2.jpeg" alt="Плоский живот" class="section-img" style="width: calc(100% + 56px); margin-left: -28px; margin-right: -28px; margin-top: -30px; border-radius: 12px 12px 0 0;">
           
         </div>
         <p><i>36 упражнений, собранные в удобные и результативные тренировки на глубокие мышцы кора (пресса), работающие изнутри.</i></p>
@@ -542,7 +535,7 @@
       </div>
       <div class="card animate-on-scroll" style="max-width: 340px; width: 100%; transition-delay: 0.2s; text-align: center;">
         <div class="image-container">
-          <img src="assets/img/team3.jpeg" alt="Королевская осанка" class="section-img">
+          <img src="assets/img/team3.jpeg" alt="Королевская осанка" class="section-img" style="width: calc(100% + 56px); margin-left: -28px; margin-right: -28px; margin-top: -30px; border-radius: 12px 12px 0 0;">
           
         </div>
         <p><i>32 упражнения, собранные в удобные и результативные тренировки для улучшения осанки.</i></p>
@@ -557,7 +550,7 @@
       </div>
       <div class="card animate-on-scroll" style="max-width: 340px; width: 100%; transition-delay: 0.3s; text-align: center;">
         <div class="image-container">
-          <img src="assets/img/team4.jpeg" alt="Уход за лицом" class="section-img">
+          <img src="assets/img/team4.jpeg" alt="Уход за лицом" class="section-img" style="width: calc(100% + 56px); margin-left: -28px; margin-right: -28px; margin-top: -30px; border-radius: 12px 12px 0 0;">
           
         </div>
         <p><i>Видеоуроки по самомассажу и фейсфитнесу.</i></p>
