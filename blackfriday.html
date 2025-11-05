@@ -12,6 +12,7 @@
   <style>
     html {
       box-sizing: border-box;
+    
     }
     *, *:before, *:after { box-sizing: inherit; }
     .sale-banner-text {
@@ -40,6 +41,39 @@
       100% {
         opacity: 1;
         transform: scale(1) translateY(0);
+      }
+    }
+    /* Стили для баннера со сканером */
+    .scanner-banner {
+      position: relative;
+      width: 100%;
+      max-width: 700px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      aspect-ratio: 21 / 7;
+      overflow: hidden; /* Скрываем все, что выходит за рамки */
+    }
+    .scanner-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .scanner-banner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -50%; /* Начинаем за пределами видимости */
+      width: 4px;
+      height: 100%;
+      background: #e10613;
+      box-shadow: 0 0 15px 3px #e10613, 0 0 25px 5px rgba(225, 6, 19, 0.7);
+      animation: scan-effect 3.5s linear infinite;
+      animation-delay: 1s; /* Задержка перед стартом анимации */
+    }
+    @keyframes scan-effect {
+      to {
+        left: 150%; /* Заканчиваем за пределами видимости */
       }
     }
     body {background:#0d0d0d;color:#fff;font-family:'Roboto', sans-serif;margin:0; line-height: 1.6;}
@@ -386,10 +420,9 @@
   </style>
 </head>
 <body>
-  <section class="main-bg">
-    <div class="torn-frame animate-on-scroll">
-      <h2 style="margin-bottom: 10px;">Распродажа</h2>
-      <h2 style="font-size: clamp; line-height: 1;">Черная Пятница</h2>
+  <section class="main-bg" style="padding-top: 40px; padding-bottom: 40px;">
+    <div class="scanner-banner animate-on-scroll">
+      <img src="assets/img/gallery3.png" alt="Черная Пятница Распродажа">
     </div>
     <div class="sale-banner animate-on-scroll" style="transition-delay: 0.1s;"><span class="sale-banner-text">15-30 НОЯБРЯ</span></div>
     <h3 class="animate-on-scroll is-visible" style="transition-delay: 0.3s; margin-top: 15px; margin-bottom: 0;"><span class="accent">Тело мечты с мега-скидкой!</span></h3>
