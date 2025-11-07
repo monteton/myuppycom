@@ -44,13 +44,14 @@
   </div>
 
   <script>
-    const counterId = 'myuppy-blackfriday'; // То же самое имя, что и на главной странице
+    const namespace = 'myuppy.com';
+    const key = 'blackfriday';
 
-    fetch(`https://api.products.aspose.app/statistics/api/${counterId}`)
+    fetch(`https://api.countapi.xyz/get/${namespace}/${key}`)
       .then(response => response.json())
       .then(data => {
-        // Этот сервис возвращает значение в поле "count"
-        document.getElementById('visits-counter').textContent = data.count || 0;
+        // Этот сервис возвращает значение в поле "value"
+        document.getElementById('visits-counter').textContent = data.value || 0;
       })
       .catch(error => {
         document.getElementById('visits-counter').textContent = 'Ошибка';

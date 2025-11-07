@@ -847,11 +847,12 @@
 
     <script>
       // Скрипт для подсчета посещений
-      const counterId = 'myuppy-blackfriday'; // Уникальное имя для вашего счетчика
+      const namespace = 'myuppy.com'; 
+      const key = 'blackfriday';
       
       document.addEventListener('DOMContentLoaded', function() {
         // Отправляем запрос для увеличения счетчика
-        fetch(`https://api.products.aspose.app/statistics/api/${counterId}`, { method: 'POST' }).catch(error => console.error('Ошибка счетчика:', error));
+        fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`).catch(error => console.error('Ошибка счетчика:', error));
       });
     </script>
 </body>
