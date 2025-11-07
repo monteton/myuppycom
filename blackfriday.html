@@ -847,12 +847,14 @@
 
     <script>
       // Скрипт для подсчета посещений
-      const namespace = 'myuppy.com'; 
-      const key = 'blackfriday';
+      const workspace = 'myuppy-com';
+      const counter = 'blackfriday';
       
       document.addEventListener('DOMContentLoaded', function() {
         // Отправляем запрос для увеличения счетчика
-        fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`).catch(error => console.error('Ошибка счетчика:', error));
+        fetch(`https://api.counterapi.com/v1/workspaces/${workspace}/counters/${counter}/up`, {
+          method: 'POST'
+        }).catch(error => console.error('Ошибка счетчика:', error));
       });
     </script>
 </body>

@@ -44,14 +44,14 @@
   </div>
 
   <script>
-    const namespace = 'myuppy.com';
-    const key = 'blackfriday';
+    const workspace = 'myuppy-com';
+    const counter = 'blackfriday';
 
-    fetch(`https://api.countapi.xyz/get/${namespace}/${key}`)
+    fetch(`https://api.counterapi.com/v1/workspaces/${workspace}/counters/${counter}`)
       .then(response => response.json())
       .then(data => {
-        // Этот сервис возвращает значение в поле "value"
-        document.getElementById('visits-counter').textContent = data.value || 0;
+        // Этот сервис возвращает значение в поле "count"
+        document.getElementById('visits-counter').textContent = data.count || 0;
       })
       .catch(error => {
         document.getElementById('visits-counter').textContent = 'Ошибка';
