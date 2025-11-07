@@ -44,14 +44,13 @@
   </div>
 
   <script>
-    // Уникальный идентификатор должен быть таким же, как на главной странице
-    const namespace = 'myuppy.com';
-    const key = 'blackfriday';
+    const counterId = 'myuppy-blackfriday'; // То же самое имя, что и на главной странице
 
-    fetch(`https://api.countapi.xyz/get/${namespace}/${key}`)
+    fetch(`https://api.products.aspose.app/statistics/api/${counterId}`)
       .then(response => response.json())
       .then(data => {
-        document.getElementById('visits-counter').textContent = data.value || 0;
+        // Этот сервис возвращает значение в поле "count"
+        document.getElementById('visits-counter').textContent = data.count || 0;
       })
       .catch(error => {
         document.getElementById('visits-counter').textContent = 'Ошибка';
