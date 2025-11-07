@@ -44,8 +44,9 @@
   </div>
 
   <script>
-    const namespace = 'nataliamakarenko.ru'; // То же самое имя, что и в blackfriday.html
-    const key = 'blackfriday-visits';
+    // Уникальный идентификатор должен быть таким же, как на главной странице
+    const namespace = 'myuppy.com';
+    const key = 'blackfriday';
 
     fetch(`https://api.countapi.xyz/get/${namespace}/${key}`)
       .then(response => response.json())
