@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Статистика Посещений</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #0d0d0d;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    .container {
+      padding: 40px;
+      background: #1c1b1b;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem;
+      color: #e10613;
+      margin: 0 0 15px 0;
+    }
+    .count {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Общее количество посещений</h1>
+    <p id="visits-counter" class="count">Загрузка...</p>
+  </div>
+
+  <script>
+    const namespace = 'nataliamakarenko.ru'; // То же самое имя, что и в blackfriday.html
+    const key = 'blackfriday-visits';
+
+    fetch(`https://api.countapi.xyz/get/${namespace}/${key}`)
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('visits-counter').textContent = data.value || 0;
+      })
+      .catch(error => {
+        document.getElementById('visits-counter').textContent = 'Ошибка';
+        console.error('Не удалось загрузить статистику:', error);
+      });
+  </script>
+</body>
+</html>
