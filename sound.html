@@ -4,7 +4,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SoulSound | Уникальная песня под ключ</title>
+  <title>Песня на заказ в подарок | Студия MyUppy Sound: Стихи, Музыка, Аранжировка</title>
+  <meta name="description"
+    content="Напишем песню про вашу историю! Демо-версия генерируется ИИ для быстрого согласования, финальная запись — профессиональными музыкантами в студии. Песни на свадьбу, юбилей, корпоративные гимны, рэп и шансон.">
+  <meta name="keywords"
+    content="песня на заказ, купить песню, стихи на заказ, песня на свадьбу, корпоративный гимн, песня в подарок, студия звукозаписи, переделка песен, рэп невесты, песня под ключ, уникальная песня, MyUppy Sound, аранжировка, текст песни, подарок на юбилей">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://myuppy.com/sound">
+  <meta property="og:title" content="Закажи хит про свою историю | MyUppy Sound">
+  <meta property="og:description"
+    content="Уникальные песни под ключ. Быстрые демо от ИИ, качественный продакшн от профи. Сделай незабываемый подарок!">
+  <meta property="og:image" content="https://myuppy.com/assets2/images/portfolio/julia_cover_rus.png">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "MyUppy Sound",
+    "url": "https://myuppy.com/sound",
+    "logo": "https://myuppy.com/logo.png",
+    "sameAs": [
+      "https://t.me/MyuppyTeam"
+    ],
+    "description": "Студия создания песен под ключ. Гибридный формат: ИИ для креатива и демо, профессиональные музыканты для записи и сведения.",
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Песня на свадьбу и Love Story",
+          "description": "Романтические песни про историю знакомства, первый танец."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Корпоративный гимн",
+          "description": "Пафосные и торжественные песни о компании, миссии и коллективе."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Песня в подарок на Юбилей",
+          "description": "Трогательные песни для родителей, друзей и коллег."
+        }
+      }
+    ],
+    "priceRange": "$$"
+  }
+  </script>
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=105999829', 'ym');
+
+    ym(105999829, 'init', { ssr: true, webvisor: true, clickmap: true, ecommerce: "dataLayer", accurateTrackBounce: true, trackLinks: true });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/105999829" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G0D0RW8JYG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-G0D0RW8JYG');
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -235,12 +316,14 @@
 
       <div class="flex items-center gap-4">
         <!-- Theme Toggle -->
-        <button id="theme-toggle"
-          class="p-2 rounded-full border border-adaptive text-adaptive hover:bg-adaptive hover:text-acid transition-colors"
-          aria-label="Toggle Theme">
-          <i data-lucide="sun" class="w-5 h-5 hidden light-icon"></i>
-          <i data-lucide="moon" class="w-5 h-5 dark-icon"></i>
-        </button>
+        <div class="flex flex-col items-center gap-1">
+          <button id="theme-toggle" title="Переключить тему оформления" aria-label="Переключить тему"
+            class="p-2 rounded-full border border-adaptive text-adaptive hover:bg-adaptive hover:text-acid transition-colors">
+            <i data-lucide="sun" class="w-5 h-5 hidden light-icon"></i>
+            <i data-lucide="moon" class="w-5 h-5 dark-icon"></i>
+          </button>
+          <span class="text-[10px] uppercase font-bold text-muted tracking-wider">Тема</span>
+        </div>
 
         <button id="mobile-menu-btn" class="md:hidden text-adaptive">
           <i data-lucide="menu"></i>
@@ -592,7 +675,7 @@
           <div class="space-y-12 md:space-y-24">
             <!-- Step 1 -->
             <div class="flex flex-col md:flex-row gap-8 md:gap-0">
-              <div class="flex-1 pl-12 md:pl-0 md:px-12 text-left md:text-right">
+              <div class="flex-1 pl-12 md:pl-0 md:pr-24 text-left md:text-right">
                 <div class="md:text-right">
                   <span
                     class="inline-block px-3 py-1 bg-card rounded text-acid text-xs font-bold uppercase tracking-wider mb-2">Шаг
@@ -611,7 +694,7 @@
 
             <!-- Step 2 -->
             <div class="flex flex-col md:flex-row gap-8 md:gap-0 md:flex-row-reverse">
-              <div class="flex-1 pl-12 md:pl-0 md:px-12 text-left md:text-right">
+              <div class="flex-1 pl-12 md:pr-0 md:pl-24 text-left md:text-left">
                 <div class="md:text-left">
                   <span
                     class="inline-block px-3 py-1 bg-card rounded text-acid text-xs font-bold uppercase tracking-wider mb-2">Шаг
@@ -630,7 +713,7 @@
 
             <!-- Step 3 -->
             <div class="flex flex-col md:flex-row gap-8 md:gap-0">
-              <div class="flex-1 pl-12 md:pl-0 md:px-12 text-left md:text-right">
+              <div class="flex-1 pl-12 md:pl-0 md:pr-24 text-left md:text-right">
                 <div class="md:text-right">
                   <span
                     class="inline-block px-3 py-1 bg-card rounded text-purple-500 text-xs font-bold uppercase tracking-wider mb-2">Шаг
@@ -649,7 +732,7 @@
 
             <!-- Step 4 -->
             <div class="flex flex-col md:flex-row gap-8 md:gap-0 md:flex-row-reverse">
-              <div class="flex-1 pl-12 md:pl-0 md:px-12 text-left md:text-right">
+              <div class="flex-1 pl-12 md:pr-0 md:pl-24 text-left md:text-left">
                 <div class="md:text-left">
                   <span
                     class="inline-block px-3 py-1 bg-card rounded text-purple-500 text-xs font-bold uppercase tracking-wider mb-2">Шаг
@@ -678,7 +761,7 @@
           <p class="text-muted">Выберите свой формат</p>
         </div>
 
-        <div class="grid grid-cols-1 gap-8 max-w-3xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           <!-- Basic Tariff -->
           <div class="glass-card p-8 md:p-12 flex flex-col hover:border-acid transition-colors duration-300">
             <h3 class="text-3xl font-display font-bold text-adaptive mb-2">Базовый</h3>
@@ -801,11 +884,12 @@
           <p class="text-muted">Послушайте примеры наших работ</p>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6" id="portfolio-items">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="portfolio-items">
           <!-- Item New: Julia -->
           <div class="portfolio-item group relative" data-audio-src="assets2/audio/ЮЛЯ.mp3">
             <div class="aspect-square w-full rounded-2xl overflow-hidden relative mb-4">
-              <img src="assets2/images/portfolio/julia_cover_rus.png" alt="Юля"
+              <img src="assets2/images/portfolio/julia_cover_rus.png"
+                alt="Песня-предложение руки и сердца на заказ, романтический подарок девушке"
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
               <div
                 class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
@@ -826,7 +910,8 @@
           <!-- Item 1: Birthday -->
           <div class="portfolio-item group relative" data-audio-src="assets2/audio/ДЕНЬ РОЖДЕНИЯ.mp3">
             <div class="aspect-square w-full rounded-2xl overflow-hidden relative mb-4">
-              <img src="assets2/images/portfolio/birthday_cover_rus.png" alt="День Рождения"
+              <img src="assets2/images/portfolio/birthday_cover_rus.png"
+                alt="Заказать песню на День Рождения, веселый поп-трек в подарок"
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
               <div
                 class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
@@ -848,7 +933,8 @@
           <!-- Item 2: Novosibirsk -->
           <div class="portfolio-item group relative" data-audio-src="assets2/audio/НОВОСИБИРСК 2026.mp3">
             <div class="aspect-square w-full rounded-2xl overflow-hidden relative mb-4">
-              <img src="assets2/images/portfolio/novosibirsk_cover_rus.png" alt="Новосибирск 2026"
+              <img src="assets2/images/portfolio/novosibirsk_cover_rus.png"
+                alt="Гимн города Новосибирск 2026, пример патриотической песни на заказ"
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
               <div
                 class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
@@ -870,7 +956,8 @@
           <!-- Item New: First Dance -->
           <div class="portfolio-item group relative" data-audio-src="assets2/audio/ПЕРВЫЙ ТАНЕЦ.mp3">
             <div class="aspect-square w-full rounded-2xl overflow-hidden relative mb-4">
-              <img src="assets2/images/portfolio/first_dance_cover_real.jpg" alt="Первый Танец"
+              <img src="assets2/images/portfolio/first_dance_cover_real.jpg"
+                alt="Песня для первого свадебного танца молодоженов, уникальный трек на свадьбу"
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
               <div
                 class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
@@ -892,7 +979,8 @@
           <!-- Item 3: Forgive Me -->
           <div class="portfolio-item group relative" data-audio-src="assets2/audio/ПРОСТИ МЕНЯ.mp3">
             <div class="aspect-square w-full rounded-2xl overflow-hidden relative mb-4">
-              <img src="assets2/images/portfolio/forgive_me_cover_rus.png" alt="Прости Меня"
+              <img src="assets2/images/portfolio/forgive_me_cover_rus.png"
+                alt="Трогательная песня-извинение для парня, пример лирического трека на заказ"
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
               <div
                 class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
@@ -914,7 +1002,8 @@
           <!-- Item 4: SC Prospekt -->
           <div class="portfolio-item group relative" data-audio-src="assets2/audio/СК ПРОСПЕКТ.mp3">
             <div class="aspect-square w-full rounded-2xl overflow-hidden relative mb-4">
-              <img src="assets2/images/portfolio/sk_prospekt_cover_rus.png" alt="СК Проспект"
+              <img src="assets2/images/portfolio/sk_prospekt_cover_rus.png"
+                alt="Корпоративный гимн строительной компании, пример песни для бизнеса"
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
               <div
                 class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
@@ -936,7 +1025,8 @@
           <!-- Item 5: Energetiki -->
           <div class="portfolio-item group relative" data-audio-src="assets2/audio/ЭНЕРГЕТИКИ ИНСКАЯ.mp3">
             <div class="aspect-square w-full rounded-2xl overflow-hidden relative mb-4">
-              <img src="assets2/images/portfolio/rzd_energy_cover_rus.png" alt="Энергетики Инская"
+              <img src="assets2/images/portfolio/rzd_energy_cover_rus.png"
+                alt="Производственный гимн для энергетиков, песня про рабочий коллектив"
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
               <div
                 class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
@@ -958,7 +1048,8 @@
           <!-- Item New: Ordynka -->
           <div class="portfolio-item group relative" data-audio-src="assets2/audio/ОРДЫНКА.mp3">
             <div class="aspect-square w-full rounded-2xl overflow-hidden relative mb-4">
-              <img src="assets2/images/portfolio/ordynka_forest_real.jpg" alt="Ордынка"
+              <img src="assets2/images/portfolio/ordynka_forest_real.jpg"
+                alt="Эстрадная песня для вокального конкурса, написание хита для фестиваля"
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
               <div
                 class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
@@ -1024,8 +1115,8 @@
       <div class="flex flex-col items-center pt-8 border-t border-adaptive/10 text-xs text-muted text-center">
         <div class="flex flex-col gap-2 items-center">
           <p>© 2026 myuppy.sound. Все права защищены.</p>
-          <p>myuppy.sound — проект <a href="https://myuppy.com"
-              class="hover:text-acid transition-colors">Myuppy.com</a></p>
+          <p>myuppy.sound — проект <a href="https://myuppy.com" class="hover:text-acid transition-colors">Myuppy.com</a>
+          </p>
           <p>Email: <a href="mailto:myuppy.com@gmail.com"
               class="hover:text-acid transition-colors">myuppy.com@gmail.com</a></p>
           <div class="flex flex-wrap justify-center gap-4 mt-2">
