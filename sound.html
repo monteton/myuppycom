@@ -16,7 +16,7 @@
   <meta property="og:title" content="Закажи хит про свою историю | MyUppy Sound">
   <meta property="og:description"
     content="Уникальные песни под ключ. Качественный продакшн от профи. Сделай незабываемый подарок!">
-  <meta property="og:image" content="https://myuppy.com/assets2/images/portfolio/julia_cover_rus.png">
+  <meta property="og:image" content="https://myuppy.com/assets2/images/portfolio/cover_rus.png">
   <meta property="og:locale" content="ru_RU">
 
   <!-- Twitter -->
@@ -25,7 +25,7 @@
   <meta name="twitter:url" content="https://myuppy.com/sound">
   <meta name="twitter:title" content="Закажи хит про свою историю | MyUppy Sound">
   <meta name="twitter:description" content="Уникальные песни под ключ.Качественный продакшн от профи.">
-  <meta name="twitter:image" content="https://myuppy.com/assets2/images/portfolio/julia_cover_rus.png">
+  <meta name="twitter:image" content="https://myuppy.com/assets2/images/portfolio/cover_rus.png">
 
   <!-- Schema.org -->
   <script type="application/ld+json">
@@ -300,7 +300,7 @@
   </style>
 </head>
 
-<body class="min-h-screen bg-adaptive text-adaptive font-sans selection:bg-acid selection:text-black">
+<body class="min-h-screen bg-adaptive text-adaptive font-sans selection:bg-acid selection:text-black light-theme">
 
   <!-- Header -->
   <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-6">
@@ -1350,13 +1350,13 @@
     // Theme Toggle Logic
     const themeBtn = document.getElementById('theme-toggle');
 
-    // Check local storage or system preference
+    // Check local storage
     const savedTheme = localStorage.getItem('theme');
-    const systemTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
 
-    // Apply initial theme
-    if (savedTheme === 'light' || (!savedTheme && systemTheme === 'light')) {
-      document.body.classList.add('light-theme');
+    // Apply initial theme (Light is default in HTML)
+    // Only switch to dark if user EXPLICITLY saved 'dark' previously
+    if (savedTheme === 'dark') {
+      document.body.classList.remove('light-theme');
     }
 
     if (themeBtn) {
