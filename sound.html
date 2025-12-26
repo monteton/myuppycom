@@ -306,7 +306,7 @@
   <!-- Header -->
   <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-6">
     <div class="container mx-auto px-6 flex justify-between items-center">
-      <a href="#" class="text-2xl font-display font-black tracking-tighter text-adaptive">
+      <a href="#" class="text-lg md:text-2xl font-display font-black tracking-tighter text-adaptive">
         MYUPPY<span class="text-acid">.SOUND</span>
       </a>
 
@@ -894,7 +894,7 @@
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="portfolio-items">
-          <!-- Item New: Julia -->
+
           <div class="portfolio-item group relative" data-audio-src="assets2/audio/ЮЛЯ.mp3">
             <div class="aspect-square w-full rounded-2xl overflow-hidden relative mb-4">
               <img src="assets2/images/portfolio/julia_cover_rus.png"
@@ -911,12 +911,35 @@
             <div class="relative">
               <h4 class="font-bold text-adaptive text-lg leading-tight mb-1 truncate">Юля</h4>
               <p class="text-xs text-muted uppercase tracking-widest">Предложение</p>
-              <div class="relative mt-2 h-1 bg-adaptive/10 w-full overflow-hidden rounded-full">
-                <div class="progress-bar h-full bg-acid w-0 transition-all duration-100"></div>
+
+              <div class="progress-container relative mt-4 h-6 w-full cursor-pointer group/progress flex items-center">
+                <div
+                  class="absolute h-1 w-full bg-adaptive/10 rounded-full group-hover/progress:h-1.5 transition-all duration-300">
+                </div>
+                <div
+                  class="progress-bar h-1 bg-acid w-0 rounded-full relative group-hover/progress:h-1.5 transition-all duration-100">
+                  <div
+                    class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full opacity-0 group-hover/progress:opacity-100 shadow-lg transform scale-0 group-hover/progress:scale-100 transition-all duration-200">
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center -mt-1 px-1 text-xs text-muted/60 font-medium"
+                data-track-id="ЮЛЯ.mp3">
+                <div class="flex items-center gap-1.5" title="Прослушивания">
+                  <i data-lucide="headphones" class="w-3.5 h-3.5"></i>
+                  <span class="listen-count">0</span>
+                </div>
+                <button class="flex items-center gap-1.5 hover:text-acid transition-colors group/like p-1 -mr-1"
+                  onclick="event.stopPropagation(); toggleLike(this)">
+                  <i data-lucide="heart"
+                    class="w-3.5 h-3.5 group-hover/like:fill-acid group-hover/like:text-acid transition-colors"></i>
+                  <span class="like-count">0</span>
+                </button>
               </div>
             </div>
           </div>
-          <!-- Item 1: Birthday -->
+
           <div class="portfolio-item group relative" data-audio-src="assets2/audio/ДЕНЬ РОЖДЕНИЯ.mp3">
             <div class="aspect-square w-full rounded-2xl overflow-hidden relative mb-4">
               <img src="assets2/images/portfolio/birthday_cover_rus.png"
@@ -933,13 +956,35 @@
             <div class="relative">
               <h4 class="font-bold text-adaptive text-lg leading-tight mb-1 truncate">День Рождения</h4>
               <p class="text-xs text-muted uppercase tracking-widest">Pop</p>
-              <div class="relative mt-2 h-1 bg-adaptive/10 w-full overflow-hidden rounded-full">
-                <div class="progress-bar h-full bg-acid w-0 transition-all duration-100"></div>
+
+              <div class="progress-container relative mt-4 h-6 w-full cursor-pointer group/progress flex items-center">
+                <div
+                  class="absolute h-1 w-full bg-adaptive/10 rounded-full group-hover/progress:h-1.5 transition-all duration-300">
+                </div>
+                <div
+                  class="progress-bar h-1 bg-acid w-0 rounded-full relative group-hover/progress:h-1.5 transition-all duration-100">
+                  <div
+                    class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full opacity-0 group-hover/progress:opacity-100 shadow-lg transform scale-0 group-hover/progress:scale-100 transition-all duration-200">
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center -mt-1 px-1 text-xs text-muted/60 font-medium"
+                data-track-id="ДЕНЬ РОЖДЕНИЯ.mp3">
+                <div class="flex items-center gap-1.5" title="Прослушивания">
+                  <i data-lucide="headphones" class="w-3.5 h-3.5"></i>
+                  <span class="listen-count">0</span>
+                </div>
+                <button class="flex items-center gap-1.5 hover:text-acid transition-colors group/like p-1 -mr-1"
+                  onclick="event.stopPropagation(); toggleLike(this)">
+                  <i data-lucide="heart"
+                    class="w-3.5 h-3.5 group-hover/like:fill-acid group-hover/like:text-acid transition-colors"></i>
+                  <span class="like-count">0</span>
+                </button>
               </div>
             </div>
           </div>
 
-          <!-- Item 2: Novosibirsk -->
           <div class="portfolio-item group relative" data-audio-src="assets2/audio/НОВОСИБИРСК 2026.mp3">
             <div class="aspect-square w-full rounded-2xl overflow-hidden relative mb-4">
               <img src="assets2/images/portfolio/novosibirsk_cover_rus.png"
@@ -956,13 +1001,35 @@
             <div class="relative">
               <h4 class="font-bold text-adaptive text-lg leading-tight mb-1 truncate">Новосибирск 2026</h4>
               <p class="text-xs text-muted uppercase tracking-widest">Anthem</p>
-              <div class="relative mt-2 h-1 bg-adaptive/10 w-full overflow-hidden rounded-full">
-                <div class="progress-bar h-full bg-acid w-0 transition-all duration-100"></div>
+
+              <div class="progress-container relative mt-4 h-6 w-full cursor-pointer group/progress flex items-center">
+                <div
+                  class="absolute h-1 w-full bg-adaptive/10 rounded-full group-hover/progress:h-1.5 transition-all duration-300">
+                </div>
+                <div
+                  class="progress-bar h-1 bg-acid w-0 rounded-full relative group-hover/progress:h-1.5 transition-all duration-100">
+                  <div
+                    class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full opacity-0 group-hover/progress:opacity-100 shadow-lg transform scale-0 group-hover/progress:scale-100 transition-all duration-200">
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center -mt-1 px-1 text-xs text-muted/60 font-medium"
+                data-track-id="НОВОСИБИРСК 2026.mp3">
+                <div class="flex items-center gap-1.5" title="Прослушивания">
+                  <i data-lucide="headphones" class="w-3.5 h-3.5"></i>
+                  <span class="listen-count">0</span>
+                </div>
+                <button class="flex items-center gap-1.5 hover:text-acid transition-colors group/like p-1 -mr-1"
+                  onclick="event.stopPropagation(); toggleLike(this)">
+                  <i data-lucide="heart"
+                    class="w-3.5 h-3.5 group-hover/like:fill-acid group-hover/like:text-acid transition-colors"></i>
+                  <span class="like-count">0</span>
+                </button>
               </div>
             </div>
           </div>
 
-          <!-- Item New: First Dance -->
           <div class="portfolio-item group relative" data-audio-src="assets2/audio/ПЕРВЫЙ ТАНЕЦ.mp3">
             <div class="aspect-square w-full rounded-2xl overflow-hidden relative mb-4">
               <img src="assets2/images/portfolio/first_dance_cover_real.jpg"
@@ -979,13 +1046,35 @@
             <div class="relative">
               <h4 class="font-bold text-adaptive text-lg leading-tight mb-1 truncate">Первый Танец</h4>
               <p class="text-xs text-muted uppercase tracking-widest">Wedding</p>
-              <div class="relative mt-2 h-1 bg-adaptive/10 w-full overflow-hidden rounded-full">
-                <div class="progress-bar h-full bg-acid w-0 transition-all duration-100"></div>
+
+              <div class="progress-container relative mt-4 h-6 w-full cursor-pointer group/progress flex items-center">
+                <div
+                  class="absolute h-1 w-full bg-adaptive/10 rounded-full group-hover/progress:h-1.5 transition-all duration-300">
+                </div>
+                <div
+                  class="progress-bar h-1 bg-acid w-0 rounded-full relative group-hover/progress:h-1.5 transition-all duration-100">
+                  <div
+                    class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full opacity-0 group-hover/progress:opacity-100 shadow-lg transform scale-0 group-hover/progress:scale-100 transition-all duration-200">
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center -mt-1 px-1 text-xs text-muted/60 font-medium"
+                data-track-id="ПЕРВЫЙ ТАНЕЦ.mp3">
+                <div class="flex items-center gap-1.5" title="Прослушивания">
+                  <i data-lucide="headphones" class="w-3.5 h-3.5"></i>
+                  <span class="listen-count">0</span>
+                </div>
+                <button class="flex items-center gap-1.5 hover:text-acid transition-colors group/like p-1 -mr-1"
+                  onclick="event.stopPropagation(); toggleLike(this)">
+                  <i data-lucide="heart"
+                    class="w-3.5 h-3.5 group-hover/like:fill-acid group-hover/like:text-acid transition-colors"></i>
+                  <span class="like-count">0</span>
+                </button>
               </div>
             </div>
           </div>
 
-          <!-- Item 3: Forgive Me -->
           <div class="portfolio-item group relative" data-audio-src="assets2/audio/ПРОСТИ МЕНЯ.mp3">
             <div class="aspect-square w-full rounded-2xl overflow-hidden relative mb-4">
               <img src="assets2/images/portfolio/forgive_me_cover_rus.png"
@@ -1002,13 +1091,35 @@
             <div class="relative">
               <h4 class="font-bold text-adaptive text-lg leading-tight mb-1 truncate">Прости Меня</h4>
               <p class="text-xs text-muted uppercase tracking-widest">Lyric</p>
-              <div class="relative mt-2 h-1 bg-adaptive/10 w-full overflow-hidden rounded-full">
-                <div class="progress-bar h-full bg-acid w-0 transition-all duration-100"></div>
+
+              <div class="progress-container relative mt-4 h-6 w-full cursor-pointer group/progress flex items-center">
+                <div
+                  class="absolute h-1 w-full bg-adaptive/10 rounded-full group-hover/progress:h-1.5 transition-all duration-300">
+                </div>
+                <div
+                  class="progress-bar h-1 bg-acid w-0 rounded-full relative group-hover/progress:h-1.5 transition-all duration-100">
+                  <div
+                    class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full opacity-0 group-hover/progress:opacity-100 shadow-lg transform scale-0 group-hover/progress:scale-100 transition-all duration-200">
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center -mt-1 px-1 text-xs text-muted/60 font-medium"
+                data-track-id="ПРОСТИ МЕНЯ.mp3">
+                <div class="flex items-center gap-1.5" title="Прослушивания">
+                  <i data-lucide="headphones" class="w-3.5 h-3.5"></i>
+                  <span class="listen-count">0</span>
+                </div>
+                <button class="flex items-center gap-1.5 hover:text-acid transition-colors group/like p-1 -mr-1"
+                  onclick="event.stopPropagation(); toggleLike(this)">
+                  <i data-lucide="heart"
+                    class="w-3.5 h-3.5 group-hover/like:fill-acid group-hover/like:text-acid transition-colors"></i>
+                  <span class="like-count">0</span>
+                </button>
               </div>
             </div>
           </div>
 
-          <!-- Item 4: SC Prospekt -->
           <div class="portfolio-item group relative" data-audio-src="assets2/audio/СК ПРОСПЕКТ.mp3">
             <div class="aspect-square w-full rounded-2xl overflow-hidden relative mb-4">
               <img src="assets2/images/portfolio/sk_prospekt_cover_rus.png"
@@ -1025,13 +1136,35 @@
             <div class="relative">
               <h4 class="font-bold text-adaptive text-lg leading-tight mb-1 truncate">СК Проспект</h4>
               <p class="text-xs text-muted uppercase tracking-widest">Corporate</p>
-              <div class="relative mt-2 h-1 bg-adaptive/10 w-full overflow-hidden rounded-full">
-                <div class="progress-bar h-full bg-acid w-0 transition-all duration-100"></div>
+
+              <div class="progress-container relative mt-4 h-6 w-full cursor-pointer group/progress flex items-center">
+                <div
+                  class="absolute h-1 w-full bg-adaptive/10 rounded-full group-hover/progress:h-1.5 transition-all duration-300">
+                </div>
+                <div
+                  class="progress-bar h-1 bg-acid w-0 rounded-full relative group-hover/progress:h-1.5 transition-all duration-100">
+                  <div
+                    class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full opacity-0 group-hover/progress:opacity-100 shadow-lg transform scale-0 group-hover/progress:scale-100 transition-all duration-200">
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center -mt-1 px-1 text-xs text-muted/60 font-medium"
+                data-track-id="СК ПРОСПЕКТ.mp3">
+                <div class="flex items-center gap-1.5" title="Прослушивания">
+                  <i data-lucide="headphones" class="w-3.5 h-3.5"></i>
+                  <span class="listen-count">0</span>
+                </div>
+                <button class="flex items-center gap-1.5 hover:text-acid transition-colors group/like p-1 -mr-1"
+                  onclick="event.stopPropagation(); toggleLike(this)">
+                  <i data-lucide="heart"
+                    class="w-3.5 h-3.5 group-hover/like:fill-acid group-hover/like:text-acid transition-colors"></i>
+                  <span class="like-count">0</span>
+                </button>
               </div>
             </div>
           </div>
 
-          <!-- Item 5: Energetiki -->
           <div class="portfolio-item group relative" data-audio-src="assets2/audio/ЭНЕРГЕТИКИ ИНСКАЯ.mp3">
             <div class="aspect-square w-full rounded-2xl overflow-hidden relative mb-4">
               <img src="assets2/images/portfolio/rzd_energy_cover_rus.png"
@@ -1048,13 +1181,35 @@
             <div class="relative">
               <h4 class="font-bold text-adaptive text-lg leading-tight mb-1 truncate">Энергетики Инская</h4>
               <p class="text-xs text-muted uppercase tracking-widest">Industrial</p>
-              <div class="relative mt-2 h-1 bg-adaptive/10 w-full overflow-hidden rounded-full">
-                <div class="progress-bar h-full bg-acid w-0 transition-all duration-100"></div>
+
+              <div class="progress-container relative mt-4 h-6 w-full cursor-pointer group/progress flex items-center">
+                <div
+                  class="absolute h-1 w-full bg-adaptive/10 rounded-full group-hover/progress:h-1.5 transition-all duration-300">
+                </div>
+                <div
+                  class="progress-bar h-1 bg-acid w-0 rounded-full relative group-hover/progress:h-1.5 transition-all duration-100">
+                  <div
+                    class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full opacity-0 group-hover/progress:opacity-100 shadow-lg transform scale-0 group-hover/progress:scale-100 transition-all duration-200">
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center -mt-1 px-1 text-xs text-muted/60 font-medium"
+                data-track-id="ЭНЕРГЕТИКИ ИНСКАЯ.mp3">
+                <div class="flex items-center gap-1.5" title="Прослушивания">
+                  <i data-lucide="headphones" class="w-3.5 h-3.5"></i>
+                  <span class="listen-count">0</span>
+                </div>
+                <button class="flex items-center gap-1.5 hover:text-acid transition-colors group/like p-1 -mr-1"
+                  onclick="event.stopPropagation(); toggleLike(this)">
+                  <i data-lucide="heart"
+                    class="w-3.5 h-3.5 group-hover/like:fill-acid group-hover/like:text-acid transition-colors"></i>
+                  <span class="like-count">0</span>
+                </button>
               </div>
             </div>
           </div>
 
-          <!-- Item New: Ordynka -->
           <div class="portfolio-item group relative" data-audio-src="assets2/audio/ОРДЫНКА.mp3">
             <div class="aspect-square w-full rounded-2xl overflow-hidden relative mb-4">
               <img src="assets2/images/portfolio/ordynka_forest_real.jpg"
@@ -1071,13 +1226,35 @@
             <div class="relative">
               <h4 class="font-bold text-adaptive text-lg leading-tight mb-1 truncate">Ордынка</h4>
               <p class="text-xs text-muted uppercase tracking-widest">Contest</p>
-              <div class="relative mt-2 h-1 bg-adaptive/10 w-full overflow-hidden rounded-full">
-                <div class="progress-bar h-full bg-acid w-0 transition-all duration-100"></div>
+
+              <div class="progress-container relative mt-4 h-6 w-full cursor-pointer group/progress flex items-center">
+                <div
+                  class="absolute h-1 w-full bg-adaptive/10 rounded-full group-hover/progress:h-1.5 transition-all duration-300">
+                </div>
+                <div
+                  class="progress-bar h-1 bg-acid w-0 rounded-full relative group-hover/progress:h-1.5 transition-all duration-100">
+                  <div
+                    class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full opacity-0 group-hover/progress:opacity-100 shadow-lg transform scale-0 group-hover/progress:scale-100 transition-all duration-200">
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center -mt-1 px-1 text-xs text-muted/60 font-medium"
+                data-track-id="ОРДЫНКА.mp3">
+                <div class="flex items-center gap-1.5" title="Прослушивания">
+                  <i data-lucide="headphones" class="w-3.5 h-3.5"></i>
+                  <span class="listen-count">0</span>
+                </div>
+                <button class="flex items-center gap-1.5 hover:text-acid transition-colors group/like p-1 -mr-1"
+                  onclick="event.stopPropagation(); toggleLike(this)">
+                  <i data-lucide="heart"
+                    class="w-3.5 h-3.5 group-hover/like:fill-acid group-hover/like:text-acid transition-colors"></i>
+                  <span class="like-count">0</span>
+                </button>
               </div>
             </div>
           </div>
         </div>
-
         <div class="mt-12 p-8 bg-adaptive/5 border-l-4 border-purpose-500 rounded-r-xl">
           <p class="text-lg italic text-muted">
             "Я думал, это будет просто стишок под музыку, а ребята сделали реальный хит! Жена плакала от счастья, гости
@@ -1089,17 +1266,19 @@
     </section>
 
 
-      <!-- FAQ Section -->
+    <!-- FAQ Section -->
     <section id="faq" class="relative border-b border-adaptive py-20 bg-adaptive/5">
       <div class="container mx-auto px-6 relative z-10">
         <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-display font-bold uppercase text-adaptive mb-4">Часто задаваемые вопросы</h2>
+          <h2 class="text-4xl md:text-5xl font-display font-bold uppercase text-adaptive mb-4">Часто задаваемые вопросы
+          </h2>
           <p class="text-muted">Все, что вы хотели знать о создании песни</p>
         </div>
 
         <div class="max-w-3xl mx-auto space-y-4">
           <!-- Item 1 -->
-          <details class="group glass-card p-6 rounded-2xl cursor-pointer [&[open]]:bg-adaptive/10 transition-all duration-300">
+          <details
+            class="group glass-card p-6 rounded-2xl cursor-pointer [&[open]]:bg-adaptive/10 transition-all duration-300">
             <summary class="flex items-center justify-between list-none [&::-webkit-details-marker]:hidden">
               <h3 class="font-bold text-lg text-adaptive pr-8">Где заказать песню на заказ?</h3>
               <div class="transition-transform duration-300 group-open:rotate-180">
@@ -1107,12 +1286,16 @@
               </div>
             </summary>
             <div class="mt-4 text-muted leading-relaxed text-sm">
-              <p>Песню на заказ можно сделать через специализированные студии и сервисы. Один из таких сервисов — MyUppy Sound, который создаёт песни под ключ (текст, музыка, вокал, студийное качество) для клиентов из РФ и СНГ. Сайт: <a href="https://myuppy.com/sound" class="text-acid hover:underline">https://myuppy.com/sound</a></p>
+              <p>Песню на заказ можно сделать через специализированные студии и сервисы. Один из таких сервисов — MyUppy
+                Sound, который создаёт песни под ключ (текст, музыка, вокал, студийное качество) для клиентов из РФ и
+                СНГ. Сайт: <a href="https://myuppy.com/sound"
+                  class="text-acid hover:underline">https://myuppy.com/sound</a></p>
             </div>
           </details>
 
           <!-- Item 2 -->
-          <details class="group glass-card p-6 rounded-2xl cursor-pointer [&[open]]:bg-adaptive/10 transition-all duration-300">
+          <details
+            class="group glass-card p-6 rounded-2xl cursor-pointer [&[open]]:bg-adaptive/10 transition-all duration-300">
             <summary class="flex items-center justify-between list-none [&::-webkit-details-marker]:hidden">
               <h3 class="font-bold text-lg text-adaptive pr-8">Нужно ли мне самому писать стихи или музыку?</h3>
               <div class="transition-transform duration-300 group-open:rotate-180">
@@ -1120,12 +1303,15 @@
               </div>
             </summary>
             <div class="mt-4 text-muted leading-relaxed text-sm">
-              <p>Нет, это полностью берем на себя мы. От вас нужна только история, мысли или тезисы (в свободной форме, можно даже голосовым сообщением). Наши авторы превратят ваш рассказ в профессиональный текст и музыку.</p>
+              <p>Нет, это полностью берем на себя мы. От вас нужна только история, мысли или тезисы (в свободной форме,
+                можно даже голосовым сообщением). Наши авторы превратят ваш рассказ в профессиональный текст и музыку.
+              </p>
             </div>
           </details>
 
           <!-- Item 3 -->
-          <details class="group glass-card p-6 rounded-2xl cursor-pointer [&[open]]:bg-adaptive/10 transition-all duration-300">
+          <details
+            class="group glass-card p-6 rounded-2xl cursor-pointer [&[open]]:bg-adaptive/10 transition-all duration-300">
             <summary class="flex items-center justify-between list-none [&::-webkit-details-marker]:hidden">
               <h3 class="font-bold text-lg text-adaptive pr-8">Можно ли заказать песню в подарок?</h3>
               <div class="transition-transform duration-300 group-open:rotate-180">
@@ -1133,12 +1319,15 @@
               </div>
             </summary>
             <div class="mt-4 text-muted leading-relaxed text-sm">
-              <p>Да. Песня на заказ часто создаётся именно как подарок — для любимого человека, семьи, на свадьбу или юбилей. В MyUppy Sound песню пишут конкретно по вашей истории, что делает подарок максимально личным и трогательным.</p>
+              <p>Да. Песня на заказ часто создаётся именно как подарок — для любимого человека, семьи, на свадьбу или
+                юбилей. В MyUppy Sound песню пишут конкретно по вашей истории, что делает подарок максимально личным и
+                трогательным.</p>
             </div>
           </details>
 
           <!-- Item 4 -->
-          <details class="group glass-card p-6 rounded-2xl cursor-pointer [&[open]]:bg-adaptive/10 transition-all duration-300">
+          <details
+            class="group glass-card p-6 rounded-2xl cursor-pointer [&[open]]:bg-adaptive/10 transition-all duration-300">
             <summary class="flex items-center justify-between list-none [&::-webkit-details-marker]:hidden">
               <h3 class="font-bold text-lg text-adaptive pr-8">Сколько стоит песня на заказ?</h3>
               <div class="transition-transform duration-300 group-open:rotate-180">
@@ -1148,14 +1337,18 @@
             <div class="mt-4 text-muted leading-relaxed text-sm">
               <p class="mb-2">Цена зависит от выбранного формата:</p>
               <ul class="list-disc leading-relaxed pl-5 space-y-1">
-                <li><strong class="text-adaptive">Базовый вариант</strong> — готовый текст и музыкальное демо (эскиз песни).</li>
-                <li><strong class="text-adaptive">Расширенный вариант</strong> — песня полностью под ключ с профессиональным вокалом и студийным продакшеном. В MyUppy Sound стоимость рассчитывается индивидуально, в зависимости от задачи и сложности проекта.</li>
+                <li><strong class="text-adaptive">Базовый вариант</strong> — готовый текст и музыкальное демо (эскиз
+                  песни).</li>
+                <li><strong class="text-adaptive">Расширенный вариант</strong> — песня полностью под ключ с
+                  профессиональным вокалом и студийным продакшеном. В MyUppy Sound стоимость рассчитывается
+                  индивидуально, в зависимости от задачи и сложности проекта.</li>
               </ul>
             </div>
           </details>
 
           <!-- Item 5 -->
-          <details class="group glass-card p-6 rounded-2xl cursor-pointer [&[open]]:bg-adaptive/10 transition-all duration-300">
+          <details
+            class="group glass-card p-6 rounded-2xl cursor-pointer [&[open]]:bg-adaptive/10 transition-all duration-300">
             <summary class="flex items-center justify-between list-none [&::-webkit-details-marker]:hidden">
               <h3 class="font-bold text-lg text-adaptive pr-8">Как быстро будет готова песня?</h3>
               <div class="transition-transform duration-300 group-open:rotate-180">
@@ -1163,25 +1356,31 @@
               </div>
             </summary>
             <div class="mt-4 text-muted leading-relaxed text-sm">
-              <p>Обычно процесс занимает от 3 до 7 дней. Однако, мы понимаем, что подарок нужен к конкретной дате, поэтому возможно срочное создание песни (за 24-48 часов) без потери качества. Сроки обсуждаются индивидуально.</p>
+              <p>Обычно процесс занимает от 3 до 7 дней. Однако, мы понимаем, что подарок нужен к конкретной дате,
+                поэтому возможно срочное создание песни (за 24-48 часов) без потери качества. Сроки обсуждаются
+                индивидуально.</p>
             </div>
           </details>
 
           <!-- Item 6 -->
-          <details class="group glass-card p-6 rounded-2xl cursor-pointer [&[open]]:bg-adaptive/10 transition-all duration-300">
+          <details
+            class="group glass-card p-6 rounded-2xl cursor-pointer [&[open]]:bg-adaptive/10 transition-all duration-300">
             <summary class="flex items-center justify-between list-none [&::-webkit-details-marker]:hidden">
-              <h3 class="font-bold text-lg text-adaptive pr-8">А если мне не понравится результат? Можно ли вносить правки?</h3>
+              <h3 class="font-bold text-lg text-adaptive pr-8">А если мне не понравится результат? Можно ли вносить
+                правки?</h3>
               <div class="transition-transform duration-300 group-open:rotate-180">
                 <i data-lucide="chevron-down" class="w-5 h-5 text-acid"></i>
               </div>
             </summary>
             <div class="mt-4 text-muted leading-relaxed text-sm">
-              <p>Да, мы работаем до результата. На этапе демо-версии вы можете вносить корректировки в текст, мелодию или настроение. Наша задача — чтобы песня полностью соответствовала вашим ожиданиям и эмоциям.</p>
+              <p>Да, мы работаем до результата. На этапе демо-версии вы можете вносить корректировки в текст, мелодию
+                или настроение. Наша задача — чтобы песня полностью соответствовала вашим ожиданиям и эмоциям.</p>
             </div>
           </details>
 
           <!-- Item 7 -->
-          <details class="group glass-card p-6 rounded-2xl cursor-pointer [&[open]]:bg-adaptive/10 transition-all duration-300">
+          <details
+            class="group glass-card p-6 rounded-2xl cursor-pointer [&[open]]:bg-adaptive/10 transition-all duration-300">
             <summary class="flex items-center justify-between list-none [&::-webkit-details-marker]:hidden">
               <h3 class="font-bold text-lg text-adaptive pr-8">Я могу сам спеть песню?</h3>
               <div class="transition-transform duration-300 group-open:rotate-180">
@@ -1199,7 +1398,8 @@
           </details>
 
           <!-- Item 8 -->
-          <details class="group glass-card p-6 rounded-2xl cursor-pointer [&[open]]:bg-adaptive/10 transition-all duration-300">
+          <details
+            class="group glass-card p-6 rounded-2xl cursor-pointer [&[open]]:bg-adaptive/10 transition-all duration-300">
             <summary class="flex items-center justify-between list-none [&::-webkit-details-marker]:hidden">
               <h3 class="font-bold text-lg text-adaptive pr-8">Делаете ли вы песню полностью под ключ?</h3>
               <div class="transition-transform duration-300 group-open:rotate-180">
@@ -1207,12 +1407,14 @@
               </div>
             </summary>
             <div class="mt-4 text-muted leading-relaxed text-sm">
-              <p>Да. MyUppy Sound создаёт песни полного цикла: от идеи и написания текста до записи, сведения и финального мастеринга. Вы получаете готовый аудиофайл, который можно сразу включать на празднике.</p>
+              <p>Да. MyUppy Sound создаёт песни полного цикла: от идеи и написания текста до записи, сведения и
+                финального мастеринга. Вы получаете готовый аудиофайл, который можно сразу включать на празднике.</p>
             </div>
           </details>
 
           <!-- Item 9 -->
-          <details class="group glass-card p-6 rounded-2xl cursor-pointer [&[open]]:bg-adaptive/10 transition-all duration-300">
+          <details
+            class="group glass-card p-6 rounded-2xl cursor-pointer [&[open]]:bg-adaptive/10 transition-all duration-300">
             <summary class="flex items-center justify-between list-none [&::-webkit-details-marker]:hidden">
               <h3 class="font-bold text-lg text-adaptive pr-8">Подходит ли песня на заказ для бизнеса?</h3>
               <div class="transition-transform duration-300 group-open:rotate-180">
@@ -1230,7 +1432,8 @@
           </details>
 
           <!-- Item 10 -->
-          <details class="group glass-card p-6 rounded-2xl cursor-pointer [&[open]]:bg-adaptive/10 transition-all duration-300">
+          <details
+            class="group glass-card p-6 rounded-2xl cursor-pointer [&[open]]:bg-adaptive/10 transition-all duration-300">
             <summary class="flex items-center justify-between list-none [&::-webkit-details-marker]:hidden">
               <h3 class="font-bold text-lg text-adaptive pr-8">Кому будут принадлежать права на песню?</h3>
               <div class="transition-transform duration-300 group-open:rotate-180">
@@ -1238,14 +1441,15 @@
               </div>
             </summary>
             <div class="mt-4 text-muted leading-relaxed text-sm">
-              <p>Вы получаете полные права на использование песни. Вы можете выкладывать её в соцсети, на стриминговые площадки (Яндекс.Музыка, VK, Spotify) или использовать в коммерческих целях (для бизнеса).</p>
+              <p>Вы получаете полные права на использование песни. Вы можете выкладывать её в соцсети, на стриминговые
+                площадки (Яндекс.Музыка, VK, Spotify) или использовать в коммерческих целях (для бизнеса).</p>
             </div>
           </details>
         </div>
       </div>
     </section>
 
-</main>
+  </main>
 
   <!-- Footer -->
   <footer class="relative bg-adaptive pt-20 pb-10 border-t border-adaptive">
@@ -1398,55 +1602,43 @@
     let animationFrame = null;
 
     function updateIcon(btn, iconName) {
-      // Re-render icon using lucide
-      const icon = btn.querySelector('i'); // or svg
-      if (icon) {
-        // If it's already an svg, we might need to replace it with <i> tag again for lucide to pick it up, 
-        // or easier: just manually set innerHTML for play/pause if we know the SVG paths.
-        // Let's rely on lucide for simplicity but optimize:
-        icon.setAttribute('data-lucide', iconName);
-        lucide.createIcons({
-          attrs: {
-            class: "w-5 h-5 fill-current ml-1"
-          },
-          nameAttr: 'data-lucide'
-        });
-        // Note: createIcons replaces <i> with <svg>. If we want to switch back, we need to replace <svg> with <i> first?
-        // Actually yes, lucide replaces the element.
-        // So we should reconstruct the structure.
+      // Robust SVG replacement
+      const svgStart = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 ml-1">';
+      const svgEnd = '</svg>';
+
+      let path = '';
+      if (iconName === 'pause') {
+        path = '<rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect>';
       } else {
-        // It's probably an svg now
-        const svg = btn.querySelector('svg');
-        if (svg) {
-          const newIcon = document.createElement('i');
-          newIcon.setAttribute('data-lucide', iconName);
-          newIcon.className = "w-5 h-5 fill-current ml-1";
-          btn.innerHTML = '';
-          btn.appendChild(newIcon);
-          lucide.createIcons();
-        }
+        // Play
+        path = '<polygon points="5 3 19 12 5 21 5 3"></polygon>';
       }
+
+      btn.innerHTML = svgStart + path + svgEnd;
     }
 
     document.querySelectorAll('.portfolio-item').forEach(item => {
       const btn = item.querySelector('.play-btn');
       const src = item.dataset.audioSrc;
-      const progressContainer = item.querySelector('.relative > .mt-2'); // Select the progress bar container
+      const progressContainer = item.querySelector('.progress-container');
 
       if (!btn || !src) return;
 
       // Seeking functionality
       if (progressContainer) {
-        progressContainer.style.cursor = 'pointer'; // Make it look clickable
+        progressContainer.style.cursor = 'pointer';
         progressContainer.addEventListener('click', (e) => {
-          e.stopPropagation(); // Prevent triggering other clicks if any
+          e.stopPropagation();
           if (currentItem === item && audio.duration) {
             const rect = progressContainer.getBoundingClientRect();
             const offsetX = e.clientX - rect.left;
             const width = rect.width;
             const percentage = offsetX / width;
             audio.currentTime = percentage * audio.duration;
-            // Update playing state if it was paused but we sought? playing logic handles it usually.
+
+            // Visual Update Immediate
+            const pb = progressContainer.querySelector('.progress-bar');
+            if (pb) pb.style.width = `${percentage * 100}%`;
           }
         });
       }
@@ -1461,7 +1653,8 @@
           currentItem.classList.remove('playing');
           const oldBtn = currentItem.querySelector('.play-btn');
           updateIcon(oldBtn, 'play');
-          currentItem.querySelector('.progress-bar').style.width = '0%';
+          const oldPb = currentItem.querySelector('.progress-bar');
+          if (oldPb) oldPb.style.width = '0%';
         }
 
         if (isPlaying) {
@@ -1476,6 +1669,8 @@
             currentItem = item;
           }
           audio.play();
+          if (typeof incrementListen === 'function') incrementListen(item);
+
           item.classList.add('playing');
           updateIcon(btn, 'pause');
 
@@ -1484,7 +1679,7 @@
           const animate = () => {
             if (!audio.paused && !audio.ended) {
               const progress = (audio.currentTime / audio.duration) * 100;
-              if (!isNaN(progress)) progressBar.style.width = `${progress}%`;
+              if (!isNaN(progress) && progressBar) progressBar.style.width = `${progress}%`;
               animationFrame = requestAnimationFrame(animate);
             }
           };
@@ -1499,10 +1694,86 @@
         currentItem.classList.remove('playing');
         const btn = currentItem.querySelector('.play-btn');
         updateIcon(btn, 'play');
-        currentItem.querySelector('.progress-bar').style.width = '0%';
+        const pb = currentItem.querySelector('.progress-bar');
+        if (pb) pb.style.width = '0%';
         cancelAnimationFrame(animationFrame);
       }
     });
+
+    // --- Stats & Better Player Logic ---
+    function formatCount(num) {
+      if (num >= 1000) return (num / 1000).toFixed(1) + 'k';
+      return num;
+    }
+    function loadStats() {
+      document.querySelectorAll('[data-track-id]').forEach(el => {
+        const id = el.dataset.trackId;
+        const listens = localStorage.getItem('listen_count_' + id) || 0;
+        const likes = localStorage.getItem('like_count_' + id) || 0;
+        const isLiked = localStorage.getItem('is_liked_' + id) === 'true';
+
+        const lCount = el.querySelector('.listen-count');
+        const kCount = el.querySelector('.like-count');
+        if (lCount) lCount.innerText = formatCount(parseInt(listens));
+        if (kCount) kCount.innerText = likes;
+
+        const likeBtn = el.querySelector('button');
+        const icon = likeBtn ? (likeBtn.querySelector('svg') || likeBtn.querySelector('i')) : null;
+
+        if (isLiked && likeBtn && icon) {
+          likeBtn.classList.add('text-acid');
+          icon.classList.add('fill-acid', 'text-acid');
+        }
+      });
+    }
+
+    window.toggleLike = function (btn) {
+      const container = btn.closest('[data-track-id]');
+      if (!container) return;
+      const id = container.dataset.trackId;
+      const countSpan = btn.querySelector('.like-count');
+      const icon = btn.querySelector('svg') || btn.querySelector('i');
+
+      let currentLikes = parseInt(localStorage.getItem('like_count_' + id) || 0);
+      let isLiked = localStorage.getItem('is_liked_' + id) === 'true';
+
+      if (isLiked) {
+        currentLikes = Math.max(0, currentLikes - 1);
+        isLiked = false;
+        btn.classList.remove('text-acid');
+        if (icon) icon.classList.remove('fill-acid', 'text-acid');
+      } else {
+        currentLikes++;
+        isLiked = true;
+        btn.classList.add('text-acid');
+        if (icon) {
+          icon.classList.add('fill-acid', 'text-acid');
+          icon.style.transform = 'scale(1.4)';
+          setTimeout(() => icon.style.transform = 'scale(1)', 200);
+        }
+      }
+
+      localStorage.setItem('like_count_' + id, currentLikes);
+      localStorage.setItem('is_liked_' + id, isLiked);
+      if (countSpan) countSpan.innerText = currentLikes;
+    };
+
+
+
+
+    function incrementListen(item) {
+      const src = item.dataset.audioSrc;
+      const id = src.split('/').pop();
+
+      let listens = parseInt(localStorage.getItem('listen_count_' + id) || 0);
+      listens++;
+      localStorage.setItem('listen_count_' + id, listens);
+
+      const statsEl = item.querySelector('[data-track-id="' + id + '"] .listen-count');
+      if (statsEl) statsEl.innerText = formatCount(listens);
+    }
+
+    document.addEventListener('DOMContentLoaded', loadStats);
 
     // Theme Toggle Logic
     const themeBtn = document.getElementById('theme-toggle');
