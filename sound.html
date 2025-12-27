@@ -358,7 +358,7 @@
 
   <main>
     <!-- Hero -->
-    <div class="relative flex flex-col justify-start pt-28 md:pt-32 pb-16 md:pb-24 overflow-hidden bg-adaptive">
+    <div class="relative flex flex-col justify-start pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden bg-adaptive">
       <!-- Background Abstract -->
       <div id="blob-1"
         class="absolute top-0 right-0 w-[800px] h-[800px] bg-acid rounded-full blur-[150px] opacity-10 pointer-events-none transition-transform duration-75">
@@ -367,12 +367,7 @@
         class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-700 rounded-full blur-[150px] opacity-10 pointer-events-none transition-transform duration-75">
       </div>
 
-      <!-- Marquee (Moved) -->
-      <div class="w-full opacity-10 pointer-events-none select-none mb-4 md:mb-8">
-        <div class="whitespace-nowrap animate-marquee text-[12vw] font-display font-black leading-none text-adaptive">
-          MYUPPY.SOUND • EMOTIONS • MEMORY • MYUPPY.SOUND • EMOTIONS • MEMORY •
-        </div>
-      </div>
+      
 
       <div class="container mx-auto px-6 relative z-20">
         <div class="max-w-4xl">
@@ -412,6 +407,12 @@
         </div>
       </div>
 
+      <!-- Marquee (Moved) -->
+      <div class="w-full opacity-10 pointer-events-none select-none mb-4 md:mb-8">
+        <div class="whitespace-nowrap animate-marquee text-[12vw] font-display font-black leading-none text-adaptive">
+          MYUPPY.SOUND • EMOTIONS • MEMORY • MYUPPY.SOUND • EMOTIONS • MEMORY •
+        </div>
+      </div>
       <div class="absolute bottom-10 right-10 hidden md:flex items-center gap-4 text-muted/40">
         <div
           class="w-12 h-12 border border-adaptive/20 rounded-full flex items-center justify-center animate-pulse-slow">
@@ -1585,6 +1586,15 @@
         mobileMenu.classList.add('hidden');
         mobileMenu.classList.remove('flex');
       });
+    // Close mobile menu on outside click
+    document.addEventListener('click', (e) => {
+      if (isMenuOpen && !mobileMenu.contains(e.target) && !mobileBtn.contains(e.target)) {
+        isMenuOpen = false;
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+      }
+    });
+
     });
 
     // Parallax Effect
