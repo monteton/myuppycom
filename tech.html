@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru" class="dark scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Solutions | Myuppy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-black text-white selection:bg-purple-500 selection:text-white">
+
+    <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 cursor-pointer group">
+                <img src="images/logo.png"
+                    class="w-14 h-14 md:w-16 md:h-16 object-contain transform group-hover:rotate-12 transition-transform duration-300 mix-blend-screen"
+                    alt="MyUppy Logo">
+                <span class="text-2xl font-display font-bold tracking-tight">MYUPPY</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                    data-i18n="nav.home">Главная</a>
+                <a href="video.html" class="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                    data-i18n="nav.video">Видео</a>
+                <a href="marketing.html" class="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                    data-i18n="nav.marketing">Маркетинг</a>
+                <a href="tech.html" class="text-sm font-medium text-white transition-colors"
+                    data-i18n="nav.tech">Технологии</a>
+                <a href="branding.html" class="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                    data-i18n="nav.branding">Бренд</a>
+                <a href="sound.html" class="text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                    data-i18n="nav.sound">Звук</a>
+
+                <div class="flex items-center bg-white/5 border border-white/10 rounded-full p-1 ml-4">
+                    <button
+                        class="lang-btn px-3 py-1 rounded-full text-[10px] font-bold transition-all bg-purple-600 text-white"
+                        data-lang="ru">RU</button>
+                    <button
+                        class="lang-btn px-3 py-1 rounded-full text-[10px] font-bold transition-all text-gray-500 hover:text-white"
+                        data-lang="en">EN</button>
+                </div>
+            </div>
+            <div class="flex md:hidden items-center bg-white/5 border border-white/10 rounded-full p-1 mr-4">
+                <button
+                    class="lang-btn px-3 py-1 rounded-full text-[10px] font-bold transition-all bg-purple-600 text-white"
+                    data-lang="ru">RU</button>
+                <button
+                    class="lang-btn px-3 py-1 rounded-full text-[10px] font-bold transition-all text-gray-500 hover:text-white"
+                    data-lang="en">EN</button>
+            </div>
+            <button id="menu-btn" class="md:hidden text-white"><i data-lucide="menu"></i></button>
+        </div>
+
+        <div id="mobile-menu"
+            class="hidden md:hidden glass absolute top-full left-0 w-full p-6 animate-in slide-in-from-top duration-300">
+            <div class="flex flex-col gap-6 items-center">
+                <button id="close-menu-btn" class="absolute top-4 right-4"><i data-lucide="x"></i></button>
+                <a href="index.html" class="text-xl font-display font-medium text-gray-300">Главная</a>
+                <a href="video.html" class="text-xl font-display font-medium text-gray-300">Видео</a>
+                <a href="marketing.html" class="text-xl font-display font-medium text-gray-300">Маркетинг</a>
+                <a href="tech.html" class="text-xl font-display font-medium text-gray-300">Технологии</a>
+                <a href="branding.html" class="text-xl font-display font-medium text-gray-300">Бренд</a>
+                <a href="sound.html" class="text-xl font-display font-medium text-gray-300">Звук</a>
+
+                <button
+                    class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-4 rounded-2xl font-bold"
+                    data-i18n="nav.contact">СВЯЗАТЬСЯ</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-32 pb-20">
+        <div class="container mx-auto px-6">
+            <button onclick="window.location.href='index.html'"
+                class="flex items-center gap-2 text-gray-500 hover:text-white transition-colors mb-12">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> <span data-i18n="service.back">Назад на главную</span>
+            </button>
+
+            <div class="flex flex-col lg:flex-row gap-16 items-start">
+                <div class="lg:w-1/2">
+                    <div
+                        class="w-20 h-20 rounded-3xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center mb-8 shadow-2xl shadow-purple-900/20">
+                        <i data-lucide="code" class="text-white w-10 h-10"></i>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-display font-black mb-8 leading-tight uppercase"
+                        data-i18n="tech.title">
+                        Технические решения
+                    </h1>
+                    <p class="text-xl text-gray-400 leading-relaxed mb-12" data-i18n="tech.subtitle">
+                        Цифровая экосистема вашего бизнеса. Разработка сайтов, ИИ-ботов и приложений.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+                        <div class="flex items-center gap-4 glass p-4 rounded-2xl border border-white/5">
+                            <i data-lucide="check-circle-2" class="text-green-500 w-6 h-6 flex-shrink-0"></i>
+                            <span class="font-medium text-gray-200 text-sm" data-i18n="tech.tag.1">Web-разработка</span>
+                        </div>
+                        <div class="flex items-center gap-4 glass p-4 rounded-2xl border border-white/5">
+                            <i data-lucide="check-circle-2" class="text-green-500 w-6 h-6 flex-shrink-0"></i>
+                            <span class="font-medium text-gray-200 text-sm" data-i18n="tech.tag.2">ИИ-чатботы</span>
+                        </div>
+                        <div class="flex items-center gap-4 glass p-4 rounded-2xl border border-white/5">
+                            <i data-lucide="check-circle-2" class="text-green-500 w-6 h-6 flex-shrink-0"></i>
+                            <span class="font-medium text-gray-200 text-sm" data-i18n="tech.tag.3">Мобильные
+                                приложения</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button
+                            class="px-10 py-5 glass text-white rounded-2xl font-bold flex items-center justify-center gap-2">
+                            <i data-lucide="message-square" class="w-5 h-5"></i> <span
+                                data-i18n="service.cta.price">Узнать стоимость</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 w-full">
+                    <div
+                        class="relative aspect-video rounded-[2.5rem] overflow-hidden group shadow-2xl border border-white/10">
+                        <img src="images/tech_hero.png" alt="Technology Solutions Concept"
+                            class="w-full h-full object-cover" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60">
+                        </div>
+                    </div>
+
+                    <div class="mt-12 grid grid-cols-2 gap-6">
+                        <div class="glass p-8 rounded-3xl border border-white/5">
+                            <div class="text-3xl font-display font-bold text-white mb-2">120%</div>
+                            <div class="text-gray-500 text-[10px] font-bold uppercase tracking-widest"
+                                data-i18n="service.growth">Рост показателей</div>
+                        </div>
+                        <div class="glass p-8 rounded-3xl border border-white/5">
+                            <div class="text-3xl font-display font-bold text-white mb-2">45k</div>
+                            <div class="text-gray-500 text-[10px] font-bold uppercase tracking-widest"
+                                data-i18n="service.users">Активных пользователей</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="mt-32">
+                <h2 class="text-3xl font-display font-bold mb-12" data-i18n="service.process">Процесс работы</h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Step 1 -->
+                    <div
+                        class="relative p-8 glass rounded-3xl border border-white/5 group hover:bg-white/5 transition-colors">
+                        <div class="w-12 h-12 rounded-full bg-emerald-600/20 flex items-center justify-center mb-6">
+                            <i data-lucide="file-code" class="text-emerald-400 w-6 h-6"></i>
+                        </div>
+                        <div class="h-1 w-12 bg-emerald-600 rounded-full mb-6"></div>
+                        <h3 class="text-xl font-bold mb-3 text-white" data-i18n="tech.process.1.title">Техническое
+                            задание</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="tech.process.1.desc">Сбор требований
+                            и архитектура.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div
+                        class="relative p-8 glass rounded-3xl border border-white/5 group hover:bg-white/5 transition-colors">
+                        <div class="w-12 h-12 rounded-full bg-emerald-600/20 flex items-center justify-center mb-6">
+                            <i data-lucide="layout" class="text-emerald-400 w-6 h-6"></i>
+                        </div>
+                        <div class="h-1 w-12 bg-emerald-600 rounded-full mb-6"></div>
+                        <h3 class="text-xl font-bold mb-3 text-white" data-i18n="tech.process.2.title">Прототипирование
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="tech.process.2.desc">Интерактивные
+                            прототипы UI/UX.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div
+                        class="relative p-8 glass rounded-3xl border border-white/5 group hover:bg-white/5 transition-colors">
+                        <div class="w-12 h-12 rounded-full bg-emerald-600/20 flex items-center justify-center mb-6">
+                            <i data-lucide="terminal" class="text-emerald-400 w-6 h-6"></i>
+                        </div>
+                        <div class="h-1 w-12 bg-emerald-600 rounded-full mb-6"></div>
+                        <h3 class="text-xl font-bold mb-3 text-white" data-i18n="tech.process.3.title">Разработка</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="tech.process.3.desc">Frontend и
+                            Backend разработка.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div
+                        class="relative p-8 glass rounded-3xl border border-white/5 group hover:bg-white/5 transition-colors">
+                        <div class="w-12 h-12 rounded-full bg-emerald-600/20 flex items-center justify-center mb-6">
+                            <i data-lucide="server" class="text-emerald-400 w-6 h-6"></i>
+                        </div>
+                        <div class="h-1 w-12 bg-emerald-600 rounded-full mb-6"></div>
+                        <h3 class="text-xl font-bold mb-3 text-white" data-i18n="tech.process.4.title">QA и Релиз</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed" data-i18n="tech.process.4.desc">Тестирование и
+                            деплой.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer Copied -->
+    <footer class="bg-black py-20 border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <img src="images/logo.png" class="w-8 h-8 object-contain mix-blend-screen" alt="MyUppy Logo">
+                        <span class="text-2xl font-display font-bold tracking-tight text-white">MYUPPY</span>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-8" data-i18n="footer.desc">Раздвигаем границы
+                        цифрового продакшна через ИИ, дизайн и кинематографическое качество.</p>
+                    <div class="flex gap-4">
+                        <i data-lucide="instagram"
+                            class="w-5 h-5 text-gray-500 hover:text-white cursor-pointer transition-colors"></i>
+                        <i data-lucide="twitter"
+                            class="w-5 h-5 text-gray-500 hover:text-white cursor-pointer transition-colors"></i>
+                        <i data-lucide="linkedin"
+                            class="w-5 h-5 text-gray-500 hover:text-white cursor-pointer transition-colors"></i>
+                        <i data-lucide="youtube"
+                            class="w-5 h-5 text-gray-500 hover:text-white cursor-pointer transition-colors"></i>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6" data-i18n="footer.services">Услуги</h4>
+                    <ul class="space-y-4 text-gray-500 text-sm">
+                        <li><a href="video.html" class="hover:text-white">AI Animation</a></li>
+                        <li><a href="tech.html" class="hover:text-white">Technical Solutions</a></li>
+                        <li><a href="branding.html" class="hover:text-white">Branding</a></li>
+                        <li><a href="sound.html" class="hover:text-white">Sound Design</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6" data-i18n="footer.company">Компания</h4>
+                    <ul class="space-y-4 text-gray-500 text-sm">
+                        <li class="hover:text-white cursor-pointer" data-i18n="footer.about">О нас</li>
+                        <li class="hover:text-white cursor-pointer" data-i18n="footer.portfolio">Портфолио</li>
+                        <li class="hover:text-white cursor-pointer" data-i18n="footer.contact">Контакты</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6" data-i18n="footer.news">Рассылка</h4>
+                    <div class="relative">
+                        <input type="email" placeholder="Email"
+                            class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-purple-500" />
+                        <button
+                            class="absolute right-2 top-2 bg-purple-600 text-white px-3 py-1 rounded-md text-[10px] font-bold">OK</button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="pt-8 border-t border-white/5 flex flex-col md:row justify-between items-center text-gray-600 text-[10px]">
+                <p>© 2024 MYUPPY AGENCY. <span data-i18n="footer.rights">ВСЕ ПРАВА ЗАЩИЩЕНЫ</span>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
