@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Марафон «Лучшая версия себя»</title>
+  <meta name="description" content="Фитнес-марафон Натальи Макаренко. Старт в феврале.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            spring: {
+              50: '#f7fee7',  /* Very light lime for main backgrounds */
+              100: '#ecfccb', /* Light lime */
+              200: '#d9f99d',
+              300: '#DFFF4F', /* The Main Acid Lime Brand Color */
+              400: '#a3e635',
+              500: '#84cc16', /* Darker lime for text contrast */
+              600: '#65a30d',
+              700: '#4d7c0f',
+            },
+            fresh: {
+              50: '#fff0f8',
+              100: '#ffe6f3',
+              400: '#f472b6',
+              500: '#ec4899',
+              550: '#ff2da5', /* Hot Pink for Buttons */
+              600: '#db2777', /* Darker Pink */
+            }
+          },
+          animation: {
+            blob: "blob 7s infinite",
+          },
+          keyframes: {
+            blob: {
+              "0%": {
+                transform: "translate(0px, 0px) scale(1)",
+              },
+              "33%": {
+                transform: "translate(30px, -50px) scale(1.1)",
+              },
+              "66%": {
+                transform: "translate(-20px, 20px) scale(0.9)",
+              },
+              "100%": {
+                transform: "translate(0px, 0px) scale(1)",
+              },
+            },
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="font-sans text-gray-900 antialiased selection:bg-spring-200 selection:text-spring-900">
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+    <!-- Decorative Background Elements -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+      <div
+        class="absolute -top-20 -left-20 w-96 h-96 bg-spring-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-blob">
+      </div>
+      <div
+        class="absolute top-0 -right-20 w-96 h-96 bg-spring-200 rounded-full mix-blend-multiply filter blur-2xl opacity-60 animate-blob animation-delay-2000">
+      </div>
+      <div
+        class="absolute -bottom-32 left-20 w-96 h-96 bg-spring-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-4000">
+      </div>
+      <img src="images2/natali.JPG" alt="Fitness background"
+        class="absolute inset-0 w-full h-full object-cover opacity-50" />
+    </div>
+
+    <div class="container mx-auto px-4 z-10 relative text-center">
+      <div
+        class="inline-block px-6 py-2 rounded-full bg-spring-300 text-gray-900 font-bold text-sm md:text-lg mb-6 md:mb-10 shadow-sm tracking-wide">
+        СТАРТ В ФЕВРАЛЕ
+      </div>
+
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 md:mb-8 leading-tight">
+        МАРАФОН<br />
+        <span class="text-spring-600">
+          «ЛУЧШАЯ ВЕРСИЯ СЕБЯ»
+        </span>
+      </h1>
+
+      <p class="text-lg md:text-2xl text-gray-700 mb-8 md:mb-12 max-w-4xl mx-auto font-medium">
+        Фитнес-марафон Натальи Макаренко
+      </p>
+
+      <div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-12 md:mb-16">
+        <div
+          class="flex items-center bg-white/90 backdrop-blur-sm px-6 py-4 rounded-3xl shadow-md border border-gray-100 max-w-2xl">
+          <i data-lucide="users" class="w-8 h-8 text-spring-500 mr-4 flex-shrink-0"></i>
+          <span class="text-gray-800 text-base md:text-lg font-medium text-left">
+            Уже более <span class="text-gray-900 font-bold">2000</span> участниц получили результат в виде потерянных
+            килограммов и стройного тела
+          </span>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <button onclick="document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })"
+          class="bg-gradient-to-r from-fresh-550 to-fresh-600 text-white font-bold rounded-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 active:translate-y-0 text-lg px-8 py-4">
+          ХОЧУ УЧАСТВОВАТЬ
+        </button>
+      </div>
+    </div>
+
+    <div class="absolute bottom-10 animate-bounce text-spring-500">
+      <i data-lucide="arrow-down" class="w-10 h-10"></i>
+    </div>
+  </section>
+
+  <!-- PainPoints Section -->
+  <section class="py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto text-center mb-16">
+        <h2 class="text-2xl md:text-6xl font-bold text-gray-900 mb-10 leading-tight">
+          Хватит обещать себе начать <br /><span class="text-spring-500">«С ПОНЕДЕЛЬНИКА»!</span>
+        </h2>
+        <p class="text-2xl text-gray-700 mb-12">
+          Сейчас — идеальный момент, чтобы всего за месяц:
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8 text-left">
+          <!-- Item 1 -->
+          <div
+            class="flex items-start p-8 bg-spring-50 rounded-3xl border border-spring-200 transition hover:shadow-lg hover:border-spring-300">
+            <i data-lucide="check-circle-2" class="w-8 h-8 text-fresh-500 mr-5 flex-shrink-0 mt-1"></i>
+            <span class="text-gray-800 font-medium text-xl leading-relaxed">Сбросить упрямые килограммы.</span>
+          </div>
+          <!-- Item 2 -->
+          <div
+            class="flex items-start p-8 bg-spring-50 rounded-3xl border border-spring-200 transition hover:shadow-lg hover:border-spring-300">
+            <i data-lucide="check-circle-2" class="w-8 h-8 text-fresh-500 mr-5 flex-shrink-0 mt-1"></i>
+            <span class="text-gray-800 font-medium text-xl leading-relaxed">Придать рельеф телу и контур лицу.</span>
+          </div>
+          <!-- Item 3 -->
+          <div
+            class="flex items-start p-8 bg-spring-50 rounded-3xl border border-spring-200 transition hover:shadow-lg hover:border-spring-300">
+            <i data-lucide="check-circle-2" class="w-8 h-8 text-fresh-500 mr-5 flex-shrink-0 mt-1"></i>
+            <span class="text-gray-800 font-medium text-xl leading-relaxed">Начать просыпаться бодрой по утрам и
+              почувствовать лёгкость.</span>
+          </div>
+          <!-- Item 4 -->
+          <div
+            class="flex items-start p-8 bg-spring-50 rounded-3xl border border-spring-200 transition hover:shadow-lg hover:border-spring-300">
+            <i data-lucide="check-circle-2" class="w-8 h-8 text-fresh-500 mr-5 flex-shrink-0 mt-1"></i>
+            <span class="text-gray-800 font-medium text-xl leading-relaxed">Полюбить свое отражение в зеркале и купить
+              новые наряды к Весне</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Block 3 -->
+  <section class="py-24 bg-spring-300">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center gap-16 max-w-7xl mx-auto">
+
+        <!-- Text Column -->
+        <div class="md:w-1/2">
+          <h3 class="text-3xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
+            Кому точно нужно на марафон?
+          </h3>
+          <p class="text-xl md:text-2xl text-gray-900 font-bold mb-8">Если ты:</p>
+          <ul class="space-y-6 mb-12">
+            <li class="flex items-start text-gray-900 text-xl font-medium">
+              <i data-lucide="x-circle" class="w-8 h-8 text-fresh-600 mr-4 flex-shrink-0 mt-1"></i>
+              <span>Никак не можешь похудеть, вернуть энергию и разочаровалась в бесконечных диетах</span>
+            </li>
+            <li class="flex items-start text-gray-900 text-xl font-medium">
+              <i data-lucide="x-circle" class="w-8 h-8 text-fresh-600 mr-4 flex-shrink-0 mt-1"></i>
+              <span>Всё делаешь «правильно» - но вес стоит</span>
+            </li>
+            <li class="flex items-start text-gray-900 text-xl font-medium">
+              <i data-lucide="x-circle" class="w-8 h-8 text-fresh-600 mr-4 flex-shrink-0 mt-1"></i>
+              <span>Страдаешь от постоянных срывов и чувства вины из-за переедания</span>
+            </li>
+            <li class="flex items-start text-gray-900 text-xl font-medium">
+              <i data-lucide="x-circle" class="w-8 h-8 text-fresh-600 mr-4 flex-shrink-0 mt-1"></i>
+              <span>Недовольна своим отражением в зеркале и испытываешь стресс перед каждым отпуском</span>
+            </li>
+            <li class="flex items-start text-gray-900 text-xl font-medium">
+              <i data-lucide="x-circle" class="w-8 h-8 text-fresh-600 mr-4 flex-shrink-0 mt-1"></i>
+              <span>Имеешь дряблое тело, слабые мышцы и отечность</span>
+            </li>
+            <li class="flex items-start text-gray-900 text-xl font-medium">
+              <i data-lucide="x-circle" class="w-8 h-8 text-fresh-600 mr-4 flex-shrink-0 mt-1"></i>
+              <span>Хочешь изменить свою жизнь, но не знаешь с чего начать</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Image Column -->
+        <div class="md:w-1/2 space-y-10">
+          <div class="relative">
+            <div class="absolute inset-0 bg-fresh-400 rounded-[4rem] rotate-3 transform opacity-20"></div>
+            <img src="images2/natalya_macarenko.jpg" alt="Наталья Макаренко"
+              class="relative rounded-[4rem] shadow-2xl w-full h-auto object-cover transform -rotate-2 transition hover:rotate-0 duration-500 border-8 border-white" />
+          </div>
+
+          <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border-l-8 border-fresh-500">
+            <p class="text-gray-700 text-xl italic leading-relaxed">
+              "Я, <span class="font-bold text-gray-900">Наталья Макаренко</span>, знаю,
+              что можно по-другому. Мне 53, и я живу в теле, которое люблю. Вот уже несколько лет я помогаю женщинам
+              стать лучшей версией себя с помощью моей <span class="font-bold">проверенной системы питания и простых
+                тренировок</span>."
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Block 4 -->
+  <section class="py-24 bg-gray-800 text-white text-center relative overflow-hidden">
+    <div
+      class="absolute top-0 right-0 w-64 h-64 bg-spring-500 rounded-full mix-blend-overlay filter blur-3xl opacity-20">
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+      <h2 class="text-4xl md:text-6xl font-bold mb-8">Хочешь перемен?<br />Значит ты в нужном месте!</h2>
+      <p class="text-2xl md:text-3xl max-w-5xl mx-auto opacity-90 leading-relaxed font-light">
+        Марафон «Лучшая версия себя» - это 45 дней, которые полностью изменят твоё отношение к себе, своему телу и своей
+        жизни.
+      </p>
+    </div>
+  </section>
+
+  <!-- ProgramDetails Section -->
+  <!-- ProgramDetails Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-12">Этот Марафон для тебя если ты:</h2>
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div
+          class="p-8 rounded-[2.5rem] bg-spring-50 border border-spring-100 hover:shadow-lg transition duration-300 hover:-translate-y-1 h-full flex items-center justify-center">
+          <p class="text-xl font-semibold text-gray-800 leading-relaxed">Хочешь похудеть и вернуть любовь к себе</p>
+        </div>
+        <div
+          class="p-8 rounded-[2.5rem] bg-spring-50 border border-spring-100 hover:shadow-lg transition duration-300 hover:-translate-y-1 h-full flex items-center justify-center">
+          <p class="text-xl font-semibold text-gray-800 leading-relaxed">Хочешь обрести поддерживающее окружение</p>
+        </div>
+        <div
+          class="p-8 rounded-[2.5rem] bg-spring-50 border border-spring-100 hover:shadow-lg transition duration-300 hover:-translate-y-1 h-full flex items-center justify-center">
+          <p class="text-xl font-semibold text-gray-800 leading-relaxed">Хочешь стать той, кем всегда и мечтала быть!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Block 6 -->
+  <section class="py-24 bg-gradient-to-b from-white to-spring-100" id="program">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl md:text-6xl font-bold text-center text-gray-900 mb-20">Что тебя ждёт?</h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Item 1 -->
+        <div
+          class="bg-white p-8 rounded-[2.5rem] shadow-lg hover:shadow-2xl transition duration-300 border border-gray-100 group h-full">
+          <div class="w-24 h-24 rounded-3xl overflow-hidden relative mb-6">
+            <img src="images2/set1.png" class="absolute w-[300%] max-w-none h-full object-cover top-0 left-0"
+              alt="Похудение" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Прощай, лишние кг!</h3>
+          <p class="text-gray-600 text-lg leading-relaxed">Ты легко и с удовольствием избавишься от 3-7 кг за время
+            марафона, почувствуешь лёгкость и свободу движений.</p>
+        </div>
+
+        <!-- Item 2 -->
+        <div
+          class="bg-white p-8 rounded-[2.5rem] shadow-lg hover:shadow-2xl transition duration-300 border border-gray-100 group h-full">
+          <div class="w-24 h-24 rounded-3xl overflow-hidden relative mb-6">
+            <img src="images2/set1.png" class="absolute w-[300%] max-w-none h-full object-cover top-0 left-[-100%]"
+              alt="Упругое тело" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Подтянутое, упругое тело</h3>
+          <p class="text-gray-600 text-lg leading-relaxed">Мы будем работать над тем, чтобы ты могла с гордостью носить
+            любую одежду и кайфовать от своего отражения в зеркале.</p>
+        </div>
+
+        <!-- Item 3 -->
+        <div
+          class="bg-white p-8 rounded-[2.5rem] shadow-lg hover:shadow-2xl transition duration-300 border border-gray-100 group h-full">
+          <div class="w-24 h-24 rounded-3xl overflow-hidden relative mb-6">
+            <img src="images2/set1.png" class="absolute w-[300%] max-w-none h-full object-cover top-0 left-[-200%]"
+              alt="Питание" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Полезное питание</h3>
+          <p class="text-gray-600 text-lg leading-relaxed">Забудь о строгих диетах. Ты научишься интуитивно понимать
+            своё тело, составлять вкусное и сбалансированное меню.</p>
+        </div>
+
+        <!-- Item 4 -->
+        <div
+          class="bg-white p-8 rounded-[2.5rem] shadow-lg hover:shadow-2xl transition duration-300 border border-gray-100 group h-full">
+          <div class="w-24 h-24 rounded-3xl overflow-hidden relative mb-6">
+            <img src="images2/set2.png" class="absolute w-[300%] max-w-none h-full object-cover top-0 left-0"
+              alt="Энергия" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Больше энергии</h3>
+          <p class="text-gray-600 text-lg leading-relaxed">С помощью марафона ты сможешь вернуть себе жизненную силу и
+            уверенность. Меньше усталости, больше жизни.</p>
+        </div>
+
+        <!-- Item 5 -->
+        <div
+          class="bg-white p-8 rounded-[2.5rem] shadow-lg hover:shadow-2xl transition duration-300 border border-gray-100 group h-full">
+          <div class="w-24 h-24 rounded-3xl overflow-hidden relative mb-6">
+            <img src="images2/set2.png" class="absolute w-[300%] max-w-none h-full object-cover top-0 left-[-100%]"
+              alt="Поддержка" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Поддержка и сообщество</h3>
+          <p class="text-gray-600 text-lg leading-relaxed">Ты не будешь одна. В нашем закрытом чате ты найдешь таких же
+            женщин, как ты, и мою личную поддержку.</p>
+        </div>
+
+        <!-- Item 6 -->
+        <div
+          class="bg-white p-8 rounded-[2.5rem] shadow-lg hover:shadow-2xl transition duration-300 border border-gray-100 group h-full">
+          <div class="w-24 h-24 rounded-3xl overflow-hidden relative mb-6">
+            <img src="images2/set2.png" class="absolute w-[300%] max-w-none h-full object-cover top-0 left-[-200%]"
+              alt="Знания" />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Знания на всю жизнь</h3>
+          <p class="text-gray-600 text-lg leading-relaxed">Это обучающая программа. За 45 дней ты освоишь систему,
+            которая поможет тебе поддерживать результат долгие годы.</p>
+        </div>
+      </div>
+
+      <!-- Item 7 (Full Width) -->
+      <div
+        class="bg-gray-100 mt-10 p-8 md:p-12 rounded-[2.5rem] shadow-lg hover:shadow-xl transition duration-300 border border-gray-200 group h-full md:col-span-2 lg:col-span-3 flex flex-col md:flex-row items-center gap-10 overflow-hidden">
+        <div class="md:w-1/2 z-10 text-left">
+          <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 leading-tight">Удобное мобильное приложение с
+            огромной базой знаний по питанию и тренировкам.</h3>
+          <p class="text-gray-600 text-lg leading-relaxed">Прямо в твоем телефоне, не требующее скачивания.</p>
+        </div>
+
+        <div class="md:w-1/2 w-full relative">
+          <!-- App Carousel -->
+          <div class="relative group max-w-lg mx-auto" id="app-carousel-wrapper">
+            <div class="overflow-hidden" id="app-carousel-container">
+              <div class="flex transition-transform duration-500 ease-out" id="app-track">
+                <!-- Slide 1 -->
+                <div class="w-full md:w-1/3 flex-shrink-0 px-8 md:px-2">
+                  <div class="aspect-[9/16] bg-gray-100 rounded-3xl overflow-hidden relative shadow-md">
+                    <img src="images2/app.png" alt="App Screen 1" class="w-full h-full object-cover" />
+                  </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="w-full md:w-1/3 flex-shrink-0 px-8 md:px-2">
+                  <div class="aspect-[9/16] bg-gray-100 rounded-3xl overflow-hidden relative shadow-md">
+                    <img src="images2/app1.png" alt="App Screen 2" class="w-full h-full object-cover" />
+                  </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="w-full md:w-1/3 flex-shrink-0 px-8 md:px-2">
+                  <div class="aspect-[9/16] bg-gray-100 rounded-3xl overflow-hidden relative shadow-md">
+                    <img src="images2/app2.png" alt="App Screen 3" class="w-full h-full object-cover" />
+                  </div>
+                </div>
+              </div>
+              <!-- Mobile Pagination Dots -->
+              <div class="flex justify-center mt-6 space-x-2 md:hidden" id="app-carousel-dots">
+                <!-- Dots will be generated by JS -->
+              </div>
+
+              <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                  const track = document.getElementById('app-track');
+                  const slides = Array.from(track.children);
+                  const dotsContainer = document.getElementById('app-carousel-dots');
+
+                  let currentIndex = 0;
+                  let slidesPerView = 1; // Default mobile
+
+                  let touchStartX = 0;
+                  let touchEndX = 0;
+
+                  function updateSlidesPerView() {
+                    if (window.innerWidth >= 768) {
+                      slidesPerView = 3;
+                    } else {
+                      slidesPerView = 1; // Show 1 phone on mobile
+                    }
+                    updateCarousel();
+                  }
+
+                  function updateCarousel() {
+                    const maxIndex = Math.max(0, slides.length - slidesPerView);
+                    if (currentIndex > maxIndex) currentIndex = maxIndex;
+                    if (currentIndex < 0) currentIndex = 0;
+
+                    const translateX = -(currentIndex * (100 / slidesPerView));
+                    track.style.transform = `translateX(${translateX}%)`;
+
+                    updateDots();
+                  }
+
+                  function updateDots() {
+                    dotsContainer.innerHTML = '';
+                    // Only needed for mobile really, as desktop shows all 3
+                    if (window.innerWidth < 768) {
+                      slides.forEach((_, index) => {
+                        // Since we show 3 items max and on mobile 1 item per view,
+                        // we can just create a dot for each slide.
+                        const dot = document.createElement('button');
+                        dot.className = `w-3 h-3 rounded-full transition-colors duration-300 ${index === currentIndex ? 'bg-spring-500' : 'bg-gray-300'}`;
+                        dot.addEventListener('click', () => {
+                          currentIndex = index;
+                          updateCarousel();
+                        });
+                        dotsContainer.appendChild(dot);
+                      });
+                    }
+                  }
+
+                  track.addEventListener('touchstart', (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                  }, { passive: true });
+
+                  track.addEventListener('touchend', (e) => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipe();
+                  }, { passive: true });
+
+                  function handleSwipe() {
+                    const threshold = 30;
+                    if (touchStartX - touchEndX > threshold) {
+                      const maxIndex = Math.max(0, slides.length - slidesPerView);
+                      if (currentIndex < maxIndex) {
+                        currentIndex++;
+                        updateCarousel();
+                      }
+                    }
+                    if (touchEndX - touchStartX > threshold) {
+                      if (currentIndex > 0) {
+                        currentIndex--;
+                        updateCarousel();
+                      }
+                    }
+                  }
+
+                  window.addEventListener('resize', updateSlidesPerView);
+                  updateSlidesPerView();
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Prizes Section -->
+  <section class="py-24 bg-white overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-20">
+        <div class="inline-flex items-center justify-center p-4 bg-spring-300 rounded-full mb-6 shadow-sm">
+          <i data-lucide="trophy" class="w-8 h-8 text-gray-800"></i>
+        </div>
+        <h2 class="text-4xl md:text-6xl font-bold text-gray-900">ПРИЗОВОЙ ФОНД ЗА РЕЗУЛЬТАТЫ</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <!-- 2nd Place -->
+        <div class="order-2 md:order-1 flex flex-col items-center">
+          <div
+            class="bg-white p-8 rounded-[3rem] w-full h-full flex flex-col items-center text-center transform hover:-translate-y-2 transition duration-300 border border-gray-100 shadow-xl">
+            <div
+              class="w-16 h-16 bg-spring-100 rounded-full flex items-center justify-center font-bold text-3xl text-gray-600 mb-6 border-2 border-spring-200">
+              2</div>
+            <img src="images2/prize-2.png" alt="Массажер"
+              class="w-48 h-48 object-cover rounded-full mb-8 shadow-md border-4 border-gray-50" />
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">Дарсонваль с 4-мя насадками </h3>
+            <p class="text-gray-500 text-lg">Для красоты лица, волос и здоровья тела</p>
+          </div>
+        </div>
+
+        <!-- 1st Place -->
+        <div class="order-1 md:order-2 flex flex-col items-center">
+          <div
+            class="bg-gradient-to-b from-spring-200 to-spring-300 p-10 rounded-[3rem] w-full h-full flex flex-col items-center text-center shadow-2xl transform md:-translate-y-6 hover:-translate-y-8 transition duration-300 relative border border-spring-400">
+            <div
+              class="absolute -top-8 w-20 h-20 bg-fresh-550 rounded-full flex items-center justify-center font-bold text-3xl text-white shadow-lg border-4 border-white">
+              1</div>
+            <div class="mt-10 mb-8">
+              <img src="images2/prize-1.png" alt="Беговая дорожка"
+                class="w-64 h-64 object-cover rounded-full shadow-lg border-8 border-white" />
+            </div>
+            <h3 class="text-3xl font-bold text-gray-900 mb-3">Беговая дорожка</h3>
+            <p class="text-gray-800 text-xl font-bold">Главный приз за лучший результат!</p>
+          </div>
+        </div>
+
+        <!-- 3rd Place -->
+        <div class="order-3 flex flex-col items-center">
+          <div
+            class="bg-white p-8 rounded-[3rem] w-full h-full flex flex-col items-center text-center transform hover:-translate-y-2 transition duration-300 border border-gray-100 shadow-xl">
+            <div
+              class="w-16 h-16 bg-spring-100 rounded-full flex items-center justify-center font-bold text-2xl text-gray-600 mb-6 border-2 border-spring-200">
+              10</div>
+            <div class="w-48 h-48 bg-spring-50 rounded-full flex items-center justify-center mb-8 shadow-inner">
+              <i data-lucide="gift" class="w-20 h-20 text-spring-500"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">10 подарочных сертификатов</h3>
+            <p class="text-gray-500 text-lg">на другие программы Натальи</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="py-24 bg-spring-50" id="pricing">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl md:text-6xl font-bold text-center text-gray-900 mb-8">Тарифы участия</h2>
+      <p class="text-center text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto mb-20 leading-relaxed">
+        Выберите формат, который подходит именно вам, и начните свой путь к лучшей версии себя
+      </p>
+
+      <div class="grid lg:grid-cols-2 gap-10 max-w-7xl mx-auto">
+        <!-- Tariff Basic -->
+        <div
+          class="relative flex flex-col h-full rounded-[2.5rem] overflow-hidden transition-all duration-300 bg-white border-4 border-spring-400 ring-4 ring-spring-100 shadow-2xl z-10">
+          <div class="bg-spring-400 text-white text-center py-3 text-base font-bold uppercase tracking-wider">
+            Хит продаж
+          </div>
+
+          <div class="p-10 flex-grow">
+            <h3 class="text-3xl md:text-4xl font-bold mb-3 text-gray-900">Тариф БАЗОВЫЙ</h3>
+
+
+
+            <ul class="space-y-6 mb-10">
+              <li class="flex items-start text-lg text-gray-800"><i data-lucide="check"
+                  class="w-6 h-6 mr-4 flex-shrink-0 text-spring-500"></i><span>Удобные видеоуроки с тренировками на
+                  каждый день</span></li>
+              <li class="flex items-start text-lg text-gray-800"><i data-lucide="check"
+                  class="w-6 h-6 mr-4 flex-shrink-0 text-spring-500"></i><span>Готовые тренировки для дома и зала (у вас
+                  всегда есть выбор)</span>
+              </li>
+              <li class="flex items-start text-lg text-gray-800"><i data-lucide="check"
+                  class="w-6 h-6 mr-4 flex-shrink-0 text-spring-500"></i><span>Видео по питанию: научимся считать
+                  калории, правильно составлять рацион, разберем самые частые ошибки.</span></li>
+              <li class="flex items-start text-lg text-gray-800"><i data-lucide="check"
+                  class="w-6 h-6 mr-4 flex-shrink-0 text-spring-500"></i><span>Сбалансированное меню на каждый день с
+                  разным КБЖУ (калории, белки, жиры, углеводы) учитывая разный вес и образ жизни каждой участницы</span>
+              </li>
+              <li class="flex items-start text-lg text-gray-800"><i data-lucide="check"
+                  class="w-6 h-6 mr-4 flex-shrink-0 text-spring-500"></i><span>Мотивационные уроки и видео, которые
+                  помогут не сорваться и идти до конца.</span>
+              </li>
+              <li class="flex items-start text-lg text-gray-800"><i data-lucide="check"
+                  class="w-6 h-6 mr-4 flex-shrink-0 text-spring-500"></i><span>Видео по уходу за кожей и растяжке,
+                  которые станут твоим секретом молодости и здоровья.</span>
+              </li>
+              <li class="flex items-start text-lg text-gray-800"><i data-lucide="check"
+                  class="w-6 h-6 mr-4 flex-shrink-0 text-spring-500"></i><span>МФР - тренировки на снятие мышечного
+                  напряжения, восстановление после нагрузок и предотвращение травм</span></li>
+              <li class="flex items-start text-lg text-gray-800"><i data-lucide="check"
+                  class="w-6 h-6 mr-4 flex-shrink-0 text-spring-500"></i><span>Полезные материалы: файлы и чек-листы для
+                  создания системы без срывов.</span></li>
+              <li class="flex items-start text-lg text-gray-800"><i data-lucide="check"
+                  class="w-6 h-6 mr-4 flex-shrink-0 text-spring-500"></i><span>Ежедневный Чат поддержки и вдохновения, с
+                  ответами на все вопросы от Натальи.</span></li>
+              <li class="flex items-start text-lg text-gray-800"><i data-lucide="check"
+                  class="w-6 h-6 mr-4 flex-shrink-0 text-spring-500"></i><span>Участие в розыгрыше призов</span></li>
+            </ul>
+
+            <div class="mb-8 p-4 bg-gray-50 rounded-2xl border border-gray-100">
+              <p class="font-bold text-gray-800 text-lg mb-2">Длительность марафона - 30 дней + 2 недели доступа ко всем
+                материалам</p>
+              <p class="text-gray-600">Количество мест ограничено, так как это марафон с личной обратной связью Натальи
+                Макаренко.</p>
+            </div>
+
+            <div
+              class="bg-gradient-to-r from-yellow-50 to-yellow-100 p-8 rounded-3xl border-l-8 border-yellow-400 mb-10 shadow-sm">
+              <h4 class="font-bold text-xl text-yellow-900 mb-5 flex items-center">
+                <i data-lucide="gift" class="w-6 h-6 mr-3"></i>
+                БОНУСЫ
+              </h4>
+              <p class="text-sm text-gray-700 mb-4 italic leading-relaxed">Специальные бонусы для тех, кто успеет внести
+                предоплату или оплатить полностью до старта основных продаж и готов начать уже сегодня!</p>
+              <ul class="space-y-3">
+                <li class="text-base text-gray-800 list-disc ml-5">3 дополнительные тренировки для старта, чтобы начать
+                  раньше всех и получить максимальный результат</li>
+                <li class="text-base text-gray-800 list-disc ml-5">Эксклюзивное меню</li>
+                <li class="text-base text-gray-800 list-disc ml-5">Знакомство с участницами и доступ в чат с поддержкой
+                  сразу после оплаты</li>
+                <li class="text-base text-gray-800 list-disc ml-5">Доступ ко всем материалам программы 3 месяца, вместо
+                  45 дней!</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="p-8 bg-gray-50 border-t border-gray-100 mt-auto">
+            <p class="text-center text-lg text-gray-600 mb-8">
+              <span class="font-bold uppercase">Зафиксируйте минимальную цену 3990 сейчас!</span>
+              <br />
+              <span class="text-base font-medium">(стоимость на старте официальных продаж начнется от 4590 и будет
+                повышаться до 9900 в несколько этапов)</span>
+            </p>
+
+            <div class="space-y-8">
+              <!-- RF Payments -->
+              <div>
+                <div class="flex items-center gap-2 mb-3 text-black">
+                  <i data-lucide="credit-card" class="w-4 h-4"></i>
+                  <span class="text-sm font-bold uppercase tracking-widest whitespace-nowrap">Карты РФ</span>
+                  <div class="h-px bg-gray-200 w-full"></div>
+                </div>
+                <div class="space-y-3">
+                  <a href="https://payform.ru/g0anQbS/"
+                    class="payment-link block w-full text-center bg-transparent border-2 border-spring-500 text-spring-600 hover:bg-spring-50 font-bold rounded-full transition-all duration-300 text-lg py-3">
+                    Внести предоплату 500₽
+                  </a>
+                  <a href="https://payform.ru/mdanQfh/"
+                    class="payment-link block w-full text-center bg-gradient-to-r from-fresh-550 to-fresh-600 text-white font-bold rounded-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-lg py-3">
+                    Оплатить полностью 3990₽
+                  </a>
+                </div>
+              </div>
+
+              <!-- Non-RF Payments -->
+              <div>
+                <div class="flex items-center gap-2 mb-3 text-black">
+                  <i data-lucide="globe" class="w-4 h-4"></i>
+                  <span class="text-sm font-bold uppercase tracking-widest whitespace-nowrap">Карты не РФ</span>
+                  <div class="h-px bg-gray-200 w-full"></div>
+                </div>
+                <div class="space-y-3">
+                  <a href="https://app.lava.top/products/5eb33fb5-3a76-487a-86c4-3f7105d05629"
+                    class="payment-link block w-full text-center bg-transparent border-2 border-spring-500 text-spring-600 hover:bg-spring-50 font-bold rounded-full transition-all duration-300 text-lg py-3">
+                    Внести предоплату 500₽
+                  </a>
+                  <a href="https://app.lava.top/products/8b8ff10a-6e83-4c1a-b860-4bf0ae69b3c8"
+                    class="payment-link block w-full text-center bg-gradient-to-r from-fresh-550 to-fresh-600 text-white font-bold rounded-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-lg py-3">
+                    Оплатить полностью 3990₽
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tariff VIP -->
+        <div
+          class="relative flex flex-col h-full rounded-[2.5rem] overflow-hidden transition-all duration-300 bg-white border-4 border-fresh-700 shadow-2xl">
+
+          <div class="p-10 flex-grow">
+            <h3 class="text-3xl md:text-4xl font-bold mb-6 text-fresh-600">Тариф VIP</h3>
+            <div class="inline-block bg-red-100 text-red-600 px-4 py-2 rounded-full text-sm font-bold mb-8">
+              Всего 10 мест
+            </div>
+
+
+
+            <ul class="space-y-6 mb-10">
+              <li class="flex items-start text-lg text-gray-800">
+                <i data-lucide="star" class="w-6 h-6 mr-4 flex-shrink-0 text-fresh-550"></i>
+                <span><span class="font-bold">Входит вся программа и бонусы базового тарифа</span> с общим чатом</span>
+              </li>
+              <li class="flex items-start text-lg text-gray-800">
+                <i data-lucide="star" class="w-6 h-6 mr-4 flex-shrink-0 text-fresh-550"></i>
+                <span><span class="font-bold">30 дней личного сопровождения</span> после марафона для закрепления
+                  материала и наилучших результатов</span>
+              </li>
+              <li class="flex items-start text-lg text-gray-800">
+                <i data-lucide="message-circle" class="w-6 h-6 mr-4 flex-shrink-0 text-fresh-550"></i>
+                <span><span class="font-bold">Личный чат с Натальей</span> 30 дней</span>
+              </li>
+              <li class="flex items-start text-lg text-gray-800">
+                <i data-lucide="utensils" class="w-6 h-6 mr-4 flex-shrink-0 text-fresh-550"></i>
+                <span><span class="font-bold">Индивидуальный подбор меню</span> от Натальи под ваш вкус, режим и
+                  индивидуальные особенности</span>
+              </li>
+              <li class="flex items-start text-lg text-gray-800">
+                <i data-lucide="activity" class="w-6 h-6 mr-4 flex-shrink-0 text-fresh-550"></i>
+                <span><span class="font-bold">Индивидуальная разработка программы тренировок</span> от Натальи под ваш
+                  образ жизни</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="p-8 bg-gray-50 border-t border-gray-100 mt-auto">
+            <p class="text-center text-lg text-gray-600 mb-8">
+              <span class="font-bold uppercase">Зафиксируйте минимальную цену сейчас!</span>
+              Стоимость будет повышаться до 19900 в несколько этапов
+            </p>
+
+            <div class="space-y-8">
+              <!-- RF Payments -->
+              <div>
+                <div class="flex items-center gap-2 mb-3 text-black">
+                  <i data-lucide="credit-card" class="w-4 h-4"></i>
+                  <span class="text-sm font-bold uppercase tracking-widest whitespace-nowrap">Карты РФ</span>
+                  <div class="h-px bg-gray-200 w-full"></div>
+                </div>
+                <div class="space-y-3">
+                  <a href="https://payform.ru/tpanQjc/"
+                    class="payment-link block w-full text-center bg-transparent border-2 border-spring-500 text-spring-600 hover:bg-spring-50 font-bold rounded-full transition-all duration-300 text-lg py-3">
+                    Внести предоплату 5000₽
+                  </a>
+                  <a href="https://payform.ru/81anQnL/"
+                    class="payment-link block w-full text-center bg-gradient-to-r from-fresh-550 to-fresh-600 text-white font-bold rounded-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-lg py-3">
+                    Оплатить полностью 14990₽
+                  </a>
+                </div>
+              </div>
+
+              <!-- Non-RF Payments -->
+              <div>
+                <div class="flex items-center gap-2 mb-3 text-black">
+                  <i data-lucide="globe" class="w-4 h-4"></i>
+                  <span class="text-sm font-bold uppercase tracking-widest whitespace-nowrap">Карты не РФ</span>
+                  <div class="h-px bg-gray-200 w-full"></div>
+                </div>
+                <div class="space-y-3">
+                  <a href="https://app.lava.top/products/68e51890-987c-48e1-976a-6f4e9403b118"
+                    class="payment-link block w-full text-center bg-transparent border-2 border-spring-500 text-spring-600 hover:bg-spring-50 font-bold rounded-full transition-all duration-300 text-lg py-3">
+                    Внести предоплату 5000₽
+                  </a>
+                  <a href="https://app.lava.top/products/3c034910-6cba-4cac-b1f7-de6a0e460391"
+                    class="payment-link block w-full text-center bg-gradient-to-r from-fresh-550 to-fresh-600 text-white font-bold rounded-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-lg py-3">
+                    Оплатить полностью 14990₽
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Section -->
+  <section class="py-24 bg-spring-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-5xl md:text-6xl font-bold text-center text-gray-900 mb-16">Результаты участниц</h2>
+
+      <div class="relative group max-w-5xl mx-auto">
+        <!-- Carousel Container -->
+        <div class="overflow-hidden rounded-[2.5rem]" id="results-carousel-container">
+          <div class="flex transition-transform duration-500 ease-out" id="results-track">
+            <!-- Slide 1 -->
+            <div class="w-full md:w-1/3 flex-shrink-0 px-4">
+              <div class="bg-white p-6 rounded-[2.5rem] shadow-xl hover:shadow-2xl transition duration-300 h-full">
+                <div class="aspect-[4/5] bg-gray-200 rounded-[2rem] overflow-hidden relative mb-6">
+                  <img src="images2/result-2.png" alt="До и После" class="w-full h-full object-cover" />
+                  <div
+                    class="absolute top-6 left-6 bg-white/95 backdrop-blur-md px-4 py-2 rounded-full text-sm font-bold text-gray-900 shadow-md tracking-wider">
+                    ДО / ПОСЛЕ</div>
+                </div>
+                <p class="text-center font-bold text-gray-800 text-xl py-2">- 5.8 кг за 30 дней</p>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="w-full md:w-1/3 flex-shrink-0 px-4">
+              <div class="bg-white p-6 rounded-[2.5rem] shadow-xl hover:shadow-2xl transition duration-300 h-full">
+                <div class="aspect-[4/5] bg-gray-200 rounded-[2rem] overflow-hidden relative mb-6">
+                  <img src="images2/result-1.png" alt="До и После" class="w-full h-full object-cover" />
+                  <div
+                    class="absolute top-6 left-6 bg-white/95 backdrop-blur-md px-4 py-2 rounded-full text-sm font-bold text-gray-900 shadow-md tracking-wider">
+                    ДО / ПОСЛЕ</div>
+                </div>
+                <p class="text-center font-bold text-gray-800 text-xl py-2">- 3.7 кг за 30 дней</p>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="w-full md:w-1/3 flex-shrink-0 px-4">
+              <div class="bg-white p-6 rounded-[2.5rem] shadow-xl hover:shadow-2xl transition duration-300 h-full">
+                <div class="aspect-[4/5] bg-gray-200 rounded-[2rem] overflow-hidden relative mb-6">
+                  <img src="images2/result-3.JPG" alt="До и После" class="w-full h-full object-cover" />
+                  <div
+                    class="absolute top-6 left-6 bg-white/95 backdrop-blur-md px-4 py-2 rounded-full text-sm font-bold text-gray-900 shadow-md tracking-wider">
+                    ДО / ПОСЛЕ</div>
+                </div>
+                <p class="text-center font-bold text-gray-800 text-xl py-2">- 5.5 кг за 30 дней</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button id="prev-btn"
+          class="absolute top-1/2 left-0 -translate-y-1/2 -ml-4 md:-ml-12 bg-white text-spring-600 p-3 rounded-full shadow-lg hover:bg-spring-50 transition focus:outline-none hidden md:block">
+          <i data-lucide="chevron-left" class="w-8 h-8"></i>
+        </button>
+        <button id="next-btn"
+          class="absolute top-1/2 right-0 -translate-y-1/2 -mr-4 md:-mr-12 bg-white text-spring-600 p-3 rounded-full shadow-lg hover:bg-spring-50 transition focus:outline-none hidden md:block">
+          <i data-lucide="chevron-right" class="w-8 h-8"></i>
+        </button>
+
+        <!-- Mobile Pagination Dots -->
+        <div class="flex justify-center mt-8 space-x-2 md:hidden" id="carousel-dots">
+          <!-- Dots will be generated by JS -->
+        </div>
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const track = document.getElementById('results-track');
+          const slides = Array.from(track.children);
+          const nextBtn = document.getElementById('next-btn');
+          const prevBtn = document.getElementById('prev-btn');
+          const dotsContainer = document.getElementById('carousel-dots');
+
+          let currentIndex = 0;
+          let slidesPerView = 1;
+
+          // Touch handling
+          let touchStartX = 0;
+          let touchEndX = 0;
+
+          function updateSlidesPerView() {
+            if (window.innerWidth >= 768) {
+              slidesPerView = 3;
+            } else {
+              slidesPerView = 1;
+            }
+            updateCarousel();
+          }
+
+          function getSlideWidth() {
+            return track.clientWidth / slidesPerView;
+          }
+
+          function updateCarousel() {
+            const slideWidth = 100 / slidesPerView;
+            // Prevent going out of bounds
+            // For desktop with 3 items, index should stick to 0 if items <= slidesPerView
+            // But let's allow circular or bounded navigation if there were more items.
+            // With 3 items and 3 slides per view, text is static on desktop.
+            // But on mobile/tablet it slides.
+
+            // Adjust bounds (clamp)
+            const maxIndex = slides.length - slidesPerView;
+            // If items < slidesPerView, clamping maxIndex to 0 or negative implies no scrolling needed.
+            // Actually if items=3 and slidesPerView=3, maxIndex=0. So currentIndex stays 0. Correct.
+
+            if (currentIndex > maxIndex) currentIndex = maxIndex;
+            if (currentIndex < 0) currentIndex = 0;
+
+            const translateX = -(currentIndex * (100 / slidesPerView));
+            track.style.transform = `translateX(${translateX}%)`;
+
+            updateDots();
+          }
+
+          function updateDots() {
+            dotsContainer.innerHTML = '';
+            // Only needed for mobile really, or when scrolling is active
+            const maxIndex = Math.max(0, slides.length - slidesPerView);
+            // However, for mobile (1 view), we want 1 dot per slide.
+            // For desktop (3 view), we might not need dots if they all fit.
+
+            if (window.innerWidth < 768) {
+              slides.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.className = `w-3 h-3 rounded-full transition-colors duration-300 ${index === currentIndex ? 'bg-spring-500' : 'bg-gray-300'}`;
+                dot.addEventListener('click', () => {
+                  currentIndex = index;
+                  updateCarousel();
+                });
+                dotsContainer.appendChild(dot);
+              });
+            }
+          }
+
+          prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+              currentIndex--;
+              updateCarousel();
+            }
+          });
+
+          nextBtn.addEventListener('click', () => {
+            const maxIndex = slides.length - slidesPerView;
+            if (currentIndex < maxIndex) {
+              currentIndex++;
+              updateCarousel();
+            }
+          });
+
+          // Swipe functionality
+          track.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+          }, { passive: true });
+
+          track.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+          }, { passive: true });
+
+          function handleSwipe() {
+            const threshold = 50;
+            if (touchStartX - touchEndX > threshold) {
+              // Swipe Left -> Next
+              const maxIndex = slides.length - slidesPerView;
+              if (currentIndex < maxIndex) {
+                currentIndex++;
+                updateCarousel();
+              }
+            }
+            if (touchEndX - touchStartX > threshold) {
+              // Swipe Right -> Prev
+              if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+              }
+            }
+          }
+
+          window.addEventListener('resize', updateSlidesPerView);
+
+          // Initialize
+          updateSlidesPerView();
+
+          // Re-render Lucide icons if needed (usually handled by script at end of body but let's be safe)
+          if (window.lucide) {
+            lucide.createIcons();
+          }
+        });
+      </script>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl md:text-6xl font-bold text-center text-gray-900 mb-16">Отзывы</h2>
+      <div class="relative group max-w-5xl mx-auto">
+        <!-- Carousel Container -->
+        <div class="overflow-hidden rounded-[2.5rem]" id="reviews-carousel-container">
+          <div class="flex transition-transform duration-500 ease-out" id="reviews-track">
+            <!-- Review 1 -->
+            <div class="w-full md:w-1/3 flex-shrink-0 px-4">
+              <div
+                class="bg-spring-50 p-10 rounded-[3rem] relative border border-spring-100 hover:shadow-xl transition h-full">
+                <i data-lucide="quote" class="w-12 h-12 text-spring-400 absolute top-8 left-8 opacity-40"></i>
+                <p class="text-gray-800 text-l italic pt-10 mb-8 relative z-10 leading-relaxed">Дорогая Наталья!!!🌺 Я
+                  от
+                  всей души хочу тебя поблагодарить за этот замечательный марафон! 🙏🙏🙏 Я многое поняла и многому
+                  научилась!
+                  Приятный бонус -4 кг🤗🤗🤗 Желаю тебе успехов во всех начинаниях , крепкого здоровья ,любви и всего
+                  того,чего ты сама себе желаешь!❤️💋💋💋 Еще раз ОГРОМНОЕ СПАСИБО!!!!!!)!</p>
+              </div>
+            </div>
+            <!-- Review 2 -->
+            <div class="w-full md:w-1/3 flex-shrink-0 px-4">
+              <div
+                class="bg-spring-50 p-10 rounded-[3rem] relative border border-spring-100 hover:shadow-xl transition h-full">
+                <i data-lucide="quote" class="w-12 h-12 text-spring-400 absolute top-8 left-8 opacity-40"></i>
+                <p class="text-gray-800 text-l italic pt-10 mb-8 relative z-10 leading-relaxed">Очень вкусное меню, я
+                  даже не
+                  заметила, что я на пп. Муж тоже оценил рецепты.</p>
+              </div>
+            </div>
+            <!-- Review 3 -->
+            <div class="w-full md:w-1/3 flex-shrink-0 px-4">
+              <div
+                class="bg-spring-50 p-10 rounded-[3rem] relative border border-spring-100 hover:shadow-xl transition h-full">
+                <i data-lucide="quote" class="w-12 h-12 text-spring-400 absolute top-8 left-8 opacity-40"></i>
+                <p class="text-gray-800 text-l italic pt-10 mb-8 relative z-10 leading-relaxed">Наталья, конечно все
+                  заметили. Масса комплиментов 😇😇😇 Ну я же не только внешне но и внутренне поменялась 👌 Поменялось
+                  мышление. И вообще хожу сияю как звезда🤩🤩🤩🤩🤩🤩 А сегодня одела вообще всё новое, надоело
+                  откладывать
+                  жизнь на потом. Новую юбку, кофту, сапоги на каблуках и новое пальто. Шла и кайфовала😇😇😇😇 Ловила
+                  на себе
+                  взгляды 👀👀👀👀 Полный восторг❤️❤️❤️❤️❤️❤️❤️❤️❤️</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button id="reviews-prev-btn"
+          class="absolute top-1/2 left-0 -translate-y-1/2 -ml-4 md:-ml-12 bg-white text-spring-600 p-3 rounded-full shadow-lg hover:bg-spring-50 transition focus:outline-none hidden md:block">
+          <i data-lucide="chevron-left" class="w-8 h-8"></i>
+        </button>
+        <button id="reviews-next-btn"
+          class="absolute top-1/2 right-0 -translate-y-1/2 -mr-4 md:-mr-12 bg-white text-spring-600 p-3 rounded-full shadow-lg hover:bg-spring-50 transition focus:outline-none hidden md:block">
+          <i data-lucide="chevron-right" class="w-8 h-8"></i>
+        </button>
+
+        <!-- Mobile Pagination Dots -->
+        <div class="flex justify-center mt-8 space-x-2 md:hidden" id="reviews-carousel-dots">
+          <!-- Dots will be generated by JS -->
+        </div>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const track = document.getElementById('reviews-track');
+            const slides = Array.from(track.children);
+            const nextBtn = document.getElementById('reviews-next-btn');
+            const prevBtn = document.getElementById('reviews-prev-btn');
+            const dotsContainer = document.getElementById('reviews-carousel-dots');
+
+            let currentIndex = 0;
+            let slidesPerView = 1;
+
+            // Touch handling
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            function updateSlidesPerView() {
+              if (window.innerWidth >= 768) {
+                slidesPerView = 3;
+              } else {
+                slidesPerView = 1;
+              }
+              updateCarousel();
+            }
+
+            function getSlideWidth() {
+              return track.clientWidth / slidesPerView;
+            }
+
+            function updateCarousel() {
+              // Adjust bounds (clamp)
+              const maxIndex = Math.max(0, slides.length - slidesPerView);
+
+              if (currentIndex > maxIndex) currentIndex = maxIndex;
+              if (currentIndex < 0) currentIndex = 0;
+
+              const translateX = -(currentIndex * (100 / slidesPerView));
+              track.style.transform = `translateX(${translateX}%)`;
+
+              updateDots();
+            }
+
+            function updateDots() {
+              dotsContainer.innerHTML = '';
+              // Only needed for mobile really
+              if (window.innerWidth < 768) {
+                slides.forEach((_, index) => {
+                  const dot = document.createElement('button');
+                  dot.className = `w-3 h-3 rounded-full transition-colors duration-300 ${index === currentIndex ? 'bg-spring-500' : 'bg-gray-300'}`;
+                  dot.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateCarousel();
+                  });
+                  dotsContainer.appendChild(dot);
+                });
+              }
+            }
+
+            prevBtn.addEventListener('click', () => {
+              if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+              }
+            });
+
+            nextBtn.addEventListener('click', () => {
+              const maxIndex = Math.max(0, slides.length - slidesPerView);
+              if (currentIndex < maxIndex) {
+                currentIndex++;
+                updateCarousel();
+              }
+            });
+
+            // Swipe functionality
+            track.addEventListener('touchstart', (e) => {
+              touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            track.addEventListener('touchend', (e) => {
+              touchEndX = e.changedTouches[0].screenX;
+              handleSwipe();
+            }, { passive: true });
+
+            function handleSwipe() {
+              const threshold = 50;
+              if (touchStartX - touchEndX > threshold) {
+                // Swipe Left -> Next
+                const maxIndex = Math.max(0, slides.length - slidesPerView);
+                if (currentIndex < maxIndex) {
+                  currentIndex++;
+                  updateCarousel();
+                }
+              }
+              if (touchEndX - touchStartX > threshold) {
+                // Swipe Right -> Prev
+                if (currentIndex > 0) {
+                  currentIndex--;
+                  updateCarousel();
+                }
+              }
+            }
+
+            window.addEventListener('resize', updateSlidesPerView);
+
+            // Initialize
+            updateSlidesPerView();
+          });
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expert Section -->
+  <section class="py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div
+        class="flex flex-col lg:flex-row items-center gap-16 bg-spring-100 rounded-[4rem] p-10 md:p-16 shadow-2xl border border-spring-200">
+        <div class="lg:w-1/3">
+          <img src="images2/expert-photo.JPG" alt="Наталья Макаренко"
+            class="w-full h-auto rounded-[3rem] shadow-xl object-cover ring-8 ring-white" />
+        </div>
+        <div class="lg:w-2/3">
+          <h2 class="text-2xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight uppercase">ПОЧЕМУ ТЫСЯЧИ ЖЕНЩИН
+            ДОВЕРЯЮТ СВОЮ ТРАНСФОРМАЦИЮ НАТАЛЬЕ МАКАРЕНКО?</h2>
+
+          <div class="space-y-6 text-gray-800 text-lg md:text-xl leading-relaxed mb-10">
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <i data-lucide="check-circle" class="w-6 h-6 text-spring-600 mr-3 flex-shrink-0 mt-1"></i>
+                <span>Профессиональный дипломированный Фитнес-Тренер.</span>
+              </li>
+              <li class="flex items-start">
+                <i data-lucide="check-circle" class="w-6 h-6 text-spring-600 mr-3 flex-shrink-0 mt-1"></i>
+                <span>53 года и доказательство того, что возраст — это только цифра.</span>
+              </li>
+              <li class="flex items-start">
+                <i data-lucide="check-circle" class="w-6 h-6 text-spring-600 mr-3 flex-shrink-0 mt-1"></i>
+                <span>Автор популярного блога о фитнесе и питании с миллионами просмотров и высочайшим доверием
+                  аудитории в 170 тысяч подписчиков.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-8 rounded-3xl border-l-4 border-spring-500 shadow-sm">
+            <i data-lucide="quote" class="w-8 h-8 text-spring-400 mb-4"></i>
+            <p class="text-gray-700 italic text-lg md:text-xl font-medium">
+              “Мне 53, и я выгляжу лучше, чем в 35. Я прошла этот путь сама и точно знаю, какие методики работают, а
+              какие только тратят время, особенно после 40-ка. Я не даю теорию, я делюсь своим опытом.
+              <br /><br />
+              Моя миссия - помочь женщинам в любом возрасте почувствовать себя красивыми, счастливыми и желанными”
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <div class="py-24 bg-white text-center">
+    <div class="max-w-4xl mx-auto px-4 mb-8">
+      <h3 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 leading-tight">Уже тысячи женщин прошли марафон и
+        добились невероятных результатов!</h3>
+      <p class="text-xl md:text-2xl text-gray-700 mb-6">Обрели здоровое и красивое тело, энергию и уверенность в себе.
+      </p>
+      <p class="text-xl md:text-2xl text-spring-600 font-bold">Перестань ждать идеального момента. Идеальный момент —
+        это сейчас, и он невероятно выгоден!</p>
+    </div>
+    <button onclick="document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })"
+      class="bg-gradient-to-r from-fresh-550 to-fresh-600 text-white px-12 py-5 rounded-full font-bold text-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+      Выбрать тариф
+    </button>
+  </div>
+
+  <!-- FAQ Section -->
+  <section class="py-24 bg-spring-50" id="faq">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <h2 class="text-5xl md:text-6xl font-bold text-center text-gray-900 mb-16">Ответы на частые вопросы</h2>
+      <div class="bg-white rounded-[3rem] p-10 shadow-xl" id="faq-container">
+        <!-- FAQ Items will participate in accordion logic -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-900 text-gray-400 py-12">
+    <div class="container mx-auto px-4 text-center">
+      <p class="mb-2">© 2026. Самозанятая Макаренко Наталья Анатольевна. Все права защищены.</p>
+      <p class="mb-2">ИНН: 772672813036</p>
+      <p class="mb-4">e-mail: manbrikserg@mail.ru</p>
+
+
+      <div class="flex flex-wrap justify-center gap-6 text-sm underline opacity-70 hover:opacity-100 transition">
+        <a href="images2/public_offer.html" target="_blank">Публичная оферта</a>
+        <a href="images2/privacy_policy.html" target="_blank">Политика конфиденциальности</a>
+        <a href="images2/consent_personal_data.html" target="_blank">Согласие на обработку персональных данных</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Payment Confirmation Modal -->
+  <div id="payment-modal"
+    class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center backdrop-blur-sm p-4">
+    <div class="bg-white rounded-3xl p-8 max-w-lg w-full shadow-2xl transform transition-all scale-100">
+      <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Подтверждение</h3>
+
+      <label class="flex items-start gap-4 cursor-pointer group">
+        <div class="relative flex items-center mt-1">
+          <input type="checkbox" id="terms-checkbox" class="peer sr-only">
+          <div
+            class="w-6 h-6 bg-gray-200 border-2 border-gray-300 rounded transition-colors peer-checked:bg-spring-500 peer-checked:border-spring-500">
+          </div>
+          <i data-lucide="check"
+            class="w-4 h-4 text-white absolute top-1 left-1 opacity-0 peer-checked:opacity-100 transition-opacity"></i>
+        </div>
+        <span class="text-gray-600 text-sm leading-relaxed select-none">
+          Я принимаю условия <a href="images2/public_offer.html" target="_blank"
+            class="text-spring-600 hover:underline">Публичной
+            оферты</a>, согласен с <a href="images2/privacy_policy.html" target="_blank"
+            class="text-spring-600 hover:underline">Политикой конфиденциальности</a> и даю <a
+            href="images2/consent_personal_data.html" target="_blank" class="text-spring-600 hover:underline">Согласие
+            на
+            обработку персональных данных</a>
+        </span>
+      </label>
+
+      <div class="flex gap-4 mt-8">
+        <button type="button" id="cancel-payment"
+          class="w-1/2 py-3 rounded-xl bg-gray-100 text-gray-700 font-bold hover:bg-gray-200 transition-colors">
+          Отмена
+        </button>
+        <button type="button" id="confirm-payment" disabled
+          class="w-1/2 py-3 rounded-xl bg-gray-300 text-white font-bold transition-all cursor-not-allowed">
+          Оплатить
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // FAQ Data
+    const questions = [
+      {
+        question: "Я никогда не занималась, подойдет ли мне марафон?",
+        answer: "Конечно, можно! Марафон идеально подходит как для новичков, так и для уже практикующих, но кто хочет получить новые результаты и мотивацию. Мы начинаем с основ и плавно переходим к более сложным упражнениям, поэтому вы точно не почувствуете себя потерянной."
+      },
+      {
+        question: "Я часто занимаюсь, тренируюсь, будет ли мне полезен ваш марафон?",
+        answer: "Да, конечно! Марафон полезен не только новичкам и вы наверняка найдете для себя пользу. Ведь в нем не только тренировки, а ещё и видео по питанию, уходу за собой, меню, полезные рецепты, а главное чат единомышленников и поддержка на всём пути, чтобы вы смогли сделать свои новые результаты."
+      },
+      {
+        question: "Подходит ли мне курс, если у меня есть проблемы со здоровьем?",
+        answer: "Смотря какие проблемы со здоровьем. Марафон разработан для тех, кому не запрещены тренировки. Если у вас есть хронические заболевания и серьезные ограничения по физическим нагрузкам, пожалуйста, проконсультируйтесь со своим лечащим врачом перед началом марафона.  Я забочусь о вашем здоровье, и моя цель- помочь вам, не навредив."
+      },
+      {
+        question: "Сколько времени нужно уделять тренировкам?",
+        answer: "Тренировки занимают 40-60 минут в день, 3 раза в неделю. Я сделала программу максимально удобной и эффективной, чтобы она легко вписалась в ваш рабочий и жизненный график без стресса и спешки."
+      },
+      {
+        question: "Нужен ли мне абонемент в спортзал?",
+        answer: "Нет! Я подготовила два варианта тренировок: для дома (с минимальным инвентарем, который легко заменить подручными вещами) и для зала. Вы можете выбрать то, что вам удобнее, и менять формат в любой момент."
+      },
+      {
+        question: "Смогу ли я похудеть на 10 и больше кг?",
+        answer: "Результаты индивидуальны и зависят от ваших усилий и изначальных данных. В среднем мои участницы сбрасывают 3-7 кг за 30-45 дней. Важно помнить, что мы нацелены на долговременный результат, а не на временные показатели. Я учу вас правильно питаться и тренироваться, чтобы вес больше не возвращался."
+      },
+      {
+        question: "А если я сорвусь? Меня выгонят из курса?",
+        answer: "Конечно, нет! Программа марафона построена на принципе поддержки, а не наказания. Срывы - это часть пути, и главное - вернуться и продолжить. В чате поддержки мы поможем вам справиться с этим."
+      },
+      {
+        question: "Что будет после окончания марафона? Я опять наберу вес?",
+        answer: "Марафон «Лучшая версия себя» - это обучение. За 45 дней вы освоите принципы правильного питания и тренировок. Эти знания останутся с вами навсегда, и вы сможете самостоятельно поддерживать результат. Я даю вам удочку, а не просто рыбу."
+      },
+      {
+        question: "Чем ваш марафон отличается от других?",
+        answer: "В отличие от других курсов, я учу вас находить баланс и получать удовольствие от полезной еды и тренировок. Так гораздо меньше срывов. Также, программа учитывает особенности женского организма и возраста (35+)."
+      },
+      {
+        question: "Как я получу доступ к материалам?",
+        answer: "После оплаты вам придет ссылка на закрытую платформу - мобильное приложение (не требует скачивания), где будут доступны все видеоуроки, меню и чек-листы."
+      },
+      {
+        question: "Можно ли оплатить марафон частями?",
+        answer: "Да. Вы можете сейчас внести предоплату 500р., а оставшуюся часть внести до начала марафона. Так вы точно забронируете за собой место и все бонусы."
+      },
+      {
+        question: "Не проходит оплата, что делать?",
+        answer: "По всем вопросам связанным с оплатой напишите в телеграм <a href='https://t.me/MyuppyTeam' class='text-spring-600 underline' target='_blank'>https://t.me/MyuppyTeam</a> и вам помогут разобраться."
+      }
+    ];
+
+    const faqContainer = document.getElementById('faq-container');
+
+    questions.forEach(q => {
+      const item = document.createElement('div');
+      item.className = "border-b border-gray-100 last:border-0";
+      item.innerHTML = `
+            <button class="accordion-button flex justify-between items-center w-full py-8 text-left focus:outline-none group">
+              <span class="text-xl md:text-2xl font-medium pr-10 transition-colors text-gray-900 group-hover:text-spring-500">
+                ${q.question}
+              </span>
+              <div class="accordion-icon flex-shrink-0 transition-transform duration-300">
+                 <i data-lucide="plus" class="w-8 h-8 text-gray-400 group-hover:text-spring-500"></i>
+              </div>
+            </button>
+            <div class="accordion-content overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+              <p class="text-gray-700 text-xl leading-relaxed pr-10 mb-8">${q.answer}</p>
+            </div>
+          `;
+      faqContainer.appendChild(item);
+    });
+
+    // Initialize Icons
+    lucide.createIcons();
+
+    // Accordion Logic
+    document.querySelectorAll('.accordion-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const iconContainer = button.querySelector('.accordion-icon');
+        const icon = iconContainer.querySelector('i'); // Get the lucide icon element
+        const isOpened = content.classList.contains('max-h-[600px]');
+        const span = button.querySelector('span');
+
+        if (isOpened) {
+          content.classList.remove('max-h-[600px]', 'opacity-100');
+          content.classList.add('max-h-0', 'opacity-0');
+          span.classList.remove('text-spring-600');
+          span.classList.add('text-gray-900');
+          iconContainer.classList.remove('rotate-180');
+          // Recreate plus icon
+          iconContainer.innerHTML = '<i data-lucide="plus" class="w-8 h-8 text-gray-400 group-hover:text-spring-500"></i>';
+        } else {
+          content.classList.remove('max-h-0', 'opacity-0');
+          content.classList.add('max-h-[600px]', 'opacity-100');
+          span.classList.remove('text-gray-900');
+          span.classList.add('text-spring-600');
+          iconContainer.classList.add('rotate-180');
+          // Recreate minus icon
+          iconContainer.innerHTML = '<i data-lucide="minus" class="w-8 h-8 text-spring-500"></i>';
+        }
+        lucide.createIcons();
+      });
+    });
+
+    // Payment Modal Logic
+    const modal = document.getElementById('payment-modal');
+    const checkbox = document.getElementById('terms-checkbox');
+    const confirmBtn = document.getElementById('confirm-payment');
+    const cancelBtn = document.getElementById('cancel-payment');
+    let targetLink = '';
+
+    // Function to open modal
+    function openPaymentModal(e) {
+      e.preventDefault();
+      targetLink = this.getAttribute('href');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+
+      // Update Lucide icons inside modal if needed
+      lucide.createIcons();
+    }
+
+    // Attach to all payment buttons
+    const payButtons = document.querySelectorAll('.payment-link');
+    payButtons.forEach(btn => btn.addEventListener('click', openPaymentModal));
+
+    // Checkbox logic
+    checkbox.addEventListener('change', function () {
+      if (this.checked) {
+        confirmBtn.disabled = false;
+        confirmBtn.classList.remove('bg-gray-300', 'cursor-not-allowed');
+        confirmBtn.classList.add('bg-spring-500', 'hover:bg-spring-600', 'shadow-lg');
+      } else {
+        confirmBtn.disabled = true;
+        confirmBtn.classList.add('bg-gray-300', 'cursor-not-allowed');
+        confirmBtn.classList.remove('bg-spring-500', 'hover:bg-spring-600', 'shadow-lg');
+      }
+    });
+
+    // Confirm button logic
+    confirmBtn.addEventListener('click', function () {
+      if (!confirmBtn.disabled) {
+        window.location.href = targetLink;
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Cancel button logic
+    cancelBtn.addEventListener('click', function () {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+      checkbox.checked = false;
+      // Reset button state
+      confirmBtn.disabled = true;
+      confirmBtn.classList.add('bg-gray-300', 'cursor-not-allowed');
+      confirmBtn.classList.remove('bg-spring-500', 'hover:bg-spring-600', 'shadow-lg');
+    });
+
+    // Close on click outside
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) {
+        cancelBtn.click();
+      }
+    });
+  </script>
+</body>
+
+</html>
