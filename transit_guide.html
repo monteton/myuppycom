@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гайд по Стыковкам 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="transit_style.css">
+    <style>
+        body {
+            padding-bottom: 4rem;
+            /* For footer space */
+            background: #0f172a;
+            min-height: 100vh;
+            color: white;
+            position: relative;
+        }
+
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .bg-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
+            /* Darker for readability */
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem 2rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #fff, #38bdf8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .golden-rule {
+            border-left: 4px solid #facc15;
+            /* Yellow warning */
+            background: rgba(250, 204, 21, 0.1);
+        }
+
+        .city-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .notification {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #10b981;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 1000;
+        }
+
+        .notification.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-container"><img src="assets/cover.png" alt="" class="bg-image"></div><a
+        href="transit_intro.html" class="back-btn">← Назад</a><a href="transit_intro.html" class="back-btn">← Назад</a>
+    <div class="container">
+        <div class="hero">
+            <h1>Ультимативный Гайд 2026</h1>
+            <p>Превращаем стыковку в мини-отпуск. Маршруты,
+                цены,
+                GPS транзит.</p>
+        </div>
+        <div class="glass-card golden-rule" style="border-radius: 12px; padding: 1.5rem;">
+            <h3 style="color: #facc15; margin-bottom: 0.5rem;">⏳ Золотое Правило Времени</h3>
+            <p style="margin: 0; font-size: 0.95rem; color: #e2e8f0;">Выходите в город,
+                только если между рейсами <strong>минимум 7–8 часов</strong>. </p>
+            <ul style="margin: 1rem 0 0 1rem; padding: 0; font-size: 0.9rem; color: #cbd5e1;">
+                <li><strong>1 ч</strong>— Паспортный контроль</li>
+                <li><strong>1 ч</strong>— Дорога в центр</li>
+                <li><strong>3–4 ч</strong>— <span style="color: #fff; font-weight: 700;">ЧИСТАЯ ПРОГУЛКА</span></li>
+                <li><strong>1 ч</strong>— Дорога обратно</li>
+                <li><strong>2 ч</strong>— Запас</li>
+            </ul>
+        </div>
+        <div class="glass-card golden-rule"
+            style="border-radius: 12px; padding: 1.5rem; border-color: #f87171; background: rgba(248, 113, 113, 0.1);">
+            <h3 style="color: #f87171; margin-bottom: 0.5rem;">⚠️ Важное предупреждение о ценах</h3>
+            <p style="margin: 0; font-size: 0.95rem; color: #e2e8f0;">Указанные ниже цены — это оценочный прогноз в
+                долларах США (USD). Курсы валют,
+                инфляция (особенно в Турции) и тарифы могут измениться. Всегда имейте небольшой запас наличных или
+                карту. </p>
+        </div>
+        <!-- DOHA -->
+        <div class="glass-card">
+            <div class="city-header"><span class="flag">🇶🇦</span>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div class="section-title">ДОХА (Катар)</div><span
+                            style="font-size: 0.9rem; background: rgba(255,255,255,0.1); padding: 0.2rem 0.6rem; border-radius: 8px;">⏱
+                            Маршрут:~4–6 часов</span>
+                    </div>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary);">Футуризм и Традиции</div>
+                </div>
+            </div><img src="assets/doha.png" alt="Doha Landmark" class="city-image">
+            <div class="description-block">Доха — это идеальный,
+                стерильно чистый оазис для короткой передышки. Здесь время течет иначе: ультрасовременные технологии
+                переплетаются с древними традициями бедуинов. <br><br><strong>Что увидите:</strong>Начните с
+                набережной Корниш — перед вами откроется тот самый открыточный вид на небоскребы Вест-Бэй,
+                вырастающие прямо из воды. Но душа города прячется на рынке Сук Вакиф. Это не «туристическая
+                ловушка»,
+                а живой лабиринт с ароматами шафрана и кардамона,
+                где по вечерам патрулирует конная полиция в парадной форме,
+                а в соколином госпитале лечат птиц шейхов. <br><br><strong>Важный момент:</strong>Контрастом станет
+                район Мшейред — «умный» центр города с бесплатными трамваями,
+                и Музей Исламского искусства. Само его здание — архитектурный шедевр,
+                словно парящий над водами залива. </div>
+            <div class="transport-grid">
+                <div class="transport-item"><strong>🚇 Метро (Red Line)</strong>Быстро (Day Pass ~$2) </div>
+                <div class="transport-item"><strong>🚕 Uber</strong>Комфорт (~$15–20) </div>
+            </div>
+            <div class="visa-info">
+                <span>🛂</span>
+                <div>
+                    <strong>Документы РФ:</strong> Бесплатный штамп на 90 дней.
+                    <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.2rem;">Нужен загранпаспорт (срок 6
+                        мес) и обратный билет.</div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Набережная Корниш (Corniche)</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=25.2917,51.5308" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #94a3b8;">Лучший вид на небоскребы.</p>
+                </div>
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Сук Вакиф (Souq Waqif)</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=25.2868,51.5328" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #94a3b8;">Рынок,
+                        специи,
+                        соколы.</p>
+                </div>
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Музей Исламского Искусства</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=25.2955,51.5391" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Район Msheireb</h3><a href="https://www.google.com/maps/search/?api=1&query=25.2862,51.5244"
+                            class="btn-map" target="_blank">Карта</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ISTANBUL -->
+        <div class="glass-card">
+            <div class="city-header"><span class="flag">🇹🇷</span>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div class="section-title">СТАМБУЛ (Турция)</div><span
+                            style="font-size: 0.9rem; background: rgba(255,255,255,0.1); padding: 0.2rem 0.6rem; border-radius: 8px;">⏱
+                            Маршрут:~6–8 часов</span>
+                    </div>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary);">Перекресток Миров</div>
+                </div>
+            </div><img src="assets/istanbul.png" alt="Istanbul Landmark" class="city-image">
+            <div class="description-block">Стамбул — это город-хаос,
+                который мгновенно заряжает энергией. Единственное место в мире,
+                где,
+                позавтракав в Европе,
+                можно выпить кофе в Азии. <br><br><strong>Что увидите:</strong>Сердце маршрута — площадь
+                Султанахмет. Стоять между великой Айя-Софией и Голубой мечетью — значит физически ощущать
+                тысячелетнюю историю. Обязательно спуститесь к шумной пристани Эминёню. Там пахнет морем и
+                жареной рыбой — это знаменитый стритфуд «балык-экмек»,
+                который продают прямо с раскачивающихся золоченых лодок. <br><br><strong>Важный
+                    момент:</strong>Пройдите пешком по Галатскому мосту,
+                наблюдая за сотнями рыбаков,
+                и посмотрите на Галатскую башню. Город очень рельефный,
+                шумный и вкусный — здесь нужно не столько смотреть,
+                сколько пробовать и вдыхать. </div>
+            <div class="transport-grid">
+                <div class="transport-item"><strong>Bus Havaist (HVIST-12)</strong>~$8 (60–90 мин) </div>
+                <div class="transport-item"><strong>Метро (M11)</strong>~$3 (3 пересадки) </div>
+            </div>
+            <div class="visa-info">
+                <span>🛂</span>
+                <div>
+                    <strong>Документы РФ:</strong> Без визы (60 дней непрерывно).
+                    <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.2rem;">Загранпаспорт должен
+                        действовать 120+ дней.</div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Площадь Султанахмет</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=41.0059,28.9778" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #94a3b8;">Айя-София и Голубая мечеть.</p>
+                </div>
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Эминёню (Eminönü)</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=41.0186,28.9723" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #94a3b8;">Пристань,
+                        балык-экмек.</p>
+                </div>
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Галатская Башня</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=41.0256,28.9741" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ABU DHABI -->
+        <div class="glass-card">
+            <div class="city-header"><span class="flag">🇦🇪</span>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div class="section-title">АБУ-ДАБИ (ОАЭ)</div><span
+                            style="font-size: 0.9rem; background: rgba(255,255,255,0.1); padding: 0.2rem 0.6rem; border-radius: 8px;">⏱
+                            Маршрут:~5–7 часов</span>
+                    </div>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary);">Восточная Сказка и
+                        Искусство</div>
+                </div>
+            </div><img src="assets/abudhabi.png" alt="Abu Dhabi Landmark" class="city-image">
+            <div class="description-block">В отличие от шумного и суетливого Дубая,
+                Абу-Даби излучает величественное,
+                дорогое спокойствие. Это город шейхов,
+                широких проспектов и зелени посреди пустыни. <br><br><strong>Что увидите:</strong>Главная
+                цель — Мечеть Шейха Зайда. Это белоснежное мраморное чудо с гигантскими люстрами Swarovski и
+                крупнейшим в мире ковром. На закате белый мрамор окрашивается в лиловые и золотые тона —
+                зрелище,
+                от которого захватывает дух. <br><br><strong>Важный момент:</strong>Вторая обязательная
+                точка — Лувр Абу-Даби на острове Саадият. Даже если вы далеки от искусства,
+                вас поразит само здание: его ажурный купол создает эффект «светового дождя»,
+                пропуская солнечные лучи внутрь. Это место для красивых,
+                медитативных прогулок. </div>
+            <div class="transport-grid">
+                <div class="transport-item"><strong>Такси</strong>~$20–25 (Рекомендуем !) </div>
+                <div class="transport-item"><strong>Автобус A1/A2</strong>~$4 (Долго) </div>
+            </div>
+            <div class="visa-info">
+                <span>🛂</span>
+                <div>
+                    <strong>Документы РФ:</strong> Бесплатная виза по прилете (90 дней).
+                    <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.2rem;">Паспорт должен
+                        действовать не менее 6 месяцев.</div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Лувр Абу-Даби</h3><a href="https://www.google.com/maps/search/?api=1&query=24.5336,54.3985"
+                            class="btn-map" target="_blank">Карта</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Мечеть Шейха Зайда</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=24.4124,54.4746" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #94a3b8;">Лучше к закату (~16:30).</p>
+                </div>
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Qasr Al Watan</h3><a href="https://www.google.com/maps/search/?api=1&query=24.4628,54.3160"
+                            class="btn-map" target="_blank">Карта</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MUSCAT -->
+        <div class="glass-card">
+            <div class="city-header"><span class="flag">🇴🇲</span>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div class="section-title">МАСКАТ (Оман)</div><span
+                            style="font-size: 0.9rem; background: rgba(255,255,255,0.1); padding: 0.2rem 0.6rem; border-radius: 8px;">⏱
+                            Маршрут:~4–6 часов</span>
+                    </div>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary);">Настоящая Аравия</div>
+                </div>
+            </div><img src="assets/muscat.png" alt="Muscat Landmark" class="city-image">
+            <div class="description-block">Маскат — самая аутентичная столица региона. Здесь запрещено
+                строить небоскребы,
+                поэтому город состоит из белоснежных малоэтажных домов,
+                зажатых между суровыми скалистыми горами и океаном. <br><br><strong>Что
+                    увидите:</strong>Главное сокровище — Мечеть Султана Кабуса,
+                шедевр современной исламской архитектуры (помните про утренние часы посещения !). После
+                отправляйтесь на старинный рынок Матрах (Muttrah Souq). Воздух здесь густой от запаха
+                ладана — «оманского золота»,
+                а в лавках продают настоящие серебряные кинжалы-ханджары. <br><br><strong>Важный
+                    момент:</strong>Прогулка по набережной Корниш с видом на яхту султана и
+                португальские форты XVI века,
+                стоящие на скалах,
+                подарит ощущение,
+                будто вы попали в декорации к фильму о Синдбаде-мореходе. </div>
+            <div class="transport-grid">
+                <div class="transport-item"><strong>Такси (OTaxi)</strong>~$30 (Общ. транспорт плохой)
+                </div>
+            </div>
+            <div class="visa-info">
+                <span>🛂</span>
+                <div>
+                    <strong>Документы РФ:</strong> Без визы до 14 дней.
+                    <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.2rem;">Необходим обратный
+                        билет и подтверждение жилья.</div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Мечеть Султана Кабуса</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=23.5837,58.3888" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Рынок Muttrah Souq</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=23.6198,58.5636" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Смотровая на набережной</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=23.6231,58.5684" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- BEIJING -->
+        <div class="glass-card">
+            <div class="city-header"><span class="flag">🇨🇳</span>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div class="section-title">ПЕКИН (Китай)</div><span
+                            style="font-size: 0.9rem; background: rgba(255,255,255,0.1); padding: 0.2rem 0.6rem; border-radius: 8px;">⏱
+                            Маршрут:~6–8 часов</span>
+                    </div>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary);">Имперский Размах
+                    </div>
+                </div>
+            </div><img src="assets/beijing.png" alt="Beijing Landmark" class="city-image">
+            <div class="description-block">Пекин монументален. Даже за пару часов здесь чувствуется
+                дыхание империи,
+                которой тысячи лет. Это город огромных пространств и строгой геометрии.
+                <br><br><strong>Что увидите:</strong>Если вы не рискуете ехать на Великую Стену,
+                отправляйтесь в самый центр — на площадь Тяньаньмэнь. Рядом находится Запретный
+                город — самый большой дворцовый комплекс в мире. Чтобы оценить его масштаб,
+                не обязательно заходить внутрь (это займет полдня),
+                лучше поднимитесь на холм в парке Цзиншань. Оттуда открывается лучший панорамный вид
+                на изогнутые золотые крыши дворца. <br><br><strong>Важный
+                    момент:</strong>Гастрономия здесь — часть культуры. Настоящая утка по-пекински в
+                специализированном ресторане — это ритуал,
+                который нельзя пропустить.
+            </div>
+            <div class="transport-grid">
+                <div class="transport-item"><strong>Airport Express</strong>~$4 (Быстро, 30 мин)
+                </div>
+                <div class="transport-item"><strong>Такси</strong>~$20–25 (Нужен адрес на китайском
+                    !) </div>
+            </div>
+            <div class="visa-info">
+                <span>🛂</span>
+                <div>
+                    <strong>Документы РФ:</strong> Безвизовый транзит 144 часа.
+                    <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.2rem;">Важно: вылет
+                        должен быть в <strong>третью</strong> страну (не обратно!). В аэропорту
+                        ищите стойку "24/144 Hour Transit".</div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Площадь Тяньаньмэнь</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=39.9055,116.3976" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Парк Цзиншань (Вид сверху)</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=39.9242,116.3965" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Улица Ванфуцзин</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=39.9110,116.4111" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- TBILISI -->
+        <div class="glass-card">
+            <div class="city-header"><span class="flag">🇬🇪</span>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div class="section-title">ТБИЛИСИ (Грузия)</div><span
+                            style="font-size: 0.9rem; background: rgba(255,255,255,0.1); padding: 0.2rem 0.6rem; border-radius: 8px;">⏱
+                            Маршрут:~4–6 часов</span>
+                    </div>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary);">Душа и
+                        Гостеприимство</div>
+                </div>
+            </div><img src="assets/tbilisi.png" alt="Tbilisi Landmark" class="city-image">
+            <div class="description-block">Тбилиси — это город,
+                который обнимает вас как родного. Здесь стыковка превращается не в экскурсию,
+                а в маленькую жизнь. Город теплый,
+                холмистый и невероятно фактурный. <br><br><strong>Что увидите:</strong>Маршрут
+                простой,
+                но эффектный. Канатная дорога поднимет вас из современного парка Рике к древней
+                крепости Нарикала. Весь город будет как на ладони. Спускайтесь пешком по
+                извилистым улочкам к району Абанотубани — знаменитым серным баням с купольными
+                крышами,
+                стоящим прямо в ущелье с водопадом. <br><br><strong>Важный
+                    момент:</strong>Тбилиси нельзя понять без еды. Хинкали,
+                хачапури и бокал вина на террасе старого города — это обязательная часть
+                программы. Здесь никто не спешит,
+                и вам тоже не стоит. </div>
+            <div class="transport-grid">
+                <div class="transport-item"><strong>Автобус #337</strong>~$0.50 (В центр) </div>
+                <div class="transport-item"><strong>Такси (Яндекс/Bolt)</strong>~$12–15 </div>
+            </div>
+            <div class="visa-info">
+                <span>🛂</span>
+                <div>
+                    <strong>Документы РФ:</strong> Без визы (365 дней).
+                    <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.2rem;">Нужен
+                        действующий загранпаспорт.</div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Канатная дорога (Парк Рике)</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=41.6928,44.8105" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Крепость Нарикала</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=41.6879,44.8091" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Серные бани</h3><a href="https://www.google.com/maps/search/?api=1&query=41.6883,44.8112"
+                            class="btn-map" target="_blank">Карта</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- YEREVAN -->
+        <div class="glass-card">
+            <div class="city-header"><span class="flag">🇦🇲</span>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div class="section-title">ЕРЕВАН (Армения)</div><span
+                            style="font-size: 0.9rem; background: rgba(255,255,255,0.1); padding: 0.2rem 0.6rem; border-radius: 8px;">⏱
+                            Маршрут:~4–6 часов</span>
+                    </div>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary);">Розовый
+                        Город и Джаз</div>
+                </div>
+            </div><img src="assets/yerevan.png" alt="Yerevan Landmark" class="city-image">
+            <div class="description-block">Ереван — солнечный,
+                построенный из розового туфа,
+                очень уютный и компактный город. Центр можно спокойно обойти пешком,
+                наслаждаясь архитектурой и атмосферой вечного праздника. <br><br><strong>Что
+                    увидите:</strong>Главная доминанта — Каскад. Это гигантская лестница из
+                белого камня,
+                украшенная уникальными скульптурами современного искусства со всего мира.
+                Поднимитесь повыше — в ясную погоду оттуда открывается вид на гору Арарат.
+                От Каскада идите к Площади Республики,
+                чтобы увидеть монументальные правительственные здания и поющие фонтаны.
+                <br><br><strong>Важный момент:</strong>Ереван — город кофеен и джаза.
+                Обязательно сделайте паузу на кофе,
+                сваренный в джазве,
+                и попробуйте пряный ламаджо. Город влюбляет в себя своим интеллигентным
+                спокойствием.
+            </div>
+            <div class="transport-grid">
+                <div class="transport-item"><strong>Экспресс-шаттл №201</strong>~$1 (До
+                    центра) </div>
+                <div class="transport-item"><strong>Такси (Яндекс)</strong>~$10 </div>
+            </div>
+            <div class="visa-info">
+                <span>🛂</span>
+                <div>
+                    <strong>Документы РФ:</strong> Без визы (180 дней).
+                    <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.2rem;">Можно
+                        въезжать по внутреннему паспорту РФ (только прямым рейсом).</div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Каскад (Cascade)</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=40.1915,44.5155" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Северный проспект</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=40.1843,44.5150" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Площадь Республики</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=40.1776,44.5126" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- TASHKENT -->
+        <div class="glass-card">
+            <div class="city-header"><span class="flag">🇺🇿</span>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div class="section-title">ТАШКЕНТ (Узбекистан)</div><span
+                            style="font-size: 0.9rem; background: rgba(255,255,255,0.1); padding: 0.2rem 0.6rem; border-radius: 8px;">⏱
+                            Маршрут:~5–7 часов</span>
+                    </div>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary);">
+                        Гастрономический рай и зеленые аллеи </div>
+                </div>
+            </div><img src="assets/tashkent.png" alt="Tashkent Landmark" class="city-image">
+            <div class="description-block">Ташкент пахнет базиликом,
+                горячим хлебом и дымом от шашлыка. Это город-санаторий: широкие
+                проспекты,
+                многолетние чинары,
+                дающие тень,
+                и невероятное гостеприимство. <br><br><strong>Что
+                    увидите:</strong>Духовное сердце города — Комплекс Хазрати Имам с
+                древнейшим Кораном. Обязательно посетите Рынок Чорсу и современный
+                Tashkent City Park. Ну и,
+                конечно,
+                Центр Плова — это культовое место,
+                где готовят в гигантских казанах. <br><br><strong>Важный
+                    момент:</strong>Обязательно закажите чай с лимоном и сахаром («чай
+                по-ташкентски») — он здесь вкуснее,
+                чем где-либо. Виза россиянам не нужна. </div>
+            <div class="transport-grid">
+                <div class="transport-item"><strong>Такси (Yandex Go)</strong>~$3–5
+                </div>
+                <div class="transport-item"><strong>Метро</strong>~$0.25 (Очень красивое
+                    !) </div>
+            </div>
+            <div class="visa-info">
+                <span>🛂</span>
+                <div>
+                    <strong>Документы РФ:</strong> Без визы (бессрочно).
+                    <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.2rem;">
+                        Регистрация нужна только при пребывании более 3 дней (делает
+                        отель).</div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Комплекс Хазрати Имам</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=41.3372,69.2401" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #94a3b8;">Древнейший Коран
+                        Османа.</p>
+                </div>
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Рынок Чорсу (Chorsu Bazaar)</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=41.2925,69.2581" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #94a3b8;">Купол,
+                        специи,
+                        еда.</p>
+                </div>
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Tashkent City Park</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=41.3164,69.2484" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Центр Плова (Besh Qozon)</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=41.3458,69.2843" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #94a3b8;">Приезжать до 13:30 !
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- DUBAI -->
+        <div class="glass-card">
+            <div class="city-header"><span class="flag">🇦🇪</span>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div class="section-title">ДУБАЙ (ОАЭ)</div><span
+                            style="font-size: 0.9rem; background: rgba(255,255,255,0.1); padding: 0.2rem 0.6rem; border-radius: 8px;">⏱
+                            Маршрут:~6–8 часов</span>
+                    </div>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary);">
+                        Город будущего в пустыне</div>
+                </div>
+            </div><img src="assets/dubai.png" alt="Dubai Landmark" class="city-image">
+            <div class="description-block">Дубай — это вау-эффект. Стерильная
+                чистота,
+                кондиционированный воздух и запах дорогих духов удового дерева
+                повсюду. Здесь вы чувствуете себя персонажем фантастического фильма.
+                <br><br><strong>Что увидите:</strong>Классика — Burj Khalifa и Dubai
+                Mall с фонтанами. Для лучшего вида поднимитесь на Sky Views
+                Observatory. Если устали от бетона,
+                отправляйтесь в Старый город (Al Fahidi) и прокатитесь на лодке
+                абре. И не забудьте про Музей Будущего. <br><br><strong>Важный
+                    момент:</strong>Виза ставится по прилете бесплатно. Контраст
+                поражает: утром вы можете торговаться за золотое кольцо на старом
+                рынке,
+                а через час пить кофе с золотой крошкой на 122-м этаже.
+            </div>
+            <div class="transport-grid">
+                <div class="transport-item"><strong>Метро (Red Line)</strong>~$2.5
+                    (Карта NOL Silver) </div>
+                <div class="transport-item"><strong>Такси (Careem /
+                        Uber)</strong>~$25–30 (Дорого) </div>
+            </div>
+            <div class="visa-info">
+                <span>🛂</span>
+                <div>
+                    <strong>Документы РФ:</strong> Бесплатная виза по прилете (90
+                    дней).
+                    <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.2rem;">
+                        Паспорт должен действовать не менее 6 месяцев. Контроль
+                        строгий.</div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Burj Khalifa и Dubai Mall</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=25.1952,55.2751" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #94a3b8;">Шоу фонтанов с
+                        18:00.</p>
+                </div>
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Sky Views Observatory</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=25.1994,55.2713" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Старый город (Al Fahidi)</h3><a
+                            href="https://www.google.com/maps/search/?api=1&query=25.2633,55.2990" class="btn-map"
+                            target="_blank">Карта</a>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #94a3b8;">Лодка абра за 1
+                        дирхам.</p>
+                </div>
+                <div class="timeline-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3>Музей Будущего</h3><a href="https://www.google.com/maps/search/?api=1&query=25.2192,55.2818"
+                            class="btn-map" target="_blank">Карта</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; opacity: 0.4; margin-top: 3rem; font-size: 0.9rem;">
+            2026 Vik_tous </div>
+    </div>
+</body>
+
+</html>
