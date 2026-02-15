@@ -185,13 +185,42 @@
                 transform: translateY(0);
             }
         }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+
+            .highlight-text span {
+                font-size: 1.2rem;
+                letter-spacing: 3px;
+            }
+
+            .content {
+                padding: 1.5rem;
+                padding-bottom: 3rem;
+            }
+
+            p.subtitle {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .btn-open {
+                padding: 0.9rem 2.5rem;
+                font-size: 1.1rem;
+                width: 100%;
+                max-width: 250px;
+                box-sizing: border-box;
+            }
+        }
     </style>
 </head>
 
 <body>
 
     <div class="background-container">
-        <img src="assets/cover.png" alt="Travel Background" class="bg-image">
+        <img src="transit_assets/cover.png" alt="Travel Background" class="bg-image">
         <div class="overlay"></div>
     </div>
 
