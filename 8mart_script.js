@@ -98,22 +98,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const checkbox = document.getElementById('agree-checkbox');
     const proceedBtn = document.getElementById('modal-proceed');
     const closeX = document.getElementById('modal-close-x');
-    let currentLink = null;
-
-    // Open modal on Buy button click
-    document.querySelectorAll('.btn-buy').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            currentLink = btn.dataset.link;
-            modal.classList.remove('hidden');
-        });
-    });
 
     // Close modal function
     function closeModal() {
-        modal.classList.add('hidden');
-        checkbox.checked = false;
-        proceedBtn.disabled = true;
+        if (modal) modal.classList.add('hidden');
+        if (checkbox) checkbox.checked = false;
+        if (proceedBtn) proceedBtn.disabled = true;
     }
 
     // Close on X click
@@ -122,21 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Checkbox toggle
     if (checkbox) {
         checkbox.addEventListener('change', () => {
-            proceedBtn.disabled = !checkbox.checked;
-        });
-    }
-
-    // Proceed action
-    if (proceedBtn) {
-        proceedBtn.addEventListener('click', () => {
-            if (checkbox.checked) {
-                if (currentLink) {
-                    window.location.href = currentLink;
-                } else {
-                    alert('Переход к оплате (Link not set)...');
-                }
-                closeModal();
-            }
+            if (proceedBtn) proceedBtn.disabled = !checkbox.checked;
         });
     }
 
