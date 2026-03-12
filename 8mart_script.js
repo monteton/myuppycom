@@ -168,8 +168,8 @@ function handleBuy(tariffId) {
 
     // Payment links mapping
     const paymentLinks = {
-        'test-drive-rf': 'https://payform.ru/nraPzOW/',
-        'test-drive-norf': 'https://app.lava.top/products/51f5cfa9-53c3-4d9a-b108-cd07cbd7ef43',
+        'test-drive-rf': 'https://payform.ru/4taVuGG/',
+        'test-drive-norf': 'https://app.lava.top/products/67a613f6-fc74-437b-8070-d478bacb93a6',
         'lot2-rf': 'https://payform.ru/cd9Ktdf/',
         'lot2-norf': 'https://app.lava.top/products/522ec7f4-a7c0-44ad-8cbd-f43598484f1e',
         'lot3-rf': 'https://payform.ru/5v9Kt9O/',
