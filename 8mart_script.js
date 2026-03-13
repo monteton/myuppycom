@@ -174,7 +174,7 @@ function handleBuy(tariffId) {
         'lot2-norf': 'https://app.lava.top/products/522ec7f4-a7c0-44ad-8cbd-f43598484f1e',
         'lot3-rf': 'https://payform.ru/5v9Kt9O/',
         'lot3-norf': 'https://app.lava.top/products/78e896fe-7360-427e-acb8-438c2c630598',
-        'lot4-rf': 'https://payform.ru/scaPzRm/',
+        'lot4-rf': 'https://payform.ru/8qaS162/',
         'lot4-norf': 'https://app.lava.top/products/a9f6ffda-b944-4509-9914-f2b11c490bd3',
         'lot5-rf': 'https://payform.ru/b1a6rQo/',
         'lot5-norf': 'https://app.lava.top/products/1f93f1c1-4e49-4a04-9ff8-d18c493c3c25',
