@@ -1,97 +1,98 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Cherry Blossom Petals Effect
     const canvas = document.getElementById('petals-canvas');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
+    if (canvas) {
+        const ctx = canvas.getContext('2d');
 
-    let width = window.innerWidth;
-    let height = window.innerHeight;
-    canvas.width = width;
-    canvas.height = height;
-
-    const petals = [];
-    const maxPetals = 35;
-    const petalColors = [
-        'rgba(247, 197, 160, ',  // peach
-        'rgba(212, 96, 122,  ',  // rose
-        'rgba(200, 155, 94,  ',  // gold
-        'rgba(255, 218, 185, ',  // moccasin
-        'rgba(109, 175, 122, ',  // spring green
-    ];
-
-    class Petal {
-        constructor() {
-            this.x = Math.random() * width;
-            this.y = Math.random() * height - height;
-            this.size = Math.random() * 12 + 6;
-            this.speedY = Math.random() * 0.8 + 0.3;
-            this.speedX = Math.random() * 0.5 - 0.25;
-            this.opacity = Math.random() * 0.4 + 0.3;
-            this.rotation = Math.random() * 360;
-            this.spin = (Math.random() - 0.5) * 1.5;
-            this.wobble = Math.random() * Math.PI * 2;
-            this.wobbleSpeed = Math.random() * 0.02 + 0.01;
-            this.color = petalColors[Math.floor(Math.random() * petalColors.length)];
-        }
-
-        update() {
-            this.y += this.speedY;
-            this.wobble += this.wobbleSpeed;
-            this.x += this.speedX + Math.sin(this.wobble) * 0.5;
-            this.rotation += this.spin;
-            if (this.y > height + 20) {
-                this.y = -20;
-                this.x = Math.random() * width;
-            }
-            if (this.x > width + 20) this.x = -20;
-            if (this.x < -20) this.x = width + 20;
-        }
-
-        draw() {
-            ctx.save();
-            ctx.translate(this.x, this.y);
-            ctx.rotate(this.rotation * Math.PI / 180);
-            ctx.fillStyle = this.color + this.opacity + ')';
-
-            // Draw petal shape
-            ctx.beginPath();
-            ctx.moveTo(0, 0);
-            ctx.bezierCurveTo(
-                this.size / 2, -this.size / 2,
-                this.size, 0,
-                0, this.size
-            );
-            ctx.bezierCurveTo(
-                -this.size, 0,
-                -this.size / 2, -this.size / 2,
-                0, 0
-            );
-            ctx.fill();
-            ctx.restore();
-        }
-    }
-
-    for (let i = 0; i < maxPetals; i++) {
-        petals.push(new Petal());
-    }
-
-    function animatePetals() {
-        ctx.clearRect(0, 0, width, height);
-        petals.forEach(petal => {
-            petal.update();
-            petal.draw();
-        });
-        requestAnimationFrame(animatePetals);
-    }
-
-    animatePetals();
-
-    window.addEventListener('resize', () => {
-        width = window.innerWidth;
-        height = window.innerHeight;
+        let width = window.innerWidth;
+        let height = window.innerHeight;
         canvas.width = width;
         canvas.height = height;
-    });
+
+        const petals = [];
+        const maxPetals = 35;
+        const petalColors = [
+            'rgba(247, 197, 160, ',  // peach
+            'rgba(212, 96, 122,  ',  // rose
+            'rgba(200, 155, 94,  ',  // gold
+            'rgba(255, 218, 185, ',  // moccasin
+            'rgba(109, 175, 122, ',  // spring green
+        ];
+
+        class Petal {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height - height;
+                this.size = Math.random() * 12 + 6;
+                this.speedY = Math.random() * 0.8 + 0.3;
+                this.speedX = Math.random() * 0.5 - 0.25;
+                this.opacity = Math.random() * 0.4 + 0.3;
+                this.rotation = Math.random() * 360;
+                this.spin = (Math.random() - 0.5) * 1.5;
+                this.wobble = Math.random() * Math.PI * 2;
+                this.wobbleSpeed = Math.random() * 0.02 + 0.01;
+                this.color = petalColors[Math.floor(Math.random() * petalColors.length)];
+            }
+
+            update() {
+                this.y += this.speedY;
+                this.wobble += this.wobbleSpeed;
+                this.x += this.speedX + Math.sin(this.wobble) * 0.5;
+                this.rotation += this.spin;
+                if (this.y > height + 20) {
+                    this.y = -20;
+                    this.x = Math.random() * width;
+                }
+                if (this.x > width + 20) this.x = -20;
+                if (this.x < -20) this.x = width + 20;
+            }
+
+            draw() {
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate(this.rotation * Math.PI / 180);
+                ctx.fillStyle = this.color + this.opacity + ')';
+
+                ctx.beginPath();
+                ctx.moveTo(0, 0);
+                ctx.bezierCurveTo(
+                    this.size / 2, -this.size / 2,
+                    this.size, 0,
+                    0, this.size
+                );
+                ctx.bezierCurveTo(
+                    -this.size, 0,
+                    -this.size / 2, -this.size / 2,
+                    0, 0
+                );
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        for (let i = 0; i < maxPetals; i++) {
+            petals.push(new Petal());
+        }
+
+        function animatePetals() {
+            ctx.clearRect(0, 0, width, height);
+            petals.forEach(petal => {
+                petal.update();
+                petal.draw();
+            });
+            requestAnimationFrame(animatePetals);
+        }
+
+        animatePetals();
+
+        window.addEventListener('resize', () => {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+        });
+    }
+
 
     // Modal Logic
     const modal = document.getElementById('confirmation-modal');
