@@ -1120,7 +1120,7 @@ blockquote {
 
 .btn-buy {
     flex: 1;
-    background: linear-gradient(135deg, #8A9D6B 0%, #9B8AC4 100%);
+    background: #941368;
     color: white;
     border: none;
     padding: 1.1rem 1.4rem;
@@ -1137,7 +1137,7 @@ blockquote {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 6px 24px rgba(130, 110, 160, 0.35);
+    box-shadow: 0 6px 24px rgba(148, 19, 104, 0.35);
 }
 
 .btn-buy::before {
@@ -1156,22 +1156,22 @@ blockquote {
 
 .btn-buy:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(130, 110, 160, 0.45);
-    background: linear-gradient(135deg, #96AA77 0%, #AA99D0 100%);
+    box-shadow: 0 12px 32px rgba(148, 19, 104, 0.45);
+    background: #7a0f56;
 }
 
 .btn-buy-foreign {
     background: transparent !important;
-    color: #8A7AB8 !important;
-    border: 2px solid #8A7AB8 !important;
+    color: #5A8D25 !important;
+    border: 2px solid #5A8D25 !important;
     box-shadow: none;
 }
 
 .btn-buy-foreign:hover {
-    background: linear-gradient(135deg, #8A9D6B, #9B8AC4) !important;
+    background: #5A8D25 !important;
     color: #fff !important;
     border-color: transparent !important;
-    box-shadow: 0 8px 25px rgba(130, 110, 160, 0.40);
+    box-shadow: 0 8px 25px rgba(90, 141, 37, 0.40);
 }
 
 /* Featured Lot — remove span */
@@ -2033,8 +2033,27 @@ blockquote {
         border-radius: 0 0 20px 20px;
     }
 
+    .hero-banner img {
+        object-position: 80% center;
+    }
+
+    .hero-banner-overlay {
+        padding-left: 1rem;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .hero-banner-content {
+        max-width: 70%;
+    }
+
     .hero-main-title {
         font-size: 2rem;
+        text-align: left;
+    }
+
+    .hero-main-sub {
+        text-align: left;
     }
 
     h1 {
