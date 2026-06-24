@@ -4,9 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>День рождения у меня, а подарки для вас | Наталья Макаренко</title>
-    <meta name="description"
-        content="День рождения у Натальи Макаренко — а подарки для вас! 2 подарочных лота только 10 дней, с 21 по 30 июня. Тренировки, рецепты, питание.">
+    <!-- Базовые метатеги -->
+    <title>Наталья Макаренко — Тренировки и питание</title>
+    <meta name="description" content="Авторские программы тренировок для дома и зала, здоровые рецепты и рекомендации по питанию от Натальи Макаренко.">
+
+    <!-- Open Graph метатеги для Facebook и Instagram -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://myuppy.com/happy_birthday.html">
+    <meta property="og:title" content="Программы тренировок и питания | Наталья Макаренко">
+    <meta property="og:description" content="Авторские программы тренировок для дома и зала, здоровые рецепты и рекомендации по питанию.">
+    <meta property="og:image" content="https://myuppy.com/images/hero_model.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -22,7 +32,8 @@
         <section id="hero" class="hero-section">
             <div class="hero-banner">
                 <!-- Background: festive image with model + balloons -->
-                <img src="images/hero_model.png" alt="Наталья Макаренко — день рождения, подарки для вас" class="hero-bg-img">
+                <img src="images/hero_model.png" alt="Наталья Макаренко — день рождения, подарки для вас"
+                    class="hero-bg-img">
 
                 <!-- Confetti only (no balloons) -->
                 <div class="hero-decorations" aria-hidden="true">
@@ -69,20 +80,39 @@
 
                 <div class="problems-grid">
                     <div class="problem-card">
-                        <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 17c-3.3 0-6-2-6-4.5S8.7 8 12 8s6 2 6 4.5-2.7 4.5-6 4.5z"/><path d="M8 10.5c0-1.1.9-2 2-2m4 0c1.1 0 2 .9 2 2"/></svg></div>
-                        <div class="problem-text"><strong>Хотите стройное и красивое тело,</strong> но не знаете с чего начать?</div>
+                        <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 17c-3.3 0-6-2-6-4.5S8.7 8 12 8s6 2 6 4.5-2.7 4.5-6 4.5z" />
+                                <path d="M8 10.5c0-1.1.9-2 2-2m4 0c1.1 0 2 .9 2 2" />
+                            </svg></div>
+                        <div class="problem-text"><strong>Хотите стройное и красивое тело,</strong> но не знаете с чего
+                            начать?</div>
                     </div>
                     <div class="problem-card">
-                        <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
-                        <div class="problem-text"><strong>Имеете лишний вес</strong> и устали от бесконечных диет и срывов</div>
+                        <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <circle cx="12" cy="8" r="4" />
+                                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+                            </svg></div>
+                        <div class="problem-text"><strong>Имеете лишний вес</strong> и устали от бесконечных диет и
+                            срывов</div>
                     </div>
                     <div class="problem-card">
-                        <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 4v4m0 0c-2 0-3.5 1-3.5 3S10 14 12 14s3.5-1 3.5-3-1.5-3-3.5-3z"/><path d="M7 18c0-2.8 2.2-5 5-5s5 2.2 5 5"/></svg></div>
-                        <div class="problem-text"><strong>Хотите раз и навсегда разобраться в питании </strong> и есть вкусную, разнообразную, полезную еду без жестких ограничекний </div>
+                        <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 4v4m0 0c-2 0-3.5 1-3.5 3S10 14 12 14s3.5-1 3.5-3-1.5-3-3.5-3z" />
+                                <path d="M7 18c0-2.8 2.2-5 5-5s5 2.2 5 5" />
+                            </svg></div>
+                        <div class="problem-text"><strong>Хотите раз и навсегда разобраться в питании </strong> и есть
+                            вкусную, разнообразную, полезную еду без жестких ограничекний </div>
                     </div>
                     <div class="problem-card">
-                        <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
-                        <div class="problem-text"><strong>Хотите вернуть энергию, силы</strong> и радоваться своему отражению по утрам</div>
+                        <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg></div>
+                        <div class="problem-text"><strong>Хотите вернуть энергию, силы</strong> и радоваться своему
+                            отражению по утрам</div>
                     </div>
                 </div>
 
@@ -99,10 +129,36 @@
                 <h2 class="section-title">На этих программах:</h2>
 
                 <div class="results-list">
-                    <div class="result-item"><div class="result-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div><div class="result-text"><strong>Уходят </strong> лишние килограммы</div></div>
-                    <div class="result-item"><div class="result-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div><div class="result-text"><strong>Появляются понимание, знания и система </strong> как прийти к стойному и здоровому телу</div></div>
-                    <div class="result-item"><div class="result-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div><div class="result-text"><strong>Улучшается тонус мышц,</strong> кожа становится более подтянутой, плотной и упругой</div></div>
-                    <div class="result-item"><div class="result-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div><div class="result-text"><strong>Восстанавливаются энергия, силы</strong> и вера в себя</div></div>
+                    <div class="result-item">
+                        <div class="result-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg></div>
+                        <div class="result-text"><strong>Уходят </strong> лишние килограммы</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg></div>
+                        <div class="result-text"><strong>Появляются понимание, знания и система </strong> как прийти к
+                            стойному и здоровому телу</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg></div>
+                        <div class="result-text"><strong>Улучшается тонус мышц,</strong> кожа становится более
+                            подтянутой, плотной и упругой</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg></div>
+                        <div class="result-text"><strong>Восстанавливаются энергия, силы</strong> и вера в себя</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -124,9 +180,12 @@
                         </div>
                     </div>
                     <div class="format-no-list">
-                        <div class="format-no-item"><span class="format-no-dash"></span><span>Без дорогого оборудования</span></div>
-                        <div class="format-no-item"><span class="format-no-dash"></span><span>Без абонемента в спортзал</span></div>
-                        <div class="format-no-item"><span class="format-no-dash"></span><span>Без пластических хирургов</span></div>
+                        <div class="format-no-item"><span class="format-no-dash"></span><span>Без дорогого
+                                оборудования</span></div>
+                        <div class="format-no-item"><span class="format-no-dash"></span><span>Без абонемента в
+                                спортзал</span></div>
+                        <div class="format-no-item"><span class="format-no-dash"></span><span>Без пластических
+                                хирургов</span></div>
                     </div>
                 </div>
             </div>
@@ -150,7 +209,8 @@
 
                     <!-- LOT 1 -->
                     <div class="lot-card lot-featured-royal">
-                        <div class="lot-badge-royal" id="lot1-badge">🎯 Осталось <span id="lot1-seats">96</span> бонусных мест из 100</div>
+                        <div class="lot-badge-royal" id="lot1-badge">🎯 Осталось <span id="lot1-seats">96</span>
+                            бонусных мест из 100</div>
                         <div class="lot-image-top">
                             <img src="images/lot_1.jpg" alt="Лот 1 — Быстрый старт">
                         </div>
@@ -162,9 +222,11 @@
                             <div class="lot-section-title">Для кого этот тариф?</div>
                             <ul class="lot-list">
                                 <li>Для тех, кто хочет стройное, здоровое тело, но не знает с чего начать</li>
-                                <li>Для тех, кто хочет попробовать программы Натальи Макаренко изнутри и забрать самые любимые и эффективные тренировки</li>
+                                <li>Для тех, кто хочет попробовать программы Натальи Макаренко изнутри и забрать самые
+                                    любимые и эффективные тренировки</li>
                                 <li>Для тех, кто хочет получить любимые готовые рецепты</li>
-                                <li>Для тех, кто хочет зарядиться энергией и сделать первый шаг к лучшей версии себя</li>
+                                <li>Для тех, кто хочет зарядиться энергией и сделать первый шаг к лучшей версии себя
+                                </li>
                             </ul>
 
                             <div class="lot-section-title">Что входит в программу?</div>
@@ -173,14 +235,21 @@
                                 <span class="lot-tag">🥗 Рецепты</span>
                                 <span class="lot-tag">💊 Гайд по нутрицевтикам</span>
                             </div>
-                            <div class="lot-quote">«В ней я собрала свои самые любимые и эффективные тренировки, которые делаю сама, когда у меня мало времени, но нужен максимальный результат.»</div>
+                            <div class="lot-quote">«В ней я собрала свои самые любимые и эффективные тренировки, которые
+                                делаю сама, когда у меня мало времени, но нужен максимальный результат.»</div>
 
                             <div class="lot-details">
-                                <div class="lot-detail-item"><span class="lot-detail-icon">✅</span><span>25 упражнений на разные группы мышц, собранные в эффективные тренировки</span></div>
-                                <div class="lot-detail-item"><span class="lot-detail-icon">✅</span><span>Сборники рецептов: ПП пирожки, брауни, хачапури, буррито — без вреда для фигуры</span></div>
-                                <div class="lot-detail-item"><span class="lot-detail-icon">✅</span><span>Универсальное меню на 30 дней на 1300 ккал</span></div>
-                                <div class="lot-detail-item"><span class="lot-detail-icon">✅</span><span>Бонусный гайд по нутрицевтикам с ссылками на проверенные продукты</span></div>
-                                <div class="lot-detail-item"><span class="lot-detail-icon">🕐</span><span><strong>Доступ к программе 3 месяца</strong></span></div>
+                                <div class="lot-detail-item"><span class="lot-detail-icon">✅</span><span>25 упражнений
+                                        на разные группы мышц, собранные в эффективные тренировки</span></div>
+                                <div class="lot-detail-item"><span class="lot-detail-icon">✅</span><span>Сборники
+                                        рецептов: ПП пирожки, брауни, хачапури, буррито — без вреда для фигуры</span>
+                                </div>
+                                <div class="lot-detail-item"><span class="lot-detail-icon">✅</span><span>Универсальное
+                                        меню на 30 дней на 1300 ккал</span></div>
+                                <div class="lot-detail-item"><span class="lot-detail-icon">✅</span><span>Бонусный гайд
+                                        по нутрицевтикам с ссылками на проверенные продукты</span></div>
+                                <div class="lot-detail-item"><span class="lot-detail-icon">🕐</span><span><strong>Доступ
+                                            к программе 3 месяца</strong></span></div>
                             </div>
                         </div>
                         <div class="lot-footer">
@@ -190,25 +259,30 @@
                             </div>
                             <div class="buttons-row">
                                 <button class="btn-buy" onclick="handleBuy('lot1-rf')">Купить из РФ</button>
-                                <button class="btn-buy btn-buy-foreign" onclick="handleBuy('lot1-norf')">Купить не из РФ</button>
+                                <button class="btn-buy btn-buy-foreign" onclick="handleBuy('lot1-norf')">Купить не из
+                                    РФ</button>
                             </div>
                         </div>
                     </div>
 
                     <!-- LOT 2 -->
                     <div class="lot-card lot-combo-hit">
-                        <div class="lot-badge-hit" id="lot2-badge">🔥 Осталось <span id="lot2-seats">89</span> бонусных мест из 100</div>
+                        <div class="lot-badge-hit" id="lot2-badge">🔥 Осталось <span id="lot2-seats">89</span> бонусных
+                            мест из 100</div>
                         <div class="lot-image-top">
                             <img src="images/lot_2.png" alt="Лот 2 — Быстрый старт + Питание">
                         </div>
                         <div class="lot-body">
                             <h3 class="lot-number">ЛОТ 2</h3>
-                        <h4 class="lot-title">"Быстрый старт" - Самое любимое и эффективное + Полная программа "Питание"</h4>
+                            <h4 class="lot-title">"Быстрый старт" - Самое любимое и эффективное + Полная программа
+                                "Питание"</h4>
                             <p class="lot-subtitle">Для наилучшего результата</p>
 
                             <div class="lot-section-title">Что в этом тарифе?</div>
-                            <p class="lot-intro">Всё, что входит в предыдущий тариф + <strong>Весь блок по питанию</strong> из программы марафона «Лучшая Версия Себя».</p>
-                            <p class="lot-intro">Вы знаете, что <strong>80% успеха в сбросе веса</strong> зависит от питания? Но как быть, если:</p>
+                            <p class="lot-intro">Всё, что входит в предыдущий тариф + <strong>Весь блок по
+                                    питанию</strong> из программы марафона «Лучшая Версия Себя».</p>
+                            <p class="lot-intro">Вы знаете, что <strong>80% успеха в сбросе веса</strong> зависит от
+                                питания? Но как быть, если:</p>
                             <ul class="lot-list">
                                 <li>Вы боитесь сложных расчетов КБЖУ и скучных рецептов?</li>
                                 <li>Вы не хотите отказываться от любимых продуктов?</li>
@@ -216,20 +290,36 @@
 
                             <div class="lot-section-title">Что в этой программе:</div>
                             <div class="lot-details">
-                                <div class="lot-detail-item"><span class="lot-detail-icon">✅</span><span>Калькулятор подсчета калорийности + обучающие видео, все удобно и просто</span></div>
-                                <div class="lot-detail-item"><span class="lot-detail-icon">✅</span><span>Меню с разным КБЖУ со списками продуктов</span></div>
-                                <div class="lot-detail-item"><span class="lot-detail-icon">✅</span><span>Вкусные, простые и полезные рецепты для красивой, стройной фигуры</span></div>
-                                <div class="lot-detail-item"><span class="lot-detail-icon">✅</span><span>Видео-уроки от Натальи по составлению индивидуального меню, в зависимости от ваших целей и задач</span></div>
-                                <div class="lot-detail-item"><span class="lot-detail-icon">✅</span><span>Дополнительные полезные материалы о питании</span></div>
-                                <div class="lot-detail-item"><span class="lot-detail-icon">🕐</span><span><strong>Доступ к платформе 3 месяца!</strong></span></div>
+                                <div class="lot-detail-item"><span class="lot-detail-icon">✅</span><span>Калькулятор
+                                        подсчета калорийности + обучающие видео, все удобно и просто</span></div>
+                                <div class="lot-detail-item"><span class="lot-detail-icon">✅</span><span>Меню с разным
+                                        КБЖУ со списками продуктов</span></div>
+                                <div class="lot-detail-item"><span class="lot-detail-icon">✅</span><span>Вкусные,
+                                        простые и полезные рецепты для красивой, стройной фигуры</span></div>
+                                <div class="lot-detail-item"><span class="lot-detail-icon">✅</span><span>Видео-уроки от
+                                        Натальи по составлению индивидуального меню, в зависимости от ваших целей и
+                                        задач</span></div>
+                                <div class="lot-detail-item"><span class="lot-detail-icon">✅</span><span>Дополнительные
+                                        полезные материалы о питании</span></div>
+                                <div class="lot-detail-item"><span class="lot-detail-icon">🕐</span><span><strong>Доступ
+                                            к платформе 3 месяца!</strong></span></div>
                             </div>
 
                             <div class="lot-section-title">Ваши главные результаты:</div>
                             <div class="lot-results">
-                                <div class="lot-result-item"><span class="lot-result-emoji">✨</span><div><strong>Лёгкость в теле.</strong> Прощай, тяжесть, вздутие и лишние килограммы!</div></div>
-                                <div class="lot-result-item"><span class="lot-result-emoji">💫</span><div><strong>Сияющая кожа.</strong> Здоровый румянец и упругость.</div></div>
-                                <div class="lot-result-item"><span class="lot-result-emoji">📉</span><div><strong>Минус в объёмах.</strong> Вес уходит естественно и без жертв.</div></div>
-                                <div class="lot-result-item"><span class="lot-result-emoji">🧠</span><div><strong>Уверенность и знания,</strong> которые останутся с вами навсегда.</div></div>
+                                <div class="lot-result-item"><span class="lot-result-emoji">✨</span>
+                                    <div><strong>Лёгкость в теле.</strong> Прощай, тяжесть, вздутие и лишние килограммы!
+                                    </div>
+                                </div>
+                                <div class="lot-result-item"><span class="lot-result-emoji">💫</span>
+                                    <div><strong>Сияющая кожа.</strong> Здоровый румянец и упругость.</div>
+                                </div>
+                                <div class="lot-result-item"><span class="lot-result-emoji">📉</span>
+                                    <div><strong>Минус в объёмах.</strong> Вес уходит естественно и без жертв.</div>
+                                </div>
+                                <div class="lot-result-item"><span class="lot-result-emoji">🧠</span>
+                                    <div><strong>Уверенность и знания,</strong> которые останутся с вами навсегда.</div>
+                                </div>
                             </div>
                         </div>
                         <div class="lot-footer">
@@ -239,7 +329,8 @@
                             </div>
                             <div class="buttons-row">
                                 <button class="btn-buy" onclick="handleBuy('lot2-rf')">Купить из РФ</button>
-                                <button class="btn-buy btn-buy-foreign" onclick="handleBuy('lot2-norf')">Купить не из РФ</button>
+                                <button class="btn-buy btn-buy-foreign" onclick="handleBuy('lot2-norf')">Купить не из
+                                    РФ</button>
                             </div>
                         </div>
                     </div>
@@ -250,28 +341,29 @@
                             <div class="gift-badge">ВАШ ГЛАВНЫЙ ПОДАРОК</div>
                             <h3 class="gift-title">Уверенная в себе, красивая, стройная, роскошная женщина!</h3>
                             <p class="gift-subtitle">Та, которой вы мечтали стать, но всегда откладыввали</p>
-<p class="gift-limited">Количество мест ограничено</p>
-                            
-                            </div>
+                            <p class="gift-limited">Количество мест ограничено</p>
 
-                            <div class="gift-footer-cta">
-                                
-                                <p class="gift-cta-text">Подари себе новую версию себя!</p>
-                            </div>
+                        </div>
+
+                        <div class="gift-footer-cta">
+
+                            <p class="gift-cta-text">Подари себе новую версию себя!</p>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Key Features -->
-                <section id="features" class="features-section">
-                    <div class="features-grid">
-                        <div class="feature-item">
-                            <h3>Ключевые особенности</h3>
-                            <p>✅ Мгновенный доступ. Все программы открываются в удобном мобильном приложении сразу после оплаты.</p>
-                            <p>✅ Всё без зала. Все комплексы разработаны для занятий дома, с минимальным инвентарём.</p>
-                        </div>
+            <!-- Key Features -->
+            <section id="features" class="features-section">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>Ключевые особенности</h3>
+                        <p>✅ Мгновенный доступ. Все программы открываются в удобном мобильном приложении сразу после
+                            оплаты.</p>
+                        <p>✅ Всё без зала. Все комплексы разработаны для занятий дома, с минимальным инвентарём.</p>
                     </div>
-                </section>
+                </div>
+            </section>
             </div>
         </section>
 
@@ -287,11 +379,15 @@
                         <ul class="trust-list">
                             <li>Профессиональный дипломированный Фитнес-Тренер.</li>
                             <li>53 года и доказательство того, что возраст — это только цифра.</li>
-                            <li>Автор популярного блога о фитнесе и питании с миллионами просмотров и высочайшим доверием аудитории в 165 тысяч подписчиков.</li>
+                            <li>Автор популярного блога о фитнесе и питании с миллионами просмотров и высочайшим
+                                доверием аудитории в 165 тысяч подписчиков.</li>
                         </ul>
                         <div class="trust-quote">
-                            <p>«Мне 53, и я выгляжу лучше, чем в 35. Я прошла этот путь сама и точно знаю, какие методики работают, а какие только тратят время, особенно после 40-ка. Я не даю теорию, я делюсь своим опытом.</p>
-                            <p>Моя миссия — помочь женщинам в любом возрасте почувствовать себя красивыми, счастливыми и желанными»</p>
+                            <p>«Мне 53, и я выгляжу лучше, чем в 35. Я прошла этот путь сама и точно знаю, какие
+                                методики работают, а какие только тратят время, особенно после 40-ка. Я не даю теорию, я
+                                делюсь своим опытом.</p>
+                            <p>Моя миссия — помочь женщинам в любом возрасте почувствовать себя красивыми, счастливыми и
+                                желанными»</p>
                         </div>
                     </div>
                 </div>
@@ -305,15 +401,20 @@
                 <div class="reviews-grid">
                     <div class="review-card">
                         <p>«С днём рождения меня!!! 😇 Девочки мне сегодня 47 🎉🎊</p>
-                        <p>Я хочу поблагодарить Наталью, за то что помогла мне прийти к телу моей мечты 💫💫💫 С августа по сегодняшний день — 7 кг. 💃💃💃💃 Я очень счастлива находиться в этом весе и этом теле 👌 Наталья благодарю Вас ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️»</p>
+                        <p>Я хочу поблагодарить Наталью, за то что помогла мне прийти к телу моей мечты 💫💫💫 С августа
+                            по сегодняшний день — 7 кг. 💃💃💃💃 Я очень счастлива находиться в этом весе и этом теле 👌
+                            Наталья благодарю Вас ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️»</p>
                         <span class="review-author">Светлана, 47 лет</span>
                     </div>
                     <div class="review-card">
-                        <p>«Я перепробовала огромное количество диет, но только ваша программа по питанию дала результат и вес сдвинулся с места. Огромное спасибо!! ❤️. Рекомендую всем!»</p>
+                        <p>«Я перепробовала огромное количество диет, но только ваша программа по питанию дала результат
+                            и вес сдвинулся с места. Огромное спасибо!! ❤️. Рекомендую всем!»</p>
                         <span class="review-author">Виктория, 42 года</span>
                     </div>
                     <div class="review-card">
-                        <p>«Добрый день Наталья. Спасибо за Ваш труд. Уже три года сохроняю свой идеальный вес! Улучшилась кожа, я перестала отекать по утрам, каждый раз вспоминаю вас с благодапрностью и подругам всем советую</p>
+                        <p>«Добрый день Наталья. Спасибо за Ваш труд. Уже три года сохроняю свой идеальный вес!
+                            Улучшилась кожа, я перестала отекать по утрам, каждый раз вспоминаю вас с благодапрностью и
+                            подругам всем советую</p>
                         <p>❤️😘!»</p>
                         <span class="review-author">Надежда, 56 лет</span>
                     </div>
@@ -327,36 +428,67 @@
                 <h2 class="section-title">Часто задаваемые вопросы</h2>
                 <div class="faq-list">
                     <div class="faq-item">
-                        <button class="faq-question" onclick="toggleFAQ(this)">Я никогда не занималась, подойдут ли мне программы?</button>
-                        <div class="faq-answer"><p>Да, конечно! Программы подходят как для новичков, так и для уже практикующих, но кто хочет получить новые результаты и мотивацию.</p></div>
+                        <button class="faq-question" onclick="toggleFAQ(this)">Я никогда не занималась, подойдут ли мне
+                            программы?</button>
+                        <div class="faq-answer">
+                            <p>Да, конечно! Программы подходят как для новичков, так и для уже практикующих, но кто
+                                хочет получить новые результаты и мотивацию.</p>
+                        </div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question" onclick="toggleFAQ(this)">Подходят ли мне программы, если у меня есть проблемы со здоровьем?</button>
-                        <div class="faq-answer"><p>Смотря какие проблемы со здоровьем. Программа по уходу за лицом подходит всем. Упражнения разработаны для тех, кому не запрещены тренировки. Если у вас есть серьезные ограничения по физическим нагрузкам, пожалуйста, проконсультируйтесь со своим лечащим врачом.</p></div>
+                        <button class="faq-question" onclick="toggleFAQ(this)">Подходят ли мне программы, если у меня
+                            есть проблемы со здоровьем?</button>
+                        <div class="faq-answer">
+                            <p>Смотря какие проблемы со здоровьем. Программа по уходу за лицом подходит всем. Упражнения
+                                разработаны для тех, кому не запрещены тренировки. Если у вас есть серьезные ограничения
+                                по физическим нагрузкам, пожалуйста, проконсультируйтесь со своим лечащим врачом.</p>
+                        </div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question" onclick="toggleFAQ(this)">Сколько времени понадобится на тренировки?</button>
-                        <div class="faq-answer"><p>Всего 15–20 минут в день! В одной тренировке 4-5 коротких упражнения. Я сделала программы максимально удобными, чтобы они легко вписались в ваш рабочий и жизненный график без стресса.</p></div>
+                        <button class="faq-question" onclick="toggleFAQ(this)">Сколько времени понадобится на
+                            тренировки?</button>
+                        <div class="faq-answer">
+                            <p>Всего 15–20 минут в день! В одной тренировке 4-5 коротких упражнения. Я сделала программы
+                                максимально удобными, чтобы они легко вписались в ваш рабочий и жизненный график без
+                                стресса.</p>
+                        </div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question" onclick="toggleFAQ(this)">Нужен ли мне абонемент в спортзал?</button>
-                        <div class="faq-answer"><p>Нет! Вовсе не обязательно. Я подготовила упражнения, которые можно делать дома, в поездке, на даче с минимальным инвентарём. Вы можете делать их где угодно.</p></div>
+                        <button class="faq-question" onclick="toggleFAQ(this)">Нужен ли мне абонемент в
+                            спортзал?</button>
+                        <div class="faq-answer">
+                            <p>Нет! Вовсе не обязательно. Я подготовила упражнения, которые можно делать дома, в
+                                поездке, на даче с минимальным инвентарём. Вы можете делать их где угодно.</p>
+                        </div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question" onclick="toggleFAQ(this)">Как проходят программы? Как я получу доступ к материалам?</button>
-                        <div class="faq-answer"><p>После оплаты вам придёт ссылка на закрытую платформу — удобное, красивое мобильное приложение, где будут доступны все видео уроки, тренировки и дополнительные бонусные материалы.</p></div>
+                        <button class="faq-question" onclick="toggleFAQ(this)">Как проходят программы? Как я получу
+                            доступ к материалам?</button>
+                        <div class="faq-answer">
+                            <p>После оплаты вам придёт ссылка на закрытую платформу — удобное, красивое мобильное
+                                приложение, где будут доступны все видео уроки, тренировки и дополнительные бонусные
+                                материалы.</p>
+                        </div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question" onclick="toggleFAQ(this)">Сколько доступ к программам?</button>
-                        <div class="faq-answer"><p>Доступ к приложению целых 3 месяца. По окончанию, можно будет продлить доступ со скидкой.</p></div>
+                        <div class="faq-answer">
+                            <p>Доступ к приложению целых 3 месяца. По окончанию, можно будет продлить доступ со скидкой.
+                            </p>
+                        </div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question" onclick="toggleFAQ(this)">Будет ли обратная связь?</button>
-                        <div class="faq-answer"><p>В рамках предложенных пакетов обратная связь не предусмотрена. Все видео записаны с пояснениями и максимально понятны для самостоятельного прохождения.</p></div>
+                        <div class="faq-answer">
+                            <p>В рамках предложенных пакетов обратная связь не предусмотрена. Все видео записаны с
+                                пояснениями и максимально понятны для самостоятельного прохождения.</p>
+                        </div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question" onclick="toggleFAQ(this)">Не проходит оплата, что делать?</button>
-                        <div class="faq-answer"><p>По этому вопросу напишите в службу Заботы — Whatsapp +79167587021</p></div>
+                        <div class="faq-answer">
+                            <p>По этому вопросу напишите в службу Заботы — Whatsapp +79167587021</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -366,9 +498,14 @@
         <footer class="site-footer">
             <div class="container">
                 <div class="footer-links">
-                    <a href="#" class="footer-link" onclick="openDocumentModal('public_offer.html', 'Публичная оферта')">Публичная оферта</a>
-                    <a href="#" class="footer-link" onclick="openDocumentModal('privacy_policy.html', 'Политика обработки персональных данных')">Политика обработки персональных данных</a>
-                    <a href="#" class="footer-link" onclick="openDocumentModal('consent_personal_data.html', 'Согласие на обработку персональных данных')">Согласие на обработку персональных данных</a>
+                    <a href="#" class="footer-link"
+                        onclick="openDocumentModal('public_offer.html', 'Публичная оферта')">Публичная оферта</a>
+                    <a href="#" class="footer-link"
+                        onclick="openDocumentModal('privacy_policy.html', 'Политика обработки персональных данных')">Политика
+                        обработки персональных данных</a>
+                    <a href="#" class="footer-link"
+                        onclick="openDocumentModal('consent_personal_data.html', 'Согласие на обработку персональных данных')">Согласие
+                        на обработку персональных данных</a>
                 </div>
                 <div class="footer-requisites">
                     <p>Реквизиты: Самозанятая Макаренко Наталья Анатольевна</p>
@@ -384,7 +521,8 @@
                 <span id="doc-modal-close-x" class="close-modal">&times;</span>
                 <div class="modal-header">
                     <h3 id="document-title">Документ</h3>
-                    <a id="document-new-tab-btn" href="#" target="_blank" class="btn-modal btn-cancel" style="font-size: 0.8rem; padding: 0.5rem 1rem; text-decoration: none;">Открыть в новом окне</a>
+                    <a id="document-new-tab-btn" href="#" target="_blank" class="btn-modal btn-cancel"
+                        style="font-size: 0.8rem; padding: 0.5rem 1rem; text-decoration: none;">Открыть в новом окне</a>
                 </div>
                 <div class="document-viewer">
                     <div id="document-content"></div>
@@ -399,7 +537,14 @@
                 <h3>Подтверждение</h3>
                 <div class="checkbox-wrapper">
                     <input type="checkbox" id="agree-checkbox">
-                    <label for="agree-checkbox">Переходя по ссылке с этого сайта, я согласна/ен с <a href="#" onclick="openDocumentModal('public_offer.html', 'Публичная оферта'); return false;">Публичной офертой</a>, и даю <a href="#" onclick="openDocumentModal('consent_personal_data.html', 'Согласие на обработку персональных данных'); return false;">Согласие на обработку персональных данных</a> в соответствии с <a href="#" onclick="openDocumentModal('privacy_policy.html', 'Политика обработки персональных данных'); return false;">Политикой</a>.<br><span style="font-size: 0.85em; opacity: 0.8;">(цель — регистрация и доступ к приложению с материалами)</span></label>
+                    <label for="agree-checkbox">Переходя по ссылке с этого сайта, я согласна/ен с <a href="#"
+                            onclick="openDocumentModal('public_offer.html', 'Публичная оферта'); return false;">Публичной
+                            офертой</a>, и даю <a href="#"
+                            onclick="openDocumentModal('consent_personal_data.html', 'Согласие на обработку персональных данных'); return false;">Согласие
+                            на обработку персональных данных</a> в соответствии с <a href="#"
+                            onclick="openDocumentModal('privacy_policy.html', 'Политика обработки персональных данных'); return false;">Политикой</a>.<br><span
+                            style="font-size: 0.85em; opacity: 0.8;">(цель — регистрация и доступ к приложению с
+                            материалами)</span></label>
                 </div>
                 <div class="modal-buttons">
                     <button id="modal-proceed" class="btn-modal btn-proceed" disabled>Перейти к оплате</button>
