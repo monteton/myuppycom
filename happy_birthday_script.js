@@ -126,7 +126,7 @@ function initSeatCountdown() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    initSeatCountdown();
+    // initSeatCountdown();
     initConfetti();
 
     // Cherry Blossom Petals Effect
