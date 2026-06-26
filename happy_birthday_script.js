@@ -76,57 +76,7 @@ function initConfetti() {
 }
 
 
-// =====================================================
-//  DAILY SEAT COUNTDOWN
-//  Subtracts 2-3 random seats per lot per day
-//  Stored in localStorage so it persists between visits
-// =====================================================
-function initSeatCountdown() {
-    const LOT1_START = 96;
-    const LOT2_START = 89;
-    const MIN_SEATS  = 3; // Never drop below this
-
-    const today = new Date().toISOString().slice(0, 10); // "YYYY-MM-DD"
-
-    // Load stored values
-    let lot1 = parseInt(localStorage.getItem('hb_lot1_seats'), 10);
-    let lot2 = parseInt(localStorage.getItem('hb_lot2_seats'), 10);
-    let lastDate = localStorage.getItem('hb_last_date') || '';
-
-    // First visit ever — set starting values
-    if (isNaN(lot1)) lot1 = LOT1_START;
-    if (isNaN(lot2)) lot2 = LOT2_START;
-
-    // New day — subtract random 2-3 from each lot
-    if (lastDate !== today) {
-        const subtract1 = Math.floor(Math.random() * 2) + 2; // 2 or 3
-        const subtract2 = Math.floor(Math.random() * 2) + 2;
-        lot1 = Math.max(MIN_SEATS, lot1 - subtract1);
-        lot2 = Math.max(MIN_SEATS, lot2 - subtract2);
-        localStorage.setItem('hb_lot1_seats', lot1);
-        localStorage.setItem('hb_lot2_seats', lot2);
-        localStorage.setItem('hb_last_date', today);
-    }
-
-    // Update DOM
-    const el1 = document.getElementById('lot1-seats');
-    const el2 = document.getElementById('lot2-seats');
-    if (el1) el1.textContent = lot1;
-    if (el2) el2.textContent = lot2;
-
-    // Pulse animation on low stock
-    if (lot1 <= 10) {
-        const badge1 = document.getElementById('lot1-badge');
-        if (badge1) badge1.classList.add('badge-urgent');
-    }
-    if (lot2 <= 10) {
-        const badge2 = document.getElementById('lot2-badge');
-        if (badge2) badge2.classList.add('badge-urgent');
-    }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-    // initSeatCountdown();
     initConfetti();
 
     // Cherry Blossom Petals Effect
