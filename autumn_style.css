@@ -145,7 +145,7 @@ p {
 
 .hero-season-badge {
     display: inline-block;
-    background: linear-gradient(135deg, #2F9E6E, #8FDDB5);
+    background: linear-gradient(135deg, #3FB07E, #1F7A52);
     color: #fff;
     padding: 0.45rem 1.8rem;
     border-radius: 50px;
@@ -339,7 +339,7 @@ p {
 
 .hero-no-inject {
     display: inline-block;
-    background: linear-gradient(135deg, #2F9E6E, #8FDDB5);
+    background: linear-gradient(135deg, #3FB07E, #1F7A52);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -570,7 +570,7 @@ blockquote {
 }
 
 .problems-cta-hint {
-    background: linear-gradient(135deg, #2F9E6E, #8FDDB5);
+    background: linear-gradient(135deg, #3FB07E, #1F7A52);
     border-radius: 16px;
     padding: 1.1rem 2rem;
     display: inline-block;
@@ -808,7 +808,7 @@ blockquote {
 
 .offer-badge-top {
     display: inline-block;
-    background: linear-gradient(135deg, #2F9E6E, #8FDDB5);
+    background: linear-gradient(135deg, #3FB07E, #1F7A52);
     color: #fff;
     font-family: var(--font-heading);
     font-weight: 700;
@@ -1154,7 +1154,7 @@ blockquote {
 .current-price {
     font-size: 2rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #2F9E6E, #8FDDB5);
+    background: linear-gradient(135deg, #3FB07E, #1F7A52);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -1177,7 +1177,7 @@ blockquote {
 
 .btn-buy {
     flex: 1;
-    background: linear-gradient(135deg, #2F9E6E, #8FDDB5);
+    background: linear-gradient(135deg, #3FB07E, #1F7A52);
     color: white;
     border: none;
     padding: 1.1rem 1.4rem;
@@ -1277,7 +1277,7 @@ blockquote {
     position: absolute;
     top: 16px;
     left: 16px;
-    background: linear-gradient(135deg, #2F9E6E, #8FDDB5);
+    background: linear-gradient(135deg, #3FB07E, #1F7A52);
     color: #fff;
     padding: 0.4rem 1.2rem;
     border-radius: 50px;
@@ -2295,4 +2295,16 @@ blockquote {
 #petals-canvas { display: block; }
 @media (prefers-reduced-motion: reduce) {
     #petals-canvas { display: none; }
+}
+
+
+/* Первый экран: всё выровнено по левому краю, баннер выше */
+.hero-banner-overlay { padding-left: max(24px, 5%); }
+.hero-banner-content { text-align: left; }
+.hero-main-title,
+.hero-main-sub { text-align: left; }
+.hero-main-sub { letter-spacing: 3px; }
+@media (min-width: 601px) and (max-width: 1024px) {
+    .hero-banner { height: 440px; }
+    .hero-main-title { font-size: 3.6rem; }
 }
