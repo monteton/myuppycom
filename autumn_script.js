@@ -1,42 +1,89 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Шапка: тонкая линия после прокрутки
-    const nav = document.getElementById('topnav');
-    const onScroll = () => nav && nav.classList.toggle('scrolled', window.scrollY > 8);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
+    // Осенние листья (фиолетово-зелёные)
+    const canvas = document.getElementById('petals-canvas');
+    if (canvas) {
+        const ctx = canvas.getContext('2d');
 
-    // Скидка в процентах считается из data-old / data-new — при смене цен править только их
-    document.querySelectorAll('.price').forEach(p => {
-        const oldP = parseFloat(p.dataset.old), newP = parseFloat(p.dataset.new);
-        const save = p.querySelector('.price-save');
-        if (save && oldP > newP) save.textContent = '−' + Math.round((1 - newP / oldP) * 100) + '%';
-    });
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
 
-    // Плавающая кнопка на телефоне: видна после первого экрана, прячется у тарифов и в футере
-    const sticky = document.getElementById('sticky-cta');
-    const hero = document.getElementById('hero');
-    const hideZones = [document.getElementById('lots'), document.querySelector('.site-footer')];
-    if (sticky && hero && 'IntersectionObserver' in window) {
-        const state = { hero: true, zones: new Set() };
-        const paint = () => sticky.classList.toggle('show', !state.hero && state.zones.size === 0);
-        new IntersectionObserver(([e]) => { state.hero = e.isIntersecting; paint(); }).observe(hero);
-        const zoneObs = new IntersectionObserver(entries => {
-            entries.forEach(e => e.isIntersecting ? state.zones.add(e.target) : state.zones.delete(e.target));
-            paint();
+        const petals = [];
+        const maxPetals = window.innerWidth < 600 ? 12 : 22;
+        const petalColors = [
+            'rgba(122, 75, 209, ',  // violet
+            'rgba(185, 163, 232, ', // lavender
+            'rgba(47, 158, 110, ',  // green
+            'rgba(143, 221, 181, ', // mint
+        ];
+
+        class Petal {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height - height;
+                this.size = Math.random() * 12 + 6;
+                this.speedY = Math.random() * 0.8 + 0.3;
+                this.speedX = Math.random() * 0.5 - 0.25;
+                this.opacity = Math.random() * 0.3 + 0.25;
+                this.rotation = Math.random() * 360;
+                this.spin = (Math.random() - 0.5) * 1.5;
+                this.wobble = Math.random() * Math.PI * 2;
+                this.wobbleSpeed = Math.random() * 0.02 + 0.01;
+                this.color = petalColors[Math.floor(Math.random() * petalColors.length)];
+            }
+
+            update() {
+                this.y += this.speedY;
+                this.wobble += this.wobbleSpeed;
+                this.x += this.speedX + Math.sin(this.wobble) * 0.5;
+                this.rotation += this.spin;
+                if (this.y > height + 20) {
+                    this.y = -20;
+                    this.x = Math.random() * width;
+                }
+                if (this.x > width + 20) this.x = -20;
+                if (this.x < -20) this.x = width + 20;
+            }
+
+            draw() {
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate(this.rotation * Math.PI / 180);
+                ctx.fillStyle = this.color + this.opacity + ')';
+
+                ctx.beginPath();
+                ctx.moveTo(0, -this.size);
+                ctx.quadraticCurveTo(this.size * 0.7, 0, 0, this.size);
+                ctx.quadraticCurveTo(-this.size * 0.7, 0, 0, -this.size);
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        for (let i = 0; i < maxPetals; i++) {
+            petals.push(new Petal());
+        }
+
+        function animatePetals() {
+            ctx.clearRect(0, 0, width, height);
+            petals.forEach(petal => {
+                petal.update();
+                petal.draw();
+            });
+            requestAnimationFrame(animatePetals);
+        }
+
+        animatePetals();
+
+        window.addEventListener('resize', () => {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
         });
-        hideZones.forEach(z => z && zoneObs.observe(z));
     }
 
-    // Появление блоков при прокрутке
-    const revealObs = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-            if (e.isIntersecting) { e.target.classList.add('in'); revealObs.unobserve(e.target); }
-        });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.reveal').forEach((el, i) => {
-        el.style.transitionDelay = (i % 3) * 80 + 'ms';
-        revealObs.observe(el);
-    });
 
     // Modal Logic
     const modal = document.getElementById('confirmation-modal');
@@ -70,8 +117,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Smooth Scroll Reveal Animation
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.lot-card, .benefit-card, .review-card, .faq-item').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
 });
 
+
+function toggleDetails(button) {
+    const details = button.nextElementSibling;
+    if (details.classList.contains('hidden')) {
+        details.classList.remove('hidden');
+        button.textContent = 'СВЕРНУТЬ';
+    } else {
+        details.classList.add('hidden');
+        button.textContent = 'ПОДРОБНЕЕ О ПРОГРАММЕ';
+    }
+}
+
+function toggleFAQ(button) {
+    button.classList.toggle('active');
+    const answer = button.nextElementSibling;
+}
 
 // Handle Buy button clicks (from onclick)
 function handleBuy(tariffId) {
