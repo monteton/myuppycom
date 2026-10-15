@@ -161,7 +161,7 @@ function handleBuy(tariffId) {
     // Payment links mapping
     const paymentLinks = {
         // «Осанка + Пресс»
-        'lot1-rf': 'https://payform.ru/5mcFAzO/',
+        'lot1-rf': 'https://payform.ru/q6cOmdW/',
         'lot1-norf': 'https://app.lava.top/products/30be919e-168f-4505-9148-5f573e3ccd9c',
         'lot4-rf': 'https://payform.ru/aabjMew/',
         'lot4-norf': 'https://app.lava.top/products/a9f6ffda-b944-4509-9914-f2b11c490bd3',
