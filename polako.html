@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Polako RAW — AI photo editor для macOS | MYUPPY</title>
+  <meta name="description" content="Polako RAW AI photo editor — локальный RAW-редактор для macOS: GPU-проявка, нейромаски SAM 2, ИИ-шумодав, удаление пыли, релайтинг по глубине. RAW-файл не изменяется.">
+  <meta property="og:title" content="Polako RAW — AI photo editor">
+  <meta property="og:description" content="Локальный RAW-редактор с нейромасками, ИИ-шумодавом и релайтингом по глубине.">
+  <meta property="og:image" content="https://myuppy.com/images/polako/develop.jpg">
+  <meta name="theme-color" content="#04050a">
+  <link rel="icon" href="images/logo.png">
+  <link rel="stylesheet" href="css/neon.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Q6LB80Y74"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9Q6LB80Y74');</script>
+</head>
+<body>
+<div class="ambient"></div>
+<div class="cur"></div><div class="cur-dot"></div>
+
+<header class="nav"><div class="nav-in">
+  <a class="brand" href="index.html" data-cur><img src="images/logo.png" alt="MyUppy"><span>MYUPPY</span></a>
+  <nav class="links">
+    <a href="index.html#services" data-en="Services">Услуги</a>
+    <a href="products.html" class="hot on" data-en="Products">Продукты</a>
+    <a href="video.html" data-en="Video">Видео</a>
+    <a href="marketing.html" data-en="Marketing">Маркетинг</a>
+    <a href="tech.html" data-en="Tech">Технологии</a>
+    <a href="branding.html" data-en="Brand">Бренд</a>
+    <a href="sound.html" data-en="Sound">Звук</a>
+  </nav>
+  <div class="lang"><button data-lang="ru" class="on">RU</button><button data-lang="en">EN</button></div>
+  <button class="burger" aria-label="Menu"><i></i></button>
+</div></header>
+<div class="mmenu">
+  <a href="index.html" data-en="Home">Главная</a><a href="products.html" class="neon" data-en="Products">Продукты</a><a href="video.html" data-en="Video">Видео</a>
+  <a href="marketing.html" data-en="Marketing">Маркетинг</a><a href="tech.html" data-en="Tech">Технологии</a><a href="branding.html" data-en="Brand">Бренд</a><a href="sound.html" data-en="Sound">Звук</a>
+</div>
+
+<main>
+<section class="pol-hero">
+  <div class="wrap" style="position:relative">
+    <img class="emb rise" src="images/polako/emblem.png" alt="Polako RAW logo">
+    <span class="mono rise" data-en="AI photo editor · macOS · Apple Silicon">AI photo editor · macOS · Apple Silicon</span>
+    <h1 class="chrome rise" style="margin-top:14px">POLAKO RAW</h1>
+    <p class="lead rise" data-en="A local RAW editor built for landscape photographers. Develop on the GPU in real time, let neural nets mask the sky and clean dust and noise — while your original file stays untouched.">Локальный RAW-редактор для пейзажных фотографов. Проявка на GPU в реальном времени, нейросети сами выделяют небо, чистят пыль и шум — а исходный файл остаётся нетронутым.</p>
+    <div class="hero-cta rise">
+      <a class="btn solid" href="#gallery" data-cur><span data-en="See it in action">Смотреть в работе</span></a>
+      <a class="btn glass" href="https://t.me/MyuppyTeam" target="_blank" rel="noopener" data-cur><span data-en="Request access">Запросить доступ</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec" id="gallery" style="padding-top:50px"><div class="gal" id="gal">
+  <div class="wrap sec-h" style="margin-bottom:10px">
+    <div><span class="mono rv" data-en="Screenshots">Скриншоты</span><h2 class="rv" data-en="The interface, for real">Интерфейс вживую</h2></div>
+    <div class="gal-ctl rv">
+      <div class="dots"></div>
+      <div class="arrows"><button class="arrow" data-dir="-1" aria-label="Prev" data-cur><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 5l-7 7 7 7"/></svg></button><button class="arrow" data-dir="1" aria-label="Next" data-cur><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 5l7 7-7 7"/></svg></button></div>
+    </div>
+  </div>
+  <div class="gal-track" id="track">
+    <figure class="slide" data-src="images/polako/develop.jpg">
+      <div class="win" data-cur><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — DEVELOP</span></div><img src="images/polako/develop.jpg" alt="Polako RAW — основная проявка" loading="lazy"></div>
+      <figcaption><div><h4 data-en="Develop — the basics">Проявка — основные</h4><p data-en="Temperature, tint, exposure, contrast, highlights, shadows, whites, blacks, texture, clarity and dehaze. Histogram with clipping, live GPU preview.">Температура, оттенок, экспозиция, контраст, света, тени, белые и чёрные, текстура, чёткость и дымка. Гистограмма с клиппингом, живое превью на GPU.</p></div><span class="mono">01 / 06</span></figcaption>
+    </figure>
+    <figure class="slide" data-src="images/polako/color-mixer.jpg">
+      <div class="win" data-cur><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — COLOR MIXER</span></div><img src="images/polako/color-mixer.jpg" alt="Polako RAW — цветовой микшер" loading="lazy"></div>
+      <figcaption><div><h4 data-en="Color mixer + eyedropper">Цветовой микшер и пипетка</h4><p data-en="Eight colour channels with hue, saturation and luminance. Click a colour in the frame and drag — the right channel selects itself.">Восемь цветовых каналов: оттенок, насыщенность, яркость. Нажмите на цвет в кадре и потяните — нужный канал выберется сам.</p></div><span class="mono">02 / 06</span></figcaption>
+    </figure>
+    <figure class="slide" data-src="images/polako/curves.jpg">
+      <div class="win" data-cur><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — CURVES</span></div><img src="images/polako/curves.jpg" alt="Polako RAW — кривая" loading="lazy"></div>
+      <figcaption><div><h4 data-en="Tone curve & AI denoise">Кривая и ИИ-шумодав</h4><p data-en="Per-channel curves with point editing, plus neural denoise (NAFNet) one click away in the toolbar.">Кривые по каналам с точками, а нейросетевой шумодав (NAFNet) — в одну кнопку на панели.</p></div><span class="mono">03 / 06</span></figcaption>
+    </figure>
+    <figure class="slide" data-src="images/polako/color-grading.jpg">
+      <div class="win" data-cur><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — COLOR GRADING</span></div><img src="images/polako/color-grading.jpg" alt="Polako RAW — цветокоррекция" loading="lazy"></div>
+      <figcaption><div><h4 data-en="Three-way colour grading">Цветокоррекция: тени, полутона, света</h4><p data-en="Colour wheels for shadows, midtones, highlights and global, with balance and blending — the cinematic look in autumn forest.">Цветовые колёса для теней, полутонов, светов и общего тона, баланс и плавность — кинематографичный цвет прямо в осеннем лесу.</p></div><span class="mono">04 / 06</span></figcaption>
+    </figure>
+    <figure class="slide" data-src="images/polako/crop.jpg">
+      <div class="win" data-cur><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — CROP</span></div><img src="images/polako/crop.jpg" alt="Polako RAW — кадрирование" loading="lazy"></div>
+      <figcaption><div><h4 data-en="Crop, horizon, auto-crop">Кадрирование, горизонт, авто-кадр</h4><p data-en="Free or fixed-ratio crop right on the frame, a horizon line tool, and AI suggestions that put the subject on the thirds.">Свободная или с фиксированной пропорцией рамка прямо на кадре, линия по горизонту и подсказки ИИ, которые ставят объект на линии третей.</p></div><span class="mono">05 / 06</span></figcaption>
+    </figure>
+    <figure class="slide" data-src="images/polako/relight.jpg">
+      <div class="win" data-cur><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — RELIGHT</span></div><img src="images/polako/relight.jpg" alt="Polako RAW — релайтинг" loading="lazy"></div>
+      <figcaption><div><h4 data-en="Depth relighting, sky & atmosphere">Релайтинг по глубине, небо и атмосфера</h4><p data-en="Light up the foreground and background separately from an AI depth map, add light sources, swap or enrich the sky.">Отдельная подсветка ближнего и дальнего плана по карте глубины, источники света на кадре, замена и усиление неба.</p></div><span class="mono">06 / 06</span></figcaption>
+    </figure>
+  </div>
+  <div class="wrap"><div class="thumbs" id="thumbs"></div></div>
+</div></section>
+
+<!-- FEATURES -->
+<section class="sec" style="padding-top:20px"><div class="wrap">
+  <div class="sec-h"><div><span class="mono rv" data-en="Features">Возможности</span><h2 class="rv" data-en="Everything a landscape needs">Всё, что нужно пейзажу</h2></div></div>
+  <div class="feat">
+    <div class="fcard wide rv"><span class="tg">Non-destructive</span><h3 data-en="Your RAW is never modified">Исходный RAW не изменяется</h3><p data-en="Every edit lives in a sidecar XMP file next to the photo and saves automatically. Undo, history and the edit log are always at hand.">Все правки лежат в XMP-файле рядом со снимком и сохраняются автоматически. Отмена, история и журнал правок всегда под рукой.</p></div>
+    <div class="fcard rv"><span class="tg">AI masks</span><h3 data-en="SAM 2 selection">Нейромаски SAM 2</h3><p data-en="One click selects the sky, subject, water or foliage and creates a layer with its own corrections.">Один клик выделяет небо, объект, воду или зелень и создаёт слой с собственными поправками.</p></div>
+    <div class="fcard rv"><span class="tg">Denoise</span><h3 data-en="Neural denoise">ИИ-шумодав</h3><p data-en="NAFNet-based cleaning for high-ISO frames that keeps texture instead of smearing it.">Чистка высоких ISO на базе NAFNet, которая сохраняет текстуру, а не размазывает её.</p></div>
+    <div class="fcard rv"><span class="tg">Cleanup</span><h3 data-en="Dust removal">Удаление пыли</h3><p data-en="LaMa inpainting finds and heals sensor spots in one pass.">Инпейнтинг LaMa находит и убирает пятна на матрице за один проход.</p></div>
+    <div class="fcard rv"><span class="tg">Relight</span><h3 data-en="Depth relighting">Релайтинг по глубине</h3><p data-en="Near and far planes lit separately with warm or cool tint, driven by an AI depth map.">Ближний и дальний планы подсвечиваются отдельно, тёплым или холодным оттенком, по карте глубины ИИ.</p></div>
+    <div class="fcard rv"><span class="tg">Auto</span><h3 data-en="Scene-aware Auto">Авто с распознаванием сцены</h3><p data-en="Detects sunset, sea, forest, snow, architecture and more, then builds the develop for it.">Определяет закат, море, лес, снег, архитектуру и другое, и собирает под сцену проявку.</p></div>
+    <div class="fcard wide rv"><span class="tg">Layers & masks</span><h3 data-en="Layers, gradients and brushes">Слои, градиенты и кисти</h3><p data-en="Linear, radial and shape gradients with on-canvas handles, brush masks, luminosity ranges, blend modes and per-layer opacity.">Линейные, радиальные и фигурные градиенты с ручками прямо на кадре, кисть, маски по яркости, режимы наложения и прозрачность каждого слоя.</p></div>
+    <div class="fcard rv"><span class="tg">Compare</span><h3 data-en="Before / after">До / после</h3><p data-en="Toggle, split wipe or side-by-side — cycle with one key.">Переключатель, шторка или рядом — режимы листаются одной клавишей.</p></div>
+    <div class="fcard rv"><span class="tg">Workflow</span><h3 data-en="Copy & paste settings">Копирование установок</h3><p data-en="Copy all edits from one frame and paste them to another by group, as a single undoable step.">Копируйте все правки с одного кадра и вставляйте на другой по группам — одним отменяемым шагом.</p></div>
+    <div class="fcard rv"><span class="tg">Presets</span><h3 data-en="XMP & Lightroom presets">Пресеты XMP и Lightroom</h3><p data-en="Save your own looks as .xmp and load Lightroom / Camera Raw presets: tone, HSL, colour grading, curves.">Свои looks сохраняются как .xmp, а пресеты Lightroom / Camera Raw загружаются: тон, HSL, цветокоррекция, кривые.</p></div>
+    <div class="fcard full rv"><span class="tg">Details</span><h3 data-en="Wires, lens, microcontrast">Провода, линзы, микроконтраст</h3><p data-en="Wire and line removal, lens corrections, microcontrast in shadows, midtones and highlights.">Удаление проводов и линий, коррекция линз, микроконтраст в тенях, полутонах и светах.</p></div>
+  </div>
+</div></section>
+
+<!-- PIPELINE -->
+<section class="sec" style="padding-top:20px"><div class="wrap">
+  <div class="sec-h"><div><span class="mono rv" data-en="Under the hood">Под капотом</span><h2 class="rv" data-en="Fast where it counts">Быстро там, где важно</h2></div></div>
+  <div class="pipe rv">
+    <div class="pp"><b>01</b><h4 data-en="RAW decode">Декодирование RAW</h4><p data-en="Darktable core decodes to linear Rec.2020.">Ядро Darktable декодирует RAW в линейный Rec.2020.</p></div>
+    <div class="pp"><b>02</b><h4 data-en="GPU develop">Проявка на GPU</h4><p data-en="Sliders run in WebGL: ~5–30 ms per frame.">Ползунки считаются в WebGL: ~5–30 мс на кадр.</p></div>
+    <div class="pp"><b>03</b><h4 data-en="Neural layer">Нейрослой</h4><p data-en="SAM 2, NAFNet, LaMa and depth run on Apple Silicon (MPS).">SAM 2, NAFNet, LaMa и глубина работают на Apple Silicon (MPS).</p></div>
+    <div class="pp"><b>04</b><h4 data-en="Reference render">Эталонный рендер</h4><p data-en="Server render is the reference; GPU preview matches within ~0.2 level.">Серверный рендер — эталон; GPU-превью совпадает с ним в пределах ~0,2 уровня.</p></div>
+    <div class="pp"><b>05</b><h4 data-en="Export">Экспорт</h4><p data-en="sRGB 8-bit from a Rec.2020 linear pipeline.">sRGB 8-bit из линейного конвейера Rec.2020.</p></div>
+  </div>
+</div></section>
+
+<!-- SPECS -->
+<section class="sec" style="padding-top:20px"><div class="wrap">
+  <div class="sec-h"><div><span class="mono rv" data-en="Specs">Спецификация</span><h2 class="rv" data-en="The details">Детали</h2></div></div>
+  <div class="specs rv">
+    <div class="spec"><span data-en="Platform">Платформа</span><span>macOS · Apple Silicon</span></div>
+    <div class="spec"><span data-en="Runs">Работа</span><span data-en="Fully local, no cloud">Полностью локально, без облака</span></div>
+    <div class="spec"><span data-en="Working space">Рабочее пространство</span><span>Rec.2020 linear</span></div>
+    <div class="spec"><span data-en="Edits">Правки</span><span data-en="Sidecar XMP, RAW untouched">Сайдкар XMP, RAW не меняется</span></div>
+    <div class="spec"><span data-en="Interface">Интерфейс</span><span>Svelte · Tauri</span></div>
+    <div class="spec"><span data-en="Status">Статус</span><span class="neon">Alpha</span></div>
+  </div>
+</div></section>
+
+<section class="cta"><div class="wrap">
+  <h2 class="chrome rv" data-en="Try it on<br>your frames">Попробуйте<br>на своих кадрах</h2>
+  <div class="row rv">
+    <a class="btn solid" href="https://t.me/MyuppyTeam" target="_blank" rel="noopener" data-cur><span data-en="Request access">Запросить доступ</span></a>
+    <a class="btn glass" href="products.html" data-cur><span data-en="All products">Все продукты</span></a>
+  </div>
+</div></section>
+</main>
+
+<div class="lb" id="lb"><button class="x" aria-label="Close">✕</button><button class="pv" aria-label="Prev">‹</button><button class="nx" aria-label="Next">›</button><img alt=""><div class="cap mono"></div></div>
+
+<footer class="foot"><div class="wrap">
+  <div class="foot-g">
+    <div><a class="brand" href="index.html"><img src="images/logo.png" alt=""><span>MYUPPY</span></a><p class="d" data-en="Pushing the edge of digital production through AI, design and cinematic quality.">Раздвигаем границы цифрового продакшна через ИИ, дизайн и кинематографическое качество.</p></div>
+    <div><h5 data-en="Services">Услуги</h5><ul><li><a href="video.html">AI Animation</a></li><li><a href="tech.html">Technical Solutions</a></li><li><a href="branding.html">Branding</a></li><li><a href="sound.html">Sound Design</a></li></ul></div>
+    <div><h5 data-en="Products">Продукты</h5><ul><li><a href="polako.html">Polako RAW</a></li><li><a href="products.html" data-en="All products">Все продукты</a></li></ul></div>
+    <div><h5 data-en="Contact">Контакты</h5><ul><li><a href="https://t.me/MyuppyTeam" target="_blank" rel="noopener">Telegram</a></li><li><a href="https://instagram.com/myuppy.mne" target="_blank" rel="noopener">Instagram</a></li><li><a href="mailto:myuppy.com@gmail.com">E-mail</a></li></ul></div>
+  </div>
+  <div class="foot-b mono"><span>© 2026 MYUPPY</span><span data-en="All rights reserved">Все права защищены</span></div>
+</div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script src="js/neon.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>

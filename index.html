@@ -1,324 +1,169 @@
 <!DOCTYPE html>
-<html lang="ru" class="dark scroll-smooth">
-
+<html lang="ru" class="no-js">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Myuppy | Digital Production Agency</title>
-  <meta name="description" content="Премиальная студия цифрового продакшна. ИИ, Видео, Маркетинг.">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MYUPPY — цифровая студия и продукты</title>
+  <meta name="description" content="MYUPPY — студия цифрового продакшна: ИИ-видео, звук, маркетинг, бренд и собственные продукты, включая Polako RAW AI photo editor.">
+  <meta property="og:title" content="MYUPPY — цифровая студия и продукты">
+  <meta property="og:description" content="ИИ-видео, звук, бренд, маркетинг и собственные продукты.">
+  <meta property="og:image" content="https://myuppy.com/images/polako/develop.jpg">
+  <meta name="theme-color" content="#04050a">
+  <link rel="icon" href="images/logo.png">
+  <link rel="stylesheet" href="css/neon.css">
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9Q6LB80Y74"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9Q6LB80Y74');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Q6LB80Y74"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9Q6LB80Y74');</script>
 </head>
+<body>
+<div class="ambient"></div>
+<div class="cur"></div><div class="cur-dot"></div>
 
-<body class="bg-black text-white selection:bg-purple-500 selection:text-white">
-
-  <!-- Navigation -->
-  <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent py-6">
-    <div class="container mx-auto px-6 flex justify-between items-center">
-      <a href="index.html" class="flex items-center gap-2 cursor-pointer group">
-        <img src="images/logo.png"
-          class="w-14 h-14 md:w-16 md:h-16 object-contain transform group-hover:rotate-12 transition-transform duration-300 mix-blend-screen"
-          alt="MyUppy Logo">
-        <span class="text-2xl font-display font-bold tracking-tight">MYUPPY</span>
-      </a>
-
-      <div class="hidden md:flex items-center gap-8">
-        <a href="index.html" class="text-sm font-medium text-gray-400 hover:text-white transition-colors"
-          data-i18n="nav.home">Главная</a>
-        <a href="video.html" class="text-sm font-medium text-gray-400 hover:text-white transition-colors"
-          data-i18n="nav.video">Видео</a>
-        <a href="marketing.html" class="text-sm font-medium text-gray-400 hover:text-white transition-colors"
-          data-i18n="nav.marketing">Маркетинг</a>
-        <a href="tech.html" class="text-sm font-medium text-gray-400 hover:text-white transition-colors"
-          data-i18n="nav.tech">Технологии</a>
-        <a href="branding.html" class="text-sm font-medium text-gray-400 hover:text-white transition-colors"
-          data-i18n="nav.branding">Бренд</a>
-        <a href="sound.html" class="text-sm font-medium text-gray-400 hover:text-white transition-colors"
-          data-i18n="nav.sound">Звук</a>
-
-        <div class="flex items-center bg-white/5 border border-white/10 rounded-full p-1 ml-4">
-          <button class="lang-btn px-3 py-1 rounded-full text-[10px] font-bold transition-all bg-purple-600 text-white"
-            data-lang="ru">RU</button>
-          <button
-            class="lang-btn px-3 py-1 rounded-full text-[10px] font-bold transition-all text-gray-500 hover:text-white"
-            data-lang="en">EN</button>
-        </div>
-      </div>
-
-      <div class="flex md:hidden items-center bg-white/5 border border-white/10 rounded-full p-1 mr-4">
-        <button class="lang-btn px-3 py-1 rounded-full text-[10px] font-bold transition-all bg-purple-600 text-white"
-          data-lang="ru">RU</button>
-        <button
-          class="lang-btn px-3 py-1 rounded-full text-[10px] font-bold transition-all text-gray-500 hover:text-white"
-          data-lang="en">EN</button>
-      </div>
-
-      <button id="menu-btn" class="md:hidden text-white">
-        <i data-lucide="menu"></i>
-      </button>
-    </div>
-
-    <div id="mobile-menu"
-      class="hidden md:hidden glass absolute top-full left-0 w-full p-6 animate-in slide-in-from-top duration-300">
-      <div class="flex flex-col gap-6 items-center">
-        <button id="close-menu-btn" class="absolute top-4 right-4"><i data-lucide="x"></i></button>
-
-        <a href="index.html" class="text-xl font-display font-medium text-gray-300">Главная</a>
-        <a href="video.html" class="text-xl font-display font-medium text-gray-300">Видео</a>
-        <a href="marketing.html" class="text-xl font-display font-medium text-gray-300">Маркетинг</a>
-        <a href="tech.html" class="text-xl font-display font-medium text-gray-300">Технологии</a>
-        <a href="branding.html" class="text-xl font-display font-medium text-gray-300">Бренд</a>
-        <a href="sound.html" class="text-xl font-display font-medium text-gray-300">Звук</a>
-
-
-        <button class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-4 rounded-2xl font-bold"
-          data-i18n="nav.contact">СВЯЗАТЬСЯ</button>
-      </div>
-    </div>
+<header class="nav"><div class="nav-in">
+  <a class="brand" href="index.html" data-cur><img src="images/logo.png" alt="MyUppy"><span>MYUPPY</span></a>
+  <nav class="links">
+    <a href="index.html#services" data-en="Services">Услуги</a>
+    <a href="products.html" class="hot" data-en="Products">Продукты</a>
+    <a href="video.html" data-en="Video">Видео</a>
+    <a href="marketing.html" data-en="Marketing">Маркетинг</a>
+    <a href="tech.html" data-en="Tech">Технологии</a>
+    <a href="branding.html" data-en="Brand">Бренд</a>
+    <a href="sound.html" data-en="Sound">Звук</a>
   </nav>
+  <div class="lang"><button data-lang="ru" class="on">RU</button><button data-lang="en">EN</button></div>
+  <button class="burger" aria-label="Menu"><i></i></button>
+</div></header>
+<div class="mmenu">
+  <a href="index.html" data-en="Home">Главная</a><a href="products.html" class="neon" data-en="Products">Продукты</a><a href="video.html" data-en="Video">Видео</a>
+  <a href="marketing.html" data-en="Marketing">Маркетинг</a><a href="tech.html" data-en="Tech">Технологии</a><a href="branding.html" data-en="Brand">Бренд</a><a href="sound.html" data-en="Sound">Звук</a>
+</div>
 
-  <main class="pt-20">
-    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-      <div class="absolute inset-0 z-0">
-        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/20 blur-[120px] rounded-full animate-float"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/20 blur-[120px] rounded-full animate-float"
-          style="animation-delay: 2s;"></div>
-      </div>
-
-      <div class="container mx-auto px-6 relative z-10 text-center">
-        <img src="images/logo.png" class="w-80 h-80 md:w-96 md:h-96 mx-auto mb-8 object-contain animate-float"
-          alt="MyUppy Hero Logo">
-
-        <div
-          class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 mb-8 text-sm font-medium text-purple-400 backdrop-blur-sm">
-          <i data-lucide="star" class="w-4 h-4 fill-purple-400"></i>
-          <span data-i18n="hero.tag">Премиальная студия цифрового продакшна</span>
-        </div>
-
-        <h1 class="text-5xl md:text-8xl font-display font-black tracking-tight mb-8 leading-[1.1]">
-          <span data-i18n="hero.title.1">СОЗДАЕМ</span>
-          <span class="bg-gradient-to-r from-purple-400 via-indigo-500 to-blue-500 bg-clip-text text-transparent"
-            data-i18n="hero.title.2">БУДУЩЕЕ</span>
-        </h1>
-
-        <p class="max-w-2xl mx-auto text-gray-400 text-lg md:text-xl mb-12 leading-relaxed" data-i18n="hero.desc">
-          Видеопродакшн, Маркетинг, Технологии, Брендинг и Звук. Превращаем смелые идеи в высокоэффективную реальность.
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-6 justify-center">
-          <button
-            class="px-10 py-5 glass text-white rounded-2xl font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2">
-            <i data-lucide="play" class="w-5 h-5 fill-white"></i> <span data-i18n="hero.cta.reel">Смотреть шоурил</span>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-20 bg-black">
-      <div class="container mx-auto px-6">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
-          <div class="text-center">
-            <div class="text-4xl md:text-5xl font-display font-black text-white mb-2">250+</div>
-            <div class="text-gray-500 font-medium uppercase tracking-widest text-[10px]" data-i18n="stats.projects">
-              Завершенных проектов</div>
-          </div>
-          <div class="text-center">
-            <div class="text-4xl md:text-5xl font-display font-black text-white mb-2">15M+</div>
-            <div class="text-gray-500 font-medium uppercase tracking-widest text-[10px]" data-i18n="stats.views">
-              Просмотров видео</div>
-          </div>
-          <div class="text-center">
-            <div class="text-4xl md:text-5xl font-display font-black text-white mb-2">98%</div>
-            <div class="text-gray-500 font-medium uppercase tracking-widest text-[10px]" data-i18n="stats.satisfaction">
-              Довольных клиентов</div>
-          </div>
-          <div class="text-center">
-            <div class="text-4xl md:text-5xl font-display font-black text-white mb-2">40+</div>
-            <div class="text-gray-500 font-medium uppercase tracking-widest text-[10px]" data-i18n="stats.experts">
-              Мировых экспертов</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-32 relative">
-      <div class="container mx-auto px-6">
-        <div class="mb-20">
-          <h2 class="text-4xl md:text-6xl font-display font-bold mb-6" data-i18n="services.title">НАШИ ПРОЕКТЫ</h2>
-          <div class="h-1.5 w-32 bg-purple-600 rounded-full"></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Video -->
-          <a href="video.html"
-            class="group p-8 rounded-3xl glass hover:bg-white/[0.05] transition-all cursor-pointer border border-white/5 hover:border-white/10 relative overflow-hidden">
-            <div
-              class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500 to-indigo-600 opacity-0 group-hover:opacity-10 blur-2xl transition-opacity">
-            </div>
-            <div
-              class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center mb-8 shadow-lg">
-              <i data-lucide="video" class="text-white w-8 h-8"></i>
-            </div>
-            <h3 class="text-2xl font-bold mb-4" data-i18n="video.title">Видеопроизводство</h3>
-            <p class="text-gray-400 mb-8 leading-relaxed text-sm" data-i18n="video.subtitle">Больше, чем просто Reels.
-              Создаем контент нового
-              поколения: ИИ-анимация для рекламы, клипов и мультпроектов.</p>
-            <div class="flex items-center gap-2 text-white font-bold group-hover:gap-4 transition-all text-sm">
-              <span data-i18n="services.more">Подробнее</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </div>
-          </a>
-
-          <!-- Marketing -->
-          <a href="marketing.html"
-            class="group p-8 rounded-3xl glass hover:bg-white/[0.05] transition-all cursor-pointer border border-white/5 hover:border-white/10 relative overflow-hidden">
-            <div
-              class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500 to-cyan-600 opacity-0 group-hover:opacity-10 blur-2xl transition-opacity">
-            </div>
-            <div
-              class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mb-8 shadow-lg">
-              <i data-lucide="trending-up" class="text-white w-8 h-8"></i>
-            </div>
-            <h3 class="text-2xl font-bold mb-4" data-i18n="marketing.title">Маркетинг и стратегия</h3>
-            <p class="text-gray-400 mb-8 leading-relaxed text-sm" data-i18n="marketing.subtitle">Стратегическое развитие
-              бренда. Анализируем рынок и
-              создаем воронки продаж.</p>
-            <div class="flex items-center gap-2 text-white font-bold group-hover:gap-4 transition-all text-sm">
-              <span data-i18n="services.more">Подробнее</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </div>
-          </a>
-
-          <!-- Tech -->
-          <a href="tech.html"
-            class="group p-8 rounded-3xl glass hover:bg-white/[0.05] transition-all cursor-pointer border border-white/5 hover:border-white/10 relative overflow-hidden">
-            <div
-              class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-500 to-teal-600 opacity-0 group-hover:opacity-10 blur-2xl transition-opacity">
-            </div>
-            <div
-              class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center mb-8 shadow-lg">
-              <i data-lucide="code" class="text-white w-8 h-8"></i>
-            </div>
-            <h3 class="text-2xl font-bold mb-4" data-i18n="tech.title">Технические решения</h3>
-            <p class="text-gray-400 mb-8 leading-relaxed text-sm" data-i18n="tech.subtitle">Цифровая экосистема вашего
-              бизнеса. Разработка сайтов,
-              ИИ-ботов и приложений.</p>
-            <div class="flex items-center gap-2 text-white font-bold group-hover:gap-4 transition-all text-sm">
-              <span data-i18n="services.more">Подробнее</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </div>
-          </a>
-
-          <!-- Branding -->
-          <a href="branding.html"
-            class="group p-8 rounded-3xl glass hover:bg-white/[0.05] transition-all cursor-pointer border border-white/5 hover:border-white/10 relative overflow-hidden">
-            <div
-              class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-500 to-red-600 opacity-0 group-hover:opacity-10 blur-2xl transition-opacity">
-            </div>
-            <div
-              class="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center mb-8 shadow-lg">
-              <i data-lucide="zap" class="text-white w-8 h-8"></i>
-            </div>
-            <h3 class="text-2xl font-bold mb-4" data-i18n="branding.title">Продвижение бренда</h3>
-            <p class="text-gray-400 mb-8 leading-relaxed text-sm" data-i18n="branding.subtitle">Формирование
-              идентичности. Мы создаем визуальный язык,
-              который выделяет вас.</p>
-            <div class="flex items-center gap-2 text-white font-bold group-hover:gap-4 transition-all text-sm">
-              <span data-i18n="services.more">Подробнее</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </div>
-          </a>
-
-          <!-- Sound -->
-          <a href="sound.html"
-            class="group p-8 rounded-3xl glass hover:bg-white/[0.05] transition-all cursor-pointer border border-white/5 hover:border-white/10 relative overflow-hidden">
-            <div
-              class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pink-500 to-rose-600 opacity-0 group-hover:opacity-10 blur-2xl transition-opacity">
-            </div>
-            <div
-              class="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center mb-8 shadow-lg">
-              <i data-lucide="music" class="text-white w-8 h-8"></i>
-            </div>
-            <h3 class="text-2xl font-bold mb-4" data-i18n="sound.title">Саунд-продакшн</h3>
-            <p class="text-gray-400 mb-8 leading-relaxed text-sm" data-i18n="sound.subtitle">Аудиальный опыт в стиле
-              Myuppy Sound. Профессиональный
-              саунд-дизайн и озвучка.</p>
-            <div class="flex items-center gap-2 text-white font-bold group-hover:gap-4 transition-all text-sm">
-              <span data-i18n="services.more">Подробнее</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-black py-20 border-t border-white/5">
-    <div class="container mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-        <div class="col-span-1 md:col-span-1">
-          <div class="flex items-center gap-2 mb-6">
-            <img src="images/logo.png" class="w-8 h-8 object-contain mix-blend-screen" alt="MyUppy Logo">
-            <span class="text-2xl font-display font-bold tracking-tight text-white">MYUPPY</span>
-          </div>
-          <p class="text-gray-500 text-sm leading-relaxed mb-8" data-i18n="footer.desc">Раздвигаем границы цифрового
-            продакшна через ИИ, дизайн и кинематографическое качество.</p>
-          <div class="flex gap-4">
-            <i data-lucide="instagram"
-              class="w-5 h-5 text-gray-500 hover:text-white cursor-pointer transition-colors"></i>
-            <i data-lucide="twitter"
-              class="w-5 h-5 text-gray-500 hover:text-white cursor-pointer transition-colors"></i>
-            <i data-lucide="linkedin"
-              class="w-5 h-5 text-gray-500 hover:text-white cursor-pointer transition-colors"></i>
-            <i data-lucide="youtube"
-              class="w-5 h-5 text-gray-500 hover:text-white cursor-pointer transition-colors"></i>
-          </div>
-        </div>
-
-        <div>
-          <h4 class="text-white font-bold mb-6" data-i18n="footer.services">Услуги</h4>
-          <ul class="space-y-4 text-gray-500 text-sm">
-            <li><a href="video.html" class="hover:text-white">AI Animation</a></li>
-            <li><a href="tech.html" class="hover:text-white">Technical Solutions</a></li>
-            <li><a href="branding.html" class="hover:text-white">Branding</a></li>
-            <li><a href="sound.html" class="hover:text-white">Sound Design</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="text-white font-bold mb-6" data-i18n="footer.company">Компания</h4>
-          <ul class="space-y-4 text-gray-500 text-sm">
-            <li class="hover:text-white cursor-pointer" data-i18n="footer.about">О нас</li>
-            <li class="hover:text-white cursor-pointer" data-i18n="footer.portfolio">Портфолио</li>
-            <li class="hover:text-white cursor-pointer" data-i18n="footer.contact">Контакты</li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="text-white font-bold mb-6" data-i18n="footer.news">Рассылка</h4>
-          <div class="relative">
-            <input type="email" placeholder="Email"
-              class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-purple-500" />
-            <button
-              class="absolute right-2 top-2 bg-purple-600 text-white px-3 py-1 rounded-md text-[10px] font-bold">OK</button>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="pt-8 border-t border-white/5 flex flex-col md:row justify-between items-center text-gray-600 text-[10px]">
-        <p>© 2024 MYUPPY AGENCY. <span data-i18n="footer.rights">ВСЕ ПРАВА ЗАЩИЩЕНЫ</span>.</p>
+<main>
+<!-- HERO -->
+<section class="hero">
+  <canvas id="merc"></canvas>
+  <div class="scroll-hint mono" data-en="Scroll">Скролл</div>
+  <div class="wrap hero-in">
+    <div class="tag mono"><b></b><span data-en="Digital studio · AI · Products">Цифровая студия · ИИ · Продукты</span></div>
+    <h1 class="chrome split">MYUPPY</h1>
+    <div class="hero-row">
+      <p data-en="We make video, sound, brands and software — and we ship our own products. Liquid quality, zero noise.">Делаем видео, звук, бренды и софт — и выпускаем собственные продукты. Жидкое качество, ноль шума.</p>
+      <div class="hero-cta">
+        <a class="btn solid" href="polako.html" data-cur><span data-en="Polako RAW — new">Polako RAW — новинка</span></a>
+        <a class="btn glass" href="#services"><span data-en="Our work">Наши работы</span></a>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script type="module" src="js/main.js"></script>
+<div class="marq"><div class="marq-t">
+  <span>AI VIDEO</span><span>SOUND</span><span>BRAND</span><span>SOFTWARE</span><span>MARKETING</span>
+  <span>AI VIDEO</span><span>SOUND</span><span>BRAND</span><span>SOFTWARE</span><span>MARKETING</span>
+</div></div>
+
+<!-- MANIFESTO -->
+<section class="sec"><div class="wrap">
+  <span class="mono rv" data-en="Manifesto">Манифест</span>
+  <p class="mani" style="margin-top:22px" data-en="We take bold ideas and pour them into <em>flawless digital form</em> — film, music, identity and tools that people actually use.">Мы берём смелые идеи и отливаем их в <em>безупречную цифровую форму</em> — кино, музыку, айдентику и инструменты, которыми действительно пользуются.</p>
+</div></section>
+
+<!-- SERVICES -->
+<section class="sec" id="services" style="padding-top:0"><div class="wrap">
+  <div class="sec-h">
+    <div><span class="mono rv" data-en="What we do">Что мы делаем</span><h2 class="rv" data-en="Six ways to make it real">Шесть направлений</h2></div>
+    <p class="rv" style="max-width:40ch;color:#98a3b3" data-en="One team, one standard — from the first frame to the shipped product.">Одна команда, один стандарт — от первого кадра до готового продукта.</p>
+  </div>
+  <div class="bento">
+    <a href="video.html" class="card c-a rv" data-cur>
+      <div class="top"><span class="n">01</span><div class="ic"><i data-lucide="clapperboard"></i></div></div>
+      <div><h3 data-en="Video production">Видеопроизводство</h3><p data-en="More than Reels. Next-generation content: AI animation for ads, music videos and animated projects.">Больше, чем просто Reels. Контент нового поколения: ИИ-анимация для рекламы, клипов и мультпроектов.</p><span class="go"><span data-en="Explore">Подробнее</span><i data-lucide="arrow-right"></i></span></div>
+    </a>
+    <a href="marketing.html" class="card c-b rv" data-cur>
+      <div class="top"><span class="n">02</span><div class="ic"><i data-lucide="trending-up"></i></div></div>
+      <div><h3 data-en="Marketing & strategy">Маркетинг и стратегия</h3><p data-en="Market analysis, funnels, growth.">Анализ рынка, воронки продаж, рост.</p><span class="go"><span data-en="Explore">Подробнее</span><i data-lucide="arrow-right"></i></span></div>
+    </a>
+    <a href="tech.html" class="card c-c rv" data-cur>
+      <div class="top"><span class="n">03</span><div class="ic"><i data-lucide="code-2"></i></div></div>
+      <div><h3 data-en="Technical solutions">Технические решения</h3><p data-en="Websites, AI bots and apps — your digital ecosystem.">Сайты, ИИ-боты и приложения — цифровая экосистема бизнеса.</p><span class="go"><span data-en="Explore">Подробнее</span><i data-lucide="arrow-right"></i></span></div>
+    </a>
+    <a href="branding.html" class="card c-d rv" data-cur>
+      <div class="top"><span class="n">04</span><div class="ic"><i data-lucide="gem"></i></div></div>
+      <div><h3 data-en="Brand identity">Продвижение бренда</h3><p data-en="A visual language that sets you apart.">Визуальный язык, который выделяет вас.</p><span class="go"><span data-en="Explore">Подробнее</span><i data-lucide="arrow-right"></i></span></div>
+    </a>
+    <a href="sound.html" class="card c-e rv" data-cur>
+      <div class="top"><span class="n">05</span><div class="ic"><i data-lucide="audio-lines"></i></div></div>
+      <div><h3 data-en="Sound production">Саунд-продакшн</h3><p data-en="Myuppy Sound: sound design, voice-over, songs to order.">Myuppy Sound: саунд-дизайн, озвучка, песни на заказ.</p><span class="go"><span data-en="Explore">Подробнее</span><i data-lucide="arrow-right"></i></span></div>
+    </a>
+    <a href="products.html" class="card c-f rv" data-cur>
+      <div class="top"><span class="n">06</span><div class="ic" style="color:var(--neon)"><i data-lucide="aperture"></i></div></div>
+      <div><h3 data-en="Our own products" class="chrome">Собственные продукты</h3><p data-en="Software we build for ourselves and ship to others. Latest: Polako RAW — an AI RAW photo editor for landscape photographers.">Софт, который мы делаем для себя и отдаём другим. Последний — Polako RAW, ИИ-редактор RAW для пейзажных фотографов.</p><span class="go"><span data-en="See products">Смотреть продукты</span><i data-lucide="arrow-right"></i></span></div>
+    </a>
+  </div>
+</div></section>
+
+<!-- PRODUCT SPOTLIGHT -->
+<section class="sec" style="background:linear-gradient(180deg,transparent,rgba(111,243,255,.035),transparent)"><div class="wrap spot">
+  <div>
+    <span class="mono rv" data-en="Flagship product">Флагманский продукт</span>
+    <h2 class="rv"><span class="chrome">Polako RAW</span><br><span class="neon" style="font-size:.5em" data-en="AI photo editor">AI photo editor</span></h2>
+    <p class="rv" data-en="A local RAW editor for macOS: instant GPU develop, neural masks, denoise and dust removal — and your RAW file is never touched.">Локальный RAW-редактор для macOS: мгновенная GPU-проявка, нейромаски, шумодав и удаление пыли — а ваш RAW-файл остаётся нетронутым.</p>
+    <div class="chips rv"><span class="chip n">SAM 2 masks</span><span class="chip">GPU develop</span><span class="chip">AI denoise</span><span class="chip">Depth relight</span><span class="chip">XMP presets</span></div>
+    <div class="hero-cta rv"><a class="btn solid" href="polako.html" data-cur><span data-en="Open Polako RAW">Открыть Polako RAW</span></a></div>
+  </div>
+  <div class="spot-vis rv" data-par="-4"><div class="stack">
+    <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW</span></div><img src="images/polako/develop.jpg" alt="Polako RAW — develop" loading="lazy"></div>
+    <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW</span></div><img src="images/polako/color-mixer.jpg" alt="Polako RAW — color mixer" loading="lazy"></div>
+    <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW</span></div><img src="images/polako/color-grading.jpg" alt="Polako RAW — color grading" loading="lazy"></div>
+  </div></div>
+</div></section>
+
+<!-- STATS -->
+<section class="sec" style="padding-block:60px 0"><div class="wrap">
+  <div class="stats">
+    <div class="stat rv"><b data-count="250" data-suf="+">0</b><span class="mono" data-en="Projects delivered">Завершённых проектов</span></div>
+    <div class="stat rv"><b data-count="15" data-suf="M+">0</b><span class="mono" data-en="Video views">Просмотров видео</span></div>
+    <div class="stat rv"><b data-count="98" data-suf="%">0</b><span class="mono" data-en="Happy clients">Довольных клиентов</span></div>
+    <div class="stat rv"><b data-count="40" data-suf="+">0</b><span class="mono" data-en="World experts">Мировых экспертов</span></div>
+  </div>
+</div></section>
+
+<!-- PROCESS -->
+<section class="sec"><div class="wrap">
+  <div class="sec-h"><div><span class="mono rv" data-en="Process">Процесс</span><h2 class="rv" data-en="From idea to launch">От идеи до запуска</h2></div></div>
+  <div class="steps">
+    <div class="step rv"><div><h4 data-en="Brief">Бриф</h4><p data-en="We dig into the goal, the audience and the constraints.">Погружаемся в цель, аудиторию и ограничения.</p></div></div>
+    <div class="step rv"><div><h4 data-en="Concept">Концепт</h4><p data-en="Reference, storyboard, a look you can approve.">Референсы, раскадровка и образ, который можно утвердить.</p></div></div>
+    <div class="step rv"><div><h4 data-en="Production">Продакшн</h4><p data-en="AI and classic tools together, with a human eye on every frame.">ИИ и классические инструменты вместе, с человеческим глазом на каждом кадре.</p></div></div>
+    <div class="step rv"><div><h4 data-en="Launch">Запуск</h4><p data-en="Delivery, publishing and the numbers after.">Сдача, публикация и цифры после.</p></div></div>
+  </div>
+</div></section>
+
+<!-- CTA -->
+<section class="cta"><div class="wrap">
+  <h2 class="chrome rv" data-en="Let's cast<br>something">Давайте<br>отольём своё</h2>
+  <div class="row rv">
+    <a class="btn solid" href="https://t.me/MyuppyTeam" target="_blank" rel="noopener" data-cur><span data-en="Write on Telegram">Написать в Telegram</span></a>
+    <a class="btn glass" href="mailto:myuppy.com@gmail.com" data-cur>myuppy.com@gmail.com</a>
+  </div>
+</div></section>
+</main>
+
+<footer class="foot"><div class="wrap">
+  <div class="foot-g">
+    <div><a class="brand" href="index.html"><img src="images/logo.png" alt=""><span>MYUPPY</span></a><p class="d" data-en="Pushing the edge of digital production through AI, design and cinematic quality.">Раздвигаем границы цифрового продакшна через ИИ, дизайн и кинематографическое качество.</p></div>
+    <div><h5 data-en="Services">Услуги</h5><ul><li><a href="video.html">AI Animation</a></li><li><a href="tech.html">Technical Solutions</a></li><li><a href="branding.html">Branding</a></li><li><a href="sound.html">Sound Design</a></li></ul></div>
+    <div><h5 data-en="Products">Продукты</h5><ul><li><a href="polako.html">Polako RAW</a></li><li><a href="products.html" data-en="All products">Все продукты</a></li></ul></div>
+    <div><h5 data-en="Contact">Контакты</h5><ul><li><a href="https://t.me/MyuppyTeam" target="_blank" rel="noopener">Telegram</a></li><li><a href="https://instagram.com/myuppy.mne" target="_blank" rel="noopener">Instagram</a></li><li><a href="mailto:myuppy.com@gmail.com">E-mail</a></li><li><a href="privacy_policy.html" data-en="Privacy policy">Политика конфиденциальности</a></li></ul></div>
+  </div>
+  <div class="foot-b mono"><span>© 2026 MYUPPY</span><span data-en="All rights reserved">Все права защищены</span></div>
+</div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script>if(window.lucide)lucide.createIcons();</script>
+<script src="js/mercury.js"></script>
+<script src="js/neon.js"></script>
 </body>
-
 </html>

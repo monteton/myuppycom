@@ -6,6 +6,7 @@ export const translations = {
         'nav.tech': 'Технологии',
         'nav.branding': 'Бренд',
         'nav.sound': 'Звук',
+        'nav.products': 'Продукты',
         'nav.contact': 'СВЯЗАТЬСЯ',
 
         'hero.tag': 'Премиальная студия цифрового продакшна',
@@ -132,6 +133,7 @@ export const translations = {
         'nav.tech': 'Tech',
         'nav.branding': 'Branding',
         'nav.sound': 'Sound',
+        'nav.products': 'Products',
         'nav.contact': 'CONTACT US',
 
         'hero.tag': 'Premium Digital Production Studio',
