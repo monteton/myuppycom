@@ -44,6 +44,14 @@
     b.addEventListener('pointerleave', () => { b.style.transform = ''; });
   });
 
+  /* logo video: HEVC-alpha .mov for Safari, VP9-alpha .webm elsewhere */
+  const lv = $('#logo-vid');
+  if (lv) {
+    const safari = /^((?!chrome|chromium|android).)*safari/i.test(navigator.userAgent);
+    lv.src = safari ? 'videos/logo.mov' : 'videos/logo.webm';
+    if (!reduce) lv.play().catch(() => {});
+  }
+
   if (!hasG) return;
   root.classList.remove('no-js');
   gsap.registerPlugin(ScrollTrigger);
@@ -66,7 +74,7 @@
     [...txt].forEach(ch => { const s = document.createElement('span'); s.className = 'ch'; s.textContent = ch; h.appendChild(s); });
     gsap.from($$('.ch', h), { yPercent: 110, rotate: 6, opacity: 0, duration: 1.3, ease: 'expo.out', stagger: .06, delay: .25 });
   });
-  gsap.from('.hero-in > *:not(h1), .page-hero .rise', { y: 30, opacity: 0, duration: 1.1, ease: 'expo.out', stagger: .1, delay: .6 });
+  gsap.from('.hero-in > *:not(.sr-only), .page-hero .rise', { y: 30, opacity: 0, duration: 1.1, ease: 'expo.out', stagger: .1, delay: .6 });
 
   /* ---------- reveals ---------- */
   ScrollTrigger.batch('.rv', {
