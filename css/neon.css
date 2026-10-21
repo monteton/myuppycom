@@ -318,3 +318,8 @@ h1, h2, h3, h4, b, strong, .btn, .brand, .stat b, .step::before { font-weight: 4
 .step h4 { font-size: 26px; } .pp h4 { font-size: 24px; }
 .win-bar span { font-size: 13px; } .lb .cap { font-size: 16px; }
 .hero h1 { line-height: .9; }
+
+/* background-clip:text paints only inside the box: give gradient headings headroom so Й / Ё marks are not cut off */
+.chrome { padding-top: .16em; margin-top: -.16em; }
+.split .ch { padding-top: .16em; margin-top: -.16em; }
+.stat b, .step::before { padding-top: .1em; }
