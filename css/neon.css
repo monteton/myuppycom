@@ -52,13 +52,6 @@ body::before {
   background: radial-gradient(60% 50% at 80% 0%, rgba(111,243,255,.07), transparent 70%),
               radial-gradient(50% 40% at 0% 60%, rgba(183,164,255,.06), transparent 70%); }
 
-/* cursor */
-.cur, .cur-dot { position: fixed; top: 0; left: 0; z-index: 120; pointer-events: none; border-radius: 50%; mix-blend-mode: difference; display: none; }
-.cur { width: 38px; height: 38px; border: 1px solid #fff; margin: -19px 0 0 -19px; transition: width .3s var(--ease), height .3s var(--ease), margin .3s var(--ease), background .3s; }
-.cur-dot { width: 6px; height: 6px; margin: -3px 0 0 -3px; background: #fff; }
-.cur.big { width: 80px; height: 80px; margin: -40px 0 0 -40px; background: #fff; }
-@media (hover: hover) and (pointer: fine) { .cur, .cur-dot { display: block; } body, a, button { cursor: none; } }
-
 /* nav */
 .nav { position: fixed; top: 16px; left: 0; right: 0; z-index: 80; display: flex; justify-content: center; pointer-events: none; }
 .nav-in {

@@ -35,15 +35,6 @@
     c.style.setProperty('--my', (e.clientY - r.top) + 'px');
   }));
 
-  /* ---------- custom cursor ---------- */
-  const cur = $('.cur'), dot = $('.cur-dot');
-  if (cur && matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    let x = innerWidth / 2, y = innerHeight / 2, cx = x, cy = y;
-    addEventListener('pointermove', e => { x = e.clientX; y = e.clientY; dot.style.transform = `translate(${x}px,${y}px)`; });
-    (function loop() { cx += (x - cx) * .18; cy += (y - cy) * .18; cur.style.transform = `translate(${cx}px,${cy}px)`; requestAnimationFrame(loop); })();
-    document.addEventListener('pointerover', e => cur.classList.toggle('big', !!e.target.closest('[data-cur]')));
-  }
-
   /* ---------- magnetic buttons ---------- */
   if (!reduce) $$('.btn, .arrow').forEach(b => {
     b.addEventListener('pointermove', e => {
