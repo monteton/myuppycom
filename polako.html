@@ -7,10 +7,10 @@
   <meta name="description" content="Polako RAW AI photo editor — локальный RAW-редактор для macOS: GPU-проявка, нейромаски SAM 2, ИИ-шумодав, удаление пыли, релайтинг по глубине. RAW-файл не изменяется.">
   <meta property="og:title" content="Polako RAW — AI photo editor">
   <meta property="og:description" content="Локальный RAW-редактор с нейромасками, ИИ-шумодавом и релайтингом по глубине.">
-  <meta property="og:image" content="https://myuppy.com/images/polako/develop.jpg">
+  <meta property="og:image" content="https://myuppy.com/images/polako/raw-grading-bay.jpg">
   <meta name="theme-color" content="#04050a">
   <link rel="icon" href="images/logo.png">
-  <link rel="stylesheet" href="css/neon.css?v=3">
+  <link rel="stylesheet" href="css/neon.css?v=4">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Q6LB80Y74"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9Q6LB80Y74');</script>
 </head>
@@ -60,29 +60,53 @@
     </div>
   </div>
   <div class="gal-track" id="track">
-    <figure class="slide" data-src="images/polako/develop.jpg">
-      <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — DEVELOP</span></div><img src="images/polako/develop.jpg" alt="Polako RAW — основная проявка" loading="lazy"></div>
-      <figcaption><div><h4 data-en="Develop — the basics">Проявка — основные</h4><p data-en="Temperature, tint, exposure, contrast, highlights, shadows, whites, blacks, texture, clarity and dehaze. Histogram with clipping, live GPU preview.">Температура, оттенок, экспозиция, контраст, света, тени, белые и чёрные, текстура, чёткость и дымка. Гистограмма с клиппингом, живое превью на GPU.</p></div><span class="mono">01 / 06</span></figcaption>
+    <figure class="slide" data-src="images/polako/raw-develop-reeds.jpg">
+      <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — DEVELOP</span></div><img src="images/polako/raw-develop-reeds.jpg" alt="Polako RAW — Проявка — основные" loading="lazy"></div>
+      <figcaption><div><h4 data-en="Develop — the basics">Проявка — основные</h4><p data-en="Exposure, contrast, highlights, shadows, whites, blacks, texture and clarity on a native RAW frame. Clipping histogram, live GPU preview.">Экспозиция, контраст, света, тени, белые и чёрные, текстура и чёткость на кадре, снятом в RAW. Гистограмма с клиппингом и живое превью на GPU.</p></div><span class="mono">01 / 12</span></figcaption>
     </figure>
-    <figure class="slide" data-src="images/polako/color-mixer.jpg">
-      <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — COLOR MIXER</span></div><img src="images/polako/color-mixer.jpg" alt="Polako RAW — цветовой микшер" loading="lazy"></div>
-      <figcaption><div><h4 data-en="Color mixer + eyedropper">Цветовой микшер и пипетка</h4><p data-en="Eight colour channels with hue, saturation and luminance. Click a colour in the frame and drag — the right channel selects itself.">Восемь цветовых каналов: оттенок, насыщенность, яркость. Нажмите на цвет в кадре и потяните — нужный канал выберется сам.</p></div><span class="mono">02 / 06</span></figcaption>
+    <figure class="slide" data-src="images/polako/raw-curve-layers.jpg">
+      <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — CURVES · LAYERS</span></div><img src="images/polako/raw-curve-layers.jpg" alt="Polako RAW — Кривая и слои со стилями" loading="lazy"></div>
+      <figcaption><div><h4 data-en="Curves and style layers">Кривая и слои со стилями</h4><p data-en="A point curve plus layers: a Foreground area and a Moody style, each with its own mask and opacity.">Кривая с точками плюс слои: область «Передний план» и стиль Moody — каждый со своей маской и прозрачностью.</p></div><span class="mono">02 / 12</span></figcaption>
     </figure>
-    <figure class="slide" data-src="images/polako/curves.jpg">
-      <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — CURVES</span></div><img src="images/polako/curves.jpg" alt="Polako RAW — кривая" loading="lazy"></div>
-      <figcaption><div><h4 data-en="Tone curve & AI denoise">Кривая и ИИ-шумодав</h4><p data-en="Per-channel curves with point editing, plus neural denoise (NAFNet) one click away in the toolbar.">Кривые по каналам с точками, а нейросетевой шумодав (NAFNet) — в одну кнопку на панели.</p></div><span class="mono">03 / 06</span></figcaption>
+    <figure class="slide" data-src="images/polako/raw-mixer-marina.jpg">
+      <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — COLOR MIXER</span></div><img src="images/polako/raw-mixer-marina.jpg" alt="Polako RAW — Цветовой микшер" loading="lazy"></div>
+      <figcaption><div><h4 data-en="Colour mixer">Цветовой микшер</h4><p data-en="Eight channels: hue, saturation, luminance. On top, the Golden Drama and AI-silhouette layers.">Восемь каналов: оттенок, насыщенность, яркость. Поверх — слои «Золотая драма» и ИИ-силуэт.</p></div><span class="mono">03 / 12</span></figcaption>
     </figure>
-    <figure class="slide" data-src="images/polako/color-grading.jpg">
-      <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — COLOR GRADING</span></div><img src="images/polako/color-grading.jpg" alt="Polako RAW — цветокоррекция" loading="lazy"></div>
-      <figcaption><div><h4 data-en="Three-way colour grading">Цветокоррекция: тени, полутона, света</h4><p data-en="Colour wheels for shadows, midtones, highlights and global, with balance and blending — the cinematic look in autumn forest.">Цветовые колёса для теней, полутонов, светов и общего тона, баланс и плавность — кинематографичный цвет прямо в осеннем лесу.</p></div><span class="mono">04 / 06</span></figcaption>
+    <figure class="slide" data-src="images/polako/raw-grading-bay.jpg">
+      <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — COLOR GRADING</span></div><img src="images/polako/raw-grading-bay.jpg" alt="Polako RAW — Цветокоррекция: три колеса" loading="lazy"></div>
+      <figcaption><div><h4 data-en="Three-way colour grading">Цветокоррекция: три колеса</h4><p data-en="Wheels for shadows, midtones, highlights and global, with balance and blending.">Колёса для теней, полутонов, светов и общего тона, баланс и плавность зон.</p></div><span class="mono">04 / 12</span></figcaption>
+    </figure>
+    <figure class="slide" data-src="images/polako/raw-sky-budva.jpg">
+      <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — SKY & ATMOSPHERE</span></div><img src="images/polako/raw-sky-budva.jpg" alt="Polako RAW — Небо и атмосфера" loading="lazy"></div>
+      <figcaption><div><h4 data-en="Sky & atmosphere">Небо и атмосфера</h4><p data-en="AI selects the sky; presets like Soft Sunset or Cumulus change it independently of the frame. Depth haze.">ИИ выделяет небо, а пресеты — «закат мягкий», «кучевые облака» — меняют его отдельно от кадра. Дымка по глубине.</p></div><span class="mono">05 / 12</span></figcaption>
+    </figure>
+    <figure class="slide" data-src="images/polako/raw-relight-rock.jpg">
+      <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — RELIGHT</span></div><img src="images/polako/raw-relight-rock.jpg" alt="Polako RAW — Релайтинг по глубине" loading="lazy"></div>
+      <figcaption><div><h4 data-en="Depth relighting">Релайтинг по глубине</h4><p data-en="Near and far planes lit separately from an AI depth map, plus light sources placed on the frame.">Ближний и дальний план подсвечиваются отдельно по карте глубины ИИ, плюс источники света на кадре.</p></div><span class="mono">06 / 12</span></figcaption>
+    </figure>
+    <figure class="slide" data-src="images/polako/raw-detail-stefan.jpg">
+      <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — DETAILS & NOISE</span></div><img src="images/polako/raw-detail-stefan.jpg" alt="Polako RAW — Детали, шум и ИИ-шумодав" loading="lazy"></div>
+      <figcaption><div><h4 data-en="Details, noise & AI denoise">Детали, шум и ИИ-шумодав</h4><p data-en="Masked sharpening, noise reduction and neural denoise for high ISO and dusk shadows.">Резкость с маской, подавление шума и нейросетевой шумодав — для высоких ISO и закатных теней.</p></div><span class="mono">07 / 12</span></figcaption>
+    </figure>
+    <figure class="slide" data-src="images/polako/raw-grading-ruins.jpg">
+      <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — COLOR GRADING</span></div><img src="images/polako/raw-grading-ruins.jpg" alt="Polako RAW — Цвет в тенях и светах" loading="lazy"></div>
+      <figcaption><div><h4 data-en="Shadows and highlights colour">Цвет в тенях и светах</h4><p data-en="Separate tones for shadows and highlights — warm stone, cool shade — without losing natural colour.">Отдельный тон теням и светам — тёплый камень, холодная тень — без потери натурального цвета.</p></div><span class="mono">08 / 12</span></figcaption>
+    </figure>
+    <figure class="slide" data-src="images/polako/raw-curve-trees.jpg">
+      <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — CURVES</span></div><img src="images/polako/raw-curve-trees.jpg" alt="Polako RAW — Кривая" loading="lazy"></div>
+      <figcaption><div><h4 data-en="Tone curve">Кривая</h4><p data-en="A point curve: highlight contrast, soft shadows and the full dynamic range of the RAW.">Кривая по точкам: контраст в светах, мягкие тени, расширенный динамический диапазон из RAW.</p></div><span class="mono">09 / 12</span></figcaption>
+    </figure>
+    <figure class="slide" data-src="images/polako/raw-mixer-mostar.jpg">
+      <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — COLOR MIXER</span></div><img src="images/polako/raw-mixer-mostar.jpg" alt="Polako RAW — Пипетка и выборочный цвет" loading="lazy"></div>
+      <figcaption><div><h4 data-en="Eyedropper & selective colour">Пипетка и выборочный цвет</h4><p data-en="Click a colour in the frame and drag — the right one of eight channels selects itself.">Нажмите на цвет в кадре и потяните — сам выберется нужный из восьми каналов.</p></div><span class="mono">10 / 12</span></figcaption>
+    </figure>
+    <figure class="slide" data-src="images/polako/raw-develop-autumn.jpg">
+      <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — DEVELOP</span></div><img src="images/polako/raw-develop-autumn.jpg" alt="Polako RAW — Осенний склон — проявка" loading="lazy"></div>
+      <figcaption><div><h4 data-en="Autumn hillside — develop">Осенний склон — проявка</h4><p data-en="Temperature, tint, exposure and contrast on autumn hills: colour pulled up without clipping.">Температура, оттенок, экспозиция и контраст на осенних холмах: цвет вытягивается без пересветов.</p></div><span class="mono">11 / 12</span></figcaption>
     </figure>
     <figure class="slide" data-src="images/polako/crop.jpg">
-      <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — CROP</span></div><img src="images/polako/crop.jpg" alt="Polako RAW — кадрирование" loading="lazy"></div>
-      <figcaption><div><h4 data-en="Crop, horizon, auto-crop">Кадрирование, горизонт, авто-кадр</h4><p data-en="Free or fixed-ratio crop right on the frame, a horizon line tool, and AI suggestions that put the subject on the thirds.">Свободная или с фиксированной пропорцией рамка прямо на кадре, линия по горизонту и подсказки ИИ, которые ставят объект на линии третей.</p></div><span class="mono">05 / 06</span></figcaption>
-    </figure>
-    <figure class="slide" data-src="images/polako/relight.jpg">
-      <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — RELIGHT</span></div><img src="images/polako/relight.jpg" alt="Polako RAW — релайтинг" loading="lazy"></div>
-      <figcaption><div><h4 data-en="Depth relighting, sky & atmosphere">Релайтинг по глубине, небо и атмосфера</h4><p data-en="Light up the foreground and background separately from an AI depth map, add light sources, swap or enrich the sky.">Отдельная подсветка ближнего и дальнего плана по карте глубины, источники света на кадре, замена и усиление неба.</p></div><span class="mono">06 / 06</span></figcaption>
+      <div class="win"><div class="win-bar"><i></i><i></i><i></i><span>POLAKO RAW — CROP</span></div><img src="images/polako/crop.jpg" alt="Polako RAW — Кадрирование, горизонт, авто-кадр" loading="lazy"></div>
+      <figcaption><div><h4 data-en="Crop, horizon, auto-crop">Кадрирование, горизонт, авто-кадр</h4><p data-en="Crop right on the frame, a horizon line tool and AI suggestions that place the subject on the thirds.">Рамка прямо на кадре, линия по горизонту и подсказки ИИ, которые ставят объект на линии третей.</p></div><span class="mono">12 / 12</span></figcaption>
     </figure>
   </div>
   <div class="wrap"><div class="thumbs" id="thumbs"></div></div>
@@ -155,7 +179,7 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
-<script src="js/neon.js?v=3"></script>
-<script src="js/gallery.js?v=3"></script>
+<script src="js/neon.js?v=4"></script>
+<script src="js/gallery.js?v=4"></script>
 </body>
 </html>

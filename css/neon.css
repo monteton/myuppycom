@@ -1,5 +1,5 @@
 /* MYUPPY — neon mercury theme (index, products, polako) */
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;700;900&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@font-face { font-family: 'Bebas'; src: url('../fonts/BebasNeueCyrillic.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
 
 :root {
   --bg: #04050a;
@@ -12,9 +12,9 @@
   --glow: 0 0 24px rgba(111, 243, 255, .35), 0 0 80px rgba(111, 243, 255, .14);
   --chrome: linear-gradient(115deg, #ffffff 0%, #d7dee9 18%, #7a8697 38%, #f4f7fb 52%, #8f9bad 68%, #dfe6f0 84%, #ffffff 100%);
   --ease: cubic-bezier(.22, 1, .36, 1);
-  --f-d: 'Unbounded', 'Manrope', sans-serif;
-  --f-b: 'Manrope', system-ui, sans-serif;
-  --f-m: 'JetBrains Mono', ui-monospace, monospace;
+  --f-d: 'Bebas', 'Bebas Neue', Impact, sans-serif;
+  --f-b: 'Bebas', 'Bebas Neue', Impact, sans-serif;
+  --f-m: 'Bebas', 'Bebas Neue', Impact, sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -24,7 +24,7 @@ html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-stopped { overflow: hidden; }
 body {
   background: var(--bg); color: var(--ink); font-family: var(--f-b); font-weight: 400;
-  line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  line-height: 1.5; font-size: 19px; letter-spacing: .02em; -webkit-font-smoothing: antialiased; overflow-x: hidden;
 }
 img, canvas, video { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
@@ -60,7 +60,7 @@ body::before {
   border: 1px solid var(--line); box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 10px 40px rgba(0,0,0,.4);
   max-width: calc(100% - 24px);
 }
-.brand { display: flex; align-items: center; gap: 10px; font-family: var(--f-d); font-weight: 700; letter-spacing: .12em; font-size: 14px; }
+.brand { display: flex; align-items: center; gap: 10px; font-family: var(--f-d); font-weight: 700; letter-spacing: .12em; font-size: 22px; }
 .brand img { width: 34px; height: 34px; object-fit: contain; filter: grayscale(1) brightness(2.4) contrast(1.15) drop-shadow(0 0 10px rgba(111,243,255,.55)); mix-blend-mode: screen; transition: transform .5s var(--ease); }
 .brand:hover img { transform: rotate(14deg) scale(1.08); }
 .links { display: flex; gap: 4px; }
@@ -75,7 +75,7 @@ body::before {
 .burger i::before { content: ''; position: absolute; top: 5px; left: 0; }
 .mmenu { position: fixed; inset: 0; z-index: 79; background: rgba(4,5,10,.96); backdrop-filter: blur(20px); display: flex; flex-direction: column; justify-content: center; padding: 0 32px; gap: 6px; opacity: 0; pointer-events: none; transition: opacity .4s; }
 .mmenu.open { opacity: 1; pointer-events: auto; }
-.mmenu a { font-family: var(--f-d); font-size: clamp(28px, 8vw, 44px); font-weight: 700; padding: 6px 0; }
+.mmenu a { font-family: var(--f-d); font-size: clamp(40px, 11vw, 64px); font-weight: 700; padding: 6px 0; }
 @media (max-width: 920px) { .links { display: none; } .burger { display: flex; } .nav-in { gap: 14px; } }
 
 /* buttons */
@@ -101,7 +101,7 @@ body::before {
 .hero .tag { display: inline-flex; align-items: center; gap: 10px; padding: 7px 14px; border: 1px solid var(--line); border-radius: 999px; background: rgba(8,10,18,.5); backdrop-filter: blur(10px); margin-bottom: 26px; }
 .hero .tag b { width: 7px; height: 7px; border-radius: 50%; background: var(--neon); box-shadow: 0 0 12px var(--neon); animation: pulse 2s infinite; }
 @keyframes pulse { 50% { opacity: .35; } }
-.hero h1 { font-family: var(--f-d); font-weight: 900; font-size: clamp(40px, 14vw, 230px); white-space: nowrap; line-height: .86; letter-spacing: -.045em; margin-left: -.04em; }
+.hero h1 { font-family: var(--f-d); font-weight: 900; font-size: clamp(60px, 31vw, 520px); white-space: nowrap; line-height: .86; letter-spacing: .01em; margin-left: -.04em; }
 .hero h1 .ch, .split .ch { display: inline-block; will-change: transform; background: var(--chrome); background-size: 300% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; animation: sheen 9s linear infinite; }
 .hero-row { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-top: 34px; flex-wrap: wrap; }
 .hero-row p { max-width: 520px; font-size: clamp(16px, 1.5vw, 20px); color: #b9c2d0; font-weight: 300; }
@@ -113,7 +113,7 @@ body::before {
 /* marquee */
 .marq { border-block: 1px solid var(--line); overflow: hidden; padding: 22px 0; background: rgba(255,255,255,.01); }
 .marq-t { display: flex; gap: 48px; width: max-content; animation: mq 38s linear infinite; }
-.marq span { font-family: var(--f-d); font-weight: 900; font-size: clamp(28px, 5vw, 64px); letter-spacing: -.02em; -webkit-text-stroke: 1px rgba(200,214,235,.5); color: transparent; white-space: nowrap; display: flex; align-items: center; gap: 48px; }
+.marq span { font-family: var(--f-d); font-weight: 900; font-size: clamp(38px, 7vw, 100px); letter-spacing: .01em; -webkit-text-stroke: 1px rgba(200,214,235,.5); color: transparent; white-space: nowrap; display: flex; align-items: center; gap: 48px; }
 .marq span::after { content: '✦'; -webkit-text-stroke: 0; color: var(--neon); font-size: .5em; text-shadow: 0 0 16px var(--neon); }
 @keyframes mq { to { transform: translateX(-50%); } }
 
@@ -121,11 +121,11 @@ body::before {
 section { position: relative; }
 .sec { padding: clamp(80px, 12vw, 170px) 0; }
 .sec-h { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; margin-bottom: clamp(36px, 6vw, 80px); flex-wrap: wrap; }
-.sec-h h2 { font-family: var(--f-d); font-weight: 700; font-size: clamp(32px, 6vw, 84px); line-height: .98; letter-spacing: -.035em; max-width: 14ch; }
+.sec-h h2 { font-family: var(--f-d); font-weight: 700; font-size: clamp(42px, 7.6vw, 120px); line-height: .98; letter-spacing: .01em; max-width: 14ch; }
 .sec-h .mono { margin-bottom: 14px; display: block; }
 
 /* manifesto */
-.mani { font-family: var(--f-d); font-weight: 500; font-size: clamp(24px, 4.4vw, 62px); line-height: 1.12; letter-spacing: -.03em; max-width: 22ch; }
+.mani { font-family: var(--f-d); font-weight: 500; font-size: clamp(32px, 5.8vw, 84px); line-height: 1.12; letter-spacing: .01em; max-width: 22ch; }
 .mani .w { opacity: .14; transition: none; }
 .mani em { font-style: normal; color: var(--neon); }
 
@@ -139,7 +139,7 @@ section { position: relative; }
 .card:hover { border-color: rgba(111,243,255,.4); transform: translateY(-4px); }
 .card:hover::before { opacity: 1; }
 .card .n { font-family: var(--f-m); font-size: 12px; color: var(--mute); letter-spacing: .2em; }
-.card h3 { font-family: var(--f-d); font-weight: 700; font-size: clamp(20px, 2.2vw, 30px); letter-spacing: -.02em; line-height: 1.1; margin-bottom: 12px; }
+.card h3 { font-family: var(--f-d); font-weight: 700; font-size: clamp(28px, 3vw, 42px); letter-spacing: .01em; line-height: 1.1; margin-bottom: 12px; }
 .card p { color: #98a3b3; font-size: 14.5px; max-width: 40ch; }
 .card .go { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; font-size: 13px; font-weight: 700; color: var(--neon); }
 .card .go svg { width: 16px; transition: transform .4s var(--ease); }
@@ -152,7 +152,7 @@ section { position: relative; }
 
 /* product spotlight */
 .spot { display: grid; grid-template-columns: 1fr 1.35fr; gap: clamp(30px, 5vw, 80px); align-items: center; }
-.spot h2 { font-family: var(--f-d); font-weight: 700; font-size: clamp(34px, 5vw, 70px); line-height: .98; letter-spacing: -.035em; margin: 14px 0 22px; }
+.spot h2 { font-family: var(--f-d); font-weight: 700; font-size: clamp(46px, 6.8vw, 100px); line-height: .98; letter-spacing: .01em; margin: 14px 0 22px; }
 .spot p { color: #aab4c3; max-width: 46ch; margin-bottom: 26px; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; }
 .chip { font-family: var(--f-m); font-size: 11px; letter-spacing: .08em; padding: 7px 12px; border-radius: 999px; border: 1px solid var(--line); background: rgba(255,255,255,.03); color: #c5cfdd; }
@@ -176,14 +176,14 @@ section { position: relative; }
 .stat { padding: 44px 24px 44px 0; border-right: 1px solid var(--line); }
 .stat:not(:first-child) { padding-left: 28px; }
 .stat:last-child { border: 0; }
-.stat b { display: block; font-family: var(--f-d); font-weight: 900; font-size: clamp(38px, 6vw, 88px); letter-spacing: -.04em; line-height: 1; background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.stat b { display: block; font-family: var(--f-d); font-weight: 900; font-size: clamp(52px, 8.5vw, 130px); letter-spacing: .01em; line-height: 1; background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .stat span { display: block; margin-top: 12px; }
 @media (max-width: 760px) { .stats { grid-template-columns: 1fr 1fr; } .stat { border-bottom: 1px solid var(--line); padding-left: 0 !important; } .stat:nth-child(2) { border-right: 0; } }
 
 /* process */
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; counter-reset: s; }
 .step { padding: 28px; border-radius: 24px; border: 1px solid var(--line); background: rgba(255,255,255,.02); position: relative; min-height: 240px; display: flex; flex-direction: column; justify-content: space-between; }
-.step::before { counter-increment: s; content: '0' counter(s); font-family: var(--f-d); font-size: 56px; font-weight: 900; letter-spacing: -.04em; background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.step::before { counter-increment: s; content: '0' counter(s); font-family: var(--f-d); font-size: 76px; font-weight: 900; letter-spacing: .01em; background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .step h4 { font-family: var(--f-d); font-size: 19px; margin-bottom: 8px; }
 .step p { color: #98a3b3; font-size: 14px; }
 @media (max-width: 900px) { .steps { grid-template-columns: 1fr 1fr; } }
@@ -192,7 +192,7 @@ section { position: relative; }
 /* CTA */
 .cta { text-align: center; padding: clamp(90px, 14vw, 200px) 0; position: relative; overflow: hidden; }
 .cta::before { content: ''; position: absolute; left: 50%; top: 50%; width: 900px; height: 900px; max-width: 140vw; transform: translate(-50%, -50%); background: radial-gradient(circle, rgba(111,243,255,.13), transparent 62%); pointer-events: none; }
-.cta h2 { font-family: var(--f-d); font-weight: 900; font-size: clamp(40px, 9vw, 140px); line-height: .92; letter-spacing: -.045em; margin-bottom: 36px; }
+.cta h2 { font-family: var(--f-d); font-weight: 900; font-size: clamp(54px, 13vw, 210px); line-height: .92; letter-spacing: .01em; margin-bottom: 36px; }
 .cta .row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; position: relative; }
 
 /* footer */
@@ -211,7 +211,7 @@ section { position: relative; }
 
 /* ============ PRODUCTS / POLAKO ============ */
 .page-hero { padding: 170px 0 70px; position: relative; overflow: hidden; }
-.page-hero h1 { font-family: var(--f-d); font-weight: 900; font-size: clamp(42px, 9.5vw, 150px); line-height: .9; letter-spacing: -.045em; }
+.page-hero h1 { font-family: var(--f-d); font-weight: 900; font-size: clamp(56px, 13vw, 210px); line-height: .9; letter-spacing: .01em; }
 .page-hero p.lead { max-width: 56ch; margin-top: 26px; color: #b0bac9; font-size: clamp(16px, 1.6vw, 21px); font-weight: 300; }
 
 .prod { display: grid; grid-template-columns: 1.1fr 1fr; gap: 14px; margin-bottom: 14px; }
@@ -219,7 +219,7 @@ section { position: relative; }
 .pcard:hover { border-color: rgba(111,243,255,.45); transform: translateY(-4px); }
 .pcard.flag { grid-row: span 2; background: radial-gradient(80% 60% at 70% 20%, rgba(111,243,255,.12), transparent 70%), linear-gradient(160deg, rgba(255,255,255,.05), rgba(255,255,255,.01)); }
 .pcard .st { align-self: flex-start; font-family: var(--f-m); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; border: 1px solid rgba(111,243,255,.45); color: var(--neon); }
-.pcard h3 { font-family: var(--f-d); font-weight: 700; font-size: clamp(26px, 3.2vw, 46px); letter-spacing: -.03em; line-height: 1; margin: 18px 0 14px; }
+.pcard h3 { font-family: var(--f-d); font-weight: 700; font-size: clamp(36px, 4.4vw, 64px); letter-spacing: .01em; line-height: 1; margin: 18px 0 14px; }
 .pcard p { color: #a3aebe; max-width: 44ch; }
 .pcard .pimg { margin: 26px -10px -10px; }
 .pcard.flag .pimg { margin: 30px -20px -50px 40px; }
@@ -230,7 +230,7 @@ section { position: relative; }
 .pol-hero { position: relative; padding: 150px 0 40px; text-align: center; overflow: hidden; }
 .pol-hero .emb { width: min(300px, 55vw); margin: 0 auto 20px; filter: drop-shadow(0 0 50px rgba(111,243,255,.25)); animation: fl 7s ease-in-out infinite; }
 @keyframes fl { 50% { transform: translateY(-14px); } }
-.pol-hero h1 { font-family: var(--f-d); font-weight: 900; font-size: clamp(44px, 10vw, 160px); line-height: .9; letter-spacing: -.05em; }
+.pol-hero h1 { font-family: var(--f-d); font-weight: 900; font-size: clamp(58px, 14vw, 230px); line-height: .9; letter-spacing: .01em; }
 .pol-hero p.lead { max-width: 62ch; margin: 26px auto 34px; color: #b0bac9; font-size: clamp(16px, 1.6vw, 21px); font-weight: 300; }
 .pol-hero .hero-cta { justify-content: center; }
 .pol-hero::before { content: ''; position: absolute; left: 50%; top: 80px; width: 1100px; height: 700px; max-width: 150vw; transform: translateX(-50%); background: radial-gradient(closest-side, rgba(111,243,255,.14), rgba(183,164,255,.07) 55%, transparent); pointer-events: none; }
@@ -245,7 +245,7 @@ section { position: relative; }
 .slide .win { cursor: zoom-in; }
 .slide .win img { aspect-ratio: 16 / 10; user-select: none; -webkit-user-drag: none; }
 .slide figcaption { display: flex; justify-content: space-between; gap: 24px; padding: 20px 4px 0; align-items: flex-start; }
-.slide figcaption h4 { font-family: var(--f-d); font-size: clamp(16px, 1.8vw, 22px); font-weight: 700; letter-spacing: -.02em; }
+.slide figcaption h4 { font-family: var(--f-d); font-size: clamp(22px, 2.4vw, 32px); font-weight: 700; letter-spacing: .01em; }
 .slide figcaption p { color: #98a3b3; font-size: 14px; max-width: 58ch; margin-top: 6px; }
 .slide figcaption .mono { white-space: nowrap; padding-top: 6px; }
 .gal-ctl { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
@@ -280,7 +280,7 @@ section { position: relative; }
 .fcard:hover { border-color: rgba(111,243,255,.4); transform: translateY(-4px); }
 .fcard:hover::before { opacity: 1; }
 .fcard .tg { font-family: var(--f-m); font-size: 10px; letter-spacing: .2em; color: var(--neon); text-transform: uppercase; }
-.fcard h3 { font-family: var(--f-d); font-weight: 700; font-size: 20px; letter-spacing: -.02em; margin: 14px 0 10px; line-height: 1.15; }
+.fcard h3 { font-family: var(--f-d); font-weight: 700; font-size: 28px; letter-spacing: .01em; margin: 14px 0 10px; line-height: 1.15; }
 .fcard p { color: #98a3b3; font-size: 14px; }
 .fcard.wide { grid-column: span 2; }
 .fcard.full { grid-column: 1 / -1; min-height: 0; }
@@ -306,3 +306,15 @@ section { position: relative; }
 @media (max-width: 600px) { .dots button { width: 20px; } .arrow { width: 46px; height: 46px; } }
 
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .rv { opacity: 1; transform: none; } .mani .w { opacity: 1; } }
+
+/* Bebas is condensed and caps-only: scale small text up so it stays readable */
+* { font-synthesis: none; }
+h1, h2, h3, h4, b, strong, .btn, .brand, .stat b, .step::before { font-weight: 400 !important; }
+.links a { font-size: 18px; } .lang button { font-size: 14px; } .btn { font-size: 20px; letter-spacing: .06em; }
+.mono, .chip, .pcard .st, .fcard .tg, .pp b, .card .n { font-size: 14px; letter-spacing: .14em; }
+.card p, .pcard p, .fcard p, .step p, .pp p, .slide figcaption p, .foot p.d, .spot p, .sec-h p { font-size: 20px; line-height: 1.4; }
+.hero-row p, .page-hero p.lead, .pol-hero p.lead { font-size: clamp(22px, 2vw, 28px); line-height: 1.4; }
+.card .go, .foot li, .spec { font-size: 19px; } .foot h5 { font-size: 15px; }
+.step h4 { font-size: 26px; } .pp h4 { font-size: 24px; }
+.win-bar span { font-size: 13px; } .lb .cap { font-size: 16px; }
+.hero h1 { line-height: .9; }
