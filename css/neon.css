@@ -339,3 +339,27 @@ h1, h2, h3, h4, b, strong, .btn, .brand, .stat b, .step::before { font-weight: 4
 @media (max-width: 600px) { .logo-stage video { width: 165vw; } .logo-stage { margin: -4vh 0 -7vh; } }
 .logo-stage video { max-width: none; }
 @media (max-width: 600px) { .gal-ctl { width: 100%; } .dots { flex: 1; gap: 4px; min-width: 0; } .dots button { flex: 1; width: auto; min-width: 0; } }
+
+/* app review pages: device frames */
+.dev { background: #0b0e16 !important; border-radius: 40px !important; padding: 9px; border: 1px solid rgba(220,232,250,.24) !important; overflow: hidden; box-shadow: 0 40px 100px rgba(0,0,0,.65), 0 0 80px rgba(111,243,255,.1) !important; }
+.dev img { border-radius: 31px; width: 100%; height: auto; }
+.slide .win.dev img { aspect-ratio: auto; }
+.slide.phone { flex: 0 0 min(72vw, 300px); }
+.slide.phone.land { flex: 0 0 min(88vw, 640px); }
+.slide.phone.land .dev { border-radius: 32px !important; } .slide.phone.land .dev img { border-radius: 24px; }
+.slide.phone figcaption { flex-direction: column; gap: 10px; }
+.app-hero { padding: 150px 0 40px; position: relative; overflow: hidden; }
+.app-hero::before { content: ''; position: absolute; right: -10%; top: 0; width: 900px; height: 700px; max-width: 120vw; background: radial-gradient(closest-side, rgba(111,243,255,.12), rgba(183,164,255,.06) 55%, transparent); pointer-events: none; }
+.app-hero-in { display: grid; grid-template-columns: 1.2fr .8fr; gap: clamp(30px, 6vw, 90px); align-items: center; position: relative; }
+.app-hero h1 { font-weight: 400; font-size: clamp(56px, 9vw, 150px); line-height: .9; }
+.app-hero p.lead { max-width: 54ch; margin: 26px 0 22px; color: #b0bac9; font-size: clamp(22px, 2vw, 28px); line-height: 1.4; }
+.app-hero .hero-cta { justify-content: flex-start; }
+.app-hero-vis { display: flex; justify-content: center; perspective: 1400px; }
+.app-hero-vis .dev.big { width: min(330px, 78vw); transform: rotateY(-10deg) rotateX(3deg) rotateZ(2deg); transition: transform .8s var(--ease); }
+.app-hero-vis:hover .dev.big { transform: none; }
+@media (max-width: 900px) { .app-hero-in { grid-template-columns: 1fr; } .app-hero-vis { order: -1; } .app-hero { padding-top: 120px; } .app-hero-vis .dev.big { width: min(260px, 66vw); } }
+.thumbs button { width: 100px; }
+.prod2 { grid-template-columns: 1fr 1fr; }
+.pcard .pimg .dev { transform: rotate(3deg); }
+@media (max-width: 900px) { .prod2 { grid-template-columns: 1fr; } }
+.dev img { aspect-ratio: auto !important; object-fit: contain !important; height: auto !important; }
