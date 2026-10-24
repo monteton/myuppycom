@@ -239,6 +239,21 @@
   <div class="foot-b mono"><span>© 2026 MYUPPY</span><span data-en="All rights reserved">Все права защищены</span></div>
 </div></footer>
 
+<script>
+/* click counters for Google Analytics 4: download button, "Download alpha" CTAs, donate. Source = utm_source or referrer. */
+(function(){
+  var q=new URLSearchParams(location.search), src=q.get('utm_source');
+  if(!src){ try{ src=document.referrer?new URL(document.referrer).hostname:'direct'; }catch(e){ src='direct'; } }
+  function ev(name,extra){ if(typeof gtag==='function') gtag('event',name,Object.assign({page:'polako',source:src,transport_type:'beacon'},extra||{})); }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a'); if(!a) return;
+    var h=a.getAttribute('href')||'';
+    if(a.id==='dl-btn'||/\.dmg(\?|$)/.test(h)) ev('download_click',{file_name:'Polako-Raw-AI-photo-editor-0.1.0-arm64.dmg',link_url:h});
+    else if(h==='#download') ev('cta_download_alpha',{location:(a.closest('section')&&a.closest('section').id)||'page'});
+    else if(/boosty\.to/.test(h)) ev('donate_click');
+  },true);
+})();
+</script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
