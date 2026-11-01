@@ -5,5 +5,9 @@
   "compatibility_date": "2026-10-19",
   "observability": { "enabled": true },
   "assets": { "directory": "./", "binding": "ASSETS", "html_handling": "none", "not_found_handling": "404-page" },
-  "workers_dev": true
+  "workers_dev": true,
+  "routes": [
+    { "pattern": "myuppy.com", "custom_domain": true },
+    { "pattern": "www.myuppy.com", "custom_domain": true }
+  ]
 }
