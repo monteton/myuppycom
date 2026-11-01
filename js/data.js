@@ -93,7 +93,7 @@ export const translations = {
         'video.title': 'Видеопроизводство',
         'works.title': 'Наши работы',
         'works.sub': 'Короткие ролики, моушн-графика и титры, которые работают на цель.',
-        'works.1.tag': 'Моушн · Титры', 'works.1.t': 'Титры для говорящей головы',
+        'works.1.tag': 'Моушн · Титры', 'works.1.t': 'Титры для разговорных видео',
         'works.2.tag': 'Мифы · Инфографика', 'works.2.t': 'Миф №1: сайту нужен идеальный дизайн',
         'works.3.tag': 'Мифы · Вырезка', 'works.3.t': 'Миф №6: доверие и личная жизнь',
 
@@ -187,7 +187,7 @@ export const translations = {
         'video.title': 'Video Production',
         'works.title': 'Our work',
         'works.sub': 'Short videos, motion graphics and titles built to hit a goal.',
-        'works.1.tag': 'Motion · Titles', 'works.1.t': 'Titles for a talking head',
+        'works.1.tag': 'Motion · Titles', 'works.1.t': 'Titles for talking videos',
         'works.2.tag': 'Myths · Infographics', 'works.2.t': 'Myth #1: a site needs a perfect design',
         'works.3.tag': 'Myths · Cut-out', 'works.3.t': 'Myth #6: trust and your private life',
 
