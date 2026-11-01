@@ -1,0 +1,11 @@
+.git
+.github
+.DS_Store
+node_modules
+wrangler.jsonc
+.assetsignore
+CNAME
+README.md
+*.py
+split_icons.py
+worker.js

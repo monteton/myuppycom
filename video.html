@@ -17,6 +17,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/neon-theme.css?v=16">
+    <link rel="stylesheet" href="css/works.css?v=1">
     <script src="https://unpkg.com/lucide@latest"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Q6LB80Y74"></script>
@@ -158,6 +159,37 @@
                 </div>
             </div>
 
+            <section class="works" id="works">
+                <div class="works-head">
+                    <div>
+                        <h2 class="text-3xl font-display font-bold" data-i18n="works.title">Наши работы</h2>
+                        <p data-i18n="works.sub">Короткие ролики, моушн-графика и титры, которые работают на цель.</p>
+                    </div>
+                    <div class="works-arrows">
+                        <button id="worksPrev" aria-label="Назад"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+                        <button id="worksNext" aria-label="Вперёд"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+                    </div>
+                </div>
+                <div class="works-track" id="worksTrack">
+                    <button class="work" data-src="videos/works/titles.mp4" data-poster="videos/works/titles.jpg" data-title="Титры для говорящей головы" aria-label="Смотреть: Титры для говорящей головы">
+                        <img src="videos/works/titles.jpg" alt="" loading="lazy">
+                        <span class="dur">0:14</span><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg></span>
+                        <span class="meta"><span class="tag" data-i18n="works.1.tag">Моушн · Титры</span><h3 data-i18n="works.1.t">Титры для говорящей головы</h3></span>
+                    </button>
+                    <button class="work" data-src="videos/works/myth1.mp4" data-poster="videos/works/myth1.jpg" data-title="Миф №1: сайту нужен идеальный дизайн" aria-label="Смотреть: Миф №1">
+                        <img src="videos/works/myth1.jpg" alt="" loading="lazy">
+                        <span class="dur">0:30</span><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg></span>
+                        <span class="meta"><span class="tag" data-i18n="works.2.tag">Мифы · Инфографика</span><h3 data-i18n="works.2.t">Миф №1: сайту нужен идеальный дизайн</h3></span>
+                    </button>
+                    <button class="work" data-src="videos/works/myth6.mp4" data-poster="videos/works/myth6.jpg" data-title="Миф №6: доверие и личная жизнь" aria-label="Смотреть: Миф №6">
+                        <img src="videos/works/myth6.jpg" alt="" loading="lazy">
+                        <span class="dur">0:30</span><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg></span>
+                        <span class="meta"><span class="tag" data-i18n="works.3.tag">Мифы · Вырезка</span><h3 data-i18n="works.3.t">Миф №6: доверие и личная жизнь</h3></span>
+                    </button>
+                </div>
+                <div class="works-dots" id="worksDots"></div>
+            </section>
+
             <section class="mt-32">
                 <h2 class="text-3xl font-display font-bold mb-12" data-i18n="service.process">Процесс работы</h2>
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -272,6 +304,7 @@
     </footer>
 
     <script type="module" src="js/main.js"></script>
+    <script src="js/works.js?v=1" defer></script>
 </body>
 
 </html>

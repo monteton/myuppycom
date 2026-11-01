@@ -91,6 +91,12 @@ export const translations = {
         'sound.process.4.desc': 'Балансировка частот и громкости для идеального звучания на любых устройствах.',
         // Video Page
         'video.title': 'Видеопроизводство',
+        'works.title': 'Наши работы',
+        'works.sub': 'Короткие ролики, моушн-графика и титры, которые работают на цель.',
+        'works.1.tag': 'Моушн · Титры', 'works.1.t': 'Титры для говорящей головы',
+        'works.2.tag': 'Мифы · Инфографика', 'works.2.t': 'Миф №1: сайту нужен идеальный дизайн',
+        'works.3.tag': 'Мифы · Вырезка', 'works.3.t': 'Миф №6: доверие и личная жизнь',
+
         'video.subtitle': 'Больше, чем просто Reels. Создаем контент нового поколения: ИИ-анимация для рекламы, клипов и мультпроектов.',
         'video.tag.1': 'ИИ-анимация',
         'video.tag.2': 'Рекламные клипы',
@@ -179,6 +185,12 @@ export const translations = {
 
         // Video Page
         'video.title': 'Video Production',
+        'works.title': 'Our work',
+        'works.sub': 'Short videos, motion graphics and titles built to hit a goal.',
+        'works.1.tag': 'Motion · Titles', 'works.1.t': 'Titles for a talking head',
+        'works.2.tag': 'Myths · Infographics', 'works.2.t': 'Myth #1: a site needs a perfect design',
+        'works.3.tag': 'Myths · Cut-out', 'works.3.t': 'Myth #6: trust and your private life',
+
         'video.subtitle': 'More than just Reels. Creating next-gen content: AI animation for ads, clips, and cartoons.',
         'video.tag.1': 'AI Animation',
         'video.tag.2': 'Commercial Clips',
