@@ -27,3 +27,19 @@
   .nav-cta { display: none; }
 }
 @media (max-width: 920px) and (min-width: 761px) { .nav-cta { padding: 9px 14px 7px; font-size: 13px; } }
+
+/* Направления в первом экране главной */
+.dirs { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin: 22px auto 0; max-width: 1040px; position: relative; z-index: 3; }
+.dir { flex: 1 1 210px; max-width: 250px; display: flex; align-items: center; gap: 12px; padding: 12px 18px 12px 12px; border-radius: 18px; border: 1px solid rgba(255,255,255,.16); background: rgba(16,9,9,.55); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); text-align: left; color: #f2ede6; transition: transform .25s, border-color .25s, box-shadow .25s, background .25s; }
+.dir:hover { transform: translateY(-4px); border-color: #ff4a4a; background: rgba(255,74,74,.12); box-shadow: 0 14px 36px rgba(255,74,74,.22); }
+.dir-ic { flex: none; width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; color: #ff6b6b; background: rgba(255,74,74,.14); border: 1px solid rgba(255,74,74,.35); }
+.dir-ic svg { width: 22px; height: 22px; }
+.dir-t { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.dir-t b { font-size: 20px; line-height: 1; text-transform: uppercase; letter-spacing: .04em; font-weight: 700; }
+.dir-t small { font-size: 13px; line-height: 1.25; color: #a9a39b; letter-spacing: .02em; }
+@media (max-width: 760px) {
+  .dirs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; padding: 0 4px; }
+  .dir { max-width: none; flex-direction: column; align-items: flex-start; gap: 10px; padding: 12px; }
+  .dir-t b { font-size: 18px; }
+  .dir-t small { font-size: 12px; }
+}
