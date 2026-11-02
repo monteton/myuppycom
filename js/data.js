@@ -7,7 +7,9 @@ export const translations = {
         'nav.branding': 'Бренд',
         'nav.sound': 'Звук',
         'nav.products': 'Продукты',
-        'nav.contact': 'СВЯЗАТЬСЯ',
+        'nav.contact': 'НАПИСАТЬ НАМ',
+        'connect.title': 'Мы в соцсетях',
+        'connect.sub': 'Новые ролики, продукты и кейсы — в наших каналах.',
 
         'hero.tag': 'Премиальная студия цифрового продакшна',
         'hero.title.1': 'СОЗДАЕМ',
@@ -140,7 +142,9 @@ export const translations = {
         'nav.branding': 'Branding',
         'nav.sound': 'Sound',
         'nav.products': 'Products',
-        'nav.contact': 'CONTACT US',
+        'nav.contact': 'WRITE TO US',
+        'connect.title': 'We are on social media',
+        'connect.sub': 'New videos, products and cases — in our channels.',
 
         'hero.tag': 'Premium Digital Production Studio',
         'hero.title.1': 'BUILDING',
