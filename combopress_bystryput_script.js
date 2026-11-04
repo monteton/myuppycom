@@ -169,13 +169,12 @@ function handleBuy(tariffId) {
 
     // Payment links mapping
     const paymentLinks = {
-        // TODO: вставить ссылки на оплату тарифов «Быстрый путь»
         // «Питание» — 2 990 р.
-        'lot1-rf': '',
-        'lot1-norf': '',
+        'lot1-rf': 'https://payform.ru/e8cWVBc/',
+        'lot1-norf': 'https://app.lava.top/products/0a9af96a-5b00-4982-85c2-f5dca144cbcc',
         // «Питание + Тренировки» — 3 990 р.
-        'lot2-rf': '',
-        'lot2-norf': '',
+        'lot2-rf': 'https://payform.ru/fwcWVC7/',
+        'lot2-norf': 'https://app.lava.top/products/541045ac-ec68-441c-891c-5796fae3178b',
     };
 
     const link = paymentLinks[tariffId] || '';
