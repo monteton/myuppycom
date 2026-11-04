@@ -2541,3 +2541,12 @@ blockquote {
 .format-section .format-card {
     box-shadow: 0 8px 32px rgba(46, 26, 102, 0.35);
 }
+
+/* Фон «Ключевых особенностей» в тон новой картинке с телефонами */
+.features-section {
+    background: #E8F1E2;
+}
+
+.features-app img {
+    filter: none;
+}
