@@ -2550,3 +2550,52 @@ blockquote {
 .features-app img {
     filter: none;
 }
+
+/* Фото Натальи в «Почему тысячи женщин доверяют…» — целиком, без обрезки */
+.trust-image {
+    height: auto;
+    aspect-ratio: 1 / 1;
+}
+
+.trust-image img {
+    object-position: center;
+}
+
+/* Шапка: баннер со своей надписью целиком, наш текст — под ним на зелёной плашке */
+.hero-banner {
+    height: auto;
+    overflow: visible;
+    border-radius: 24px;
+}
+
+.hero-banner > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1280 / 853;
+    object-fit: cover;
+    border-radius: 24px 24px 0 0;
+}
+
+.hero-banner-overlay {
+    position: static;
+    height: auto;
+    padding: 2rem 2.5rem 2.5rem;
+    background: linear-gradient(135deg, #2B490E 0%, #78913D 100%);
+    border-radius: 0 0 24px 24px;
+}
+
+.hero-banner-content {
+    max-width: 760px;
+}
+
+.hero-phrase {
+    max-width: 760px;
+    text-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .hero-banner-overlay {
+        padding: 1.5rem 1.25rem 1.75rem;
+    }
+}
